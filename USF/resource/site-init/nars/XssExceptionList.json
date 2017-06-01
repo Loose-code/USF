@@ -1,0 +1,34 @@
+/* XSS Exception List NARS Application */
+{
+    "comment" : "XSS Exception List for the NARS Web Application. Please observe exampled data and format. Thank you.",
+    "exceptions" : {
+        "scheme" : {
+            "principal" : "uri",
+            "content" : [
+                {
+                    "uri" : "http://www.another-example.com",
+                    "description" : "Valid test website address",
+                    "added" : 20170323,
+                    "author" : "P Irving"
+                },
+                {
+                    "uri" : "ftp://www.example.com",
+                    "description" : "Valid test ftp address",
+                    "added" : 20170323,
+                    "author" : "P Irving"
+                }
+            ]
+        },
+        "coding" : {
+            "principal" : "page",
+            "content" : [
+                {
+                    "page" : "nars/admin/tools/upload.html",
+                    "description" : "Generic upload page for Admin Users",
+                    "added" : 20170326,
+                    "author" : "P Irving"
+                }
+            ]
+        }
+    }
+}

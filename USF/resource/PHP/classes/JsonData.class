@@ -1,0 +1,194 @@
+<?php
+/**
+ * Singleton: JsonData
+ * 
+ * @author Peter
+ */
+class JsonData {
+    protected static $instance = null;
+    protected static $lastError = null;
+
+    protected function __construct() {}
+    protected function __clone() {}
+    protected function __wakeup() {}
+    protected function __destroy() {}
+
+    public static function GetInstance () {
+        if (!isset(static::$instance)) {
+            static::$instance = new static;
+        }
+        return static::$instance;
+    }
+    
+    private static function JsonDataFileName ($fileName) {
+        if (!is_null($fileName)) {
+            $_array = explode('.', $fileName);
+            $fileName = array_shift($_array);
+        }
+        if (is_null($fileName)) {
+            $fileName = 'config';
+        }
+        $fileName .= '.json';
+        return $fileName;
+    }
+
+    private static function JsonDataFilePath($filePath) {
+        if (is_null($filePath)) {
+            $filePath = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . WebAppFromSession('app'));
+        }
+        return $filePath;
+    }
+
+    /**
+     * Private Static: Will Check if operations are being carried out on an
+     * Object that is an instance of the FileAccess Class.
+     * 
+     * @param object [reference] $fileAccessObject An Instance of the FileAcess
+     * Class.
+     * 
+     * @return boolean Returns TRUE if it's a valid SplFileObject, FALSE if not.
+     */
+    private static function CheckFileObject(&$fileAccessObject) {
+        $returnValue = null;
+
+        $errorData = [1, 'Argument is not an Object', __LINE__ + 1];
+        if (is_object($fileAccessObject)) {
+            $errorData = [2, 'Object is not a File Access Object', __LINE__ + 1];
+            if (property_exists($fileAccessObject, 'currentFileObject')) {
+                $fileObject = $fileAccessObject->GetCurrentFileObject();
+                $errorData = [3, 'File Access Object does not Appear to be a File', __LINE__ + 1];
+                if ((is_object($fileObject)) && (is_a($fileObject, 'SplFileObject'))) {
+                    $returnValue = true;
+                }
+            }
+        }
+        if (!isset($returnValue)) {
+            $errorPacket = array(
+                'code' => $errorData[0],
+                'message' => $errorData[1],
+                'location' => $errorData[2],
+                'action' => __CLASS__,
+                'method' => __FUNCTION__,
+                'severity' => 'fatal',
+            );
+            static::$lastError = ProcessErrorEvent($errorPacket);
+        }
+        return $returnValue;
+    }
+
+    /**
+     * Public Static: Will create an empty file specifically for JSON data.
+     * 
+     * It is anticipated that this will mostly be used for Site Configuration
+     * Files. If a file currently exists at the specified location the operation
+     * will abort with an appropriate notice. Otherwise it will create an empty
+     * file and any recursive directories as specified in the Path. 
+     * 
+     * @param string [optional] $fileName The name of the JSON file to be
+     * deleted. NOTE: It is not necessary to include the file extention. In
+     * fact, everything after (and including) the first occurrence of '.' will
+     * be truncated: a file extention of ".json." will be automatically
+     * appended. If this parameter is omitted, the filename will default to
+     * 'config'.
+     * 
+     * @param string [optional] $path The full OS Path of the file's intended
+     * location. If omitted then the contents of the constant
+     * USF_SITE_CONFIG_DIRECTORY_PHP will be used. ALSO: If a valid Web App has been
+     * determined, then that will be used to modify the path accordingly.
+     * 
+     * @return boolean TRUE on success, FALSE on failure. Property $lastError
+     */
+    public static function CreateJsonFile($fileName=null, $path=null) {
+        $returnValue = false;
+        $fileName = static::JsonDataFileName($fileName);
+        $filePath = static::JsonDataFilePath($path);
+        $jsonFile = $filePath . $fileName;
+        if (!file_exists($jsonFile)) {
+            $returnValue = new FileAccess($jsonFile, 'create');
+        }
+        else {
+            /** @todo File exists, so we can't "create" it. What to do? */
+        }
+        return $returnValue;
+    }
+    /**
+     * 
+     * @param type $fileAccessObject
+     */
+    public static function DeleteJsonFile($fileAccessObject) {
+        if (static::CheckFileObject($fileAccessObject)) {
+            //unlink($fileObject);
+        }
+        
+    }
+    
+    public static function SanitiseJsonData($jsonIn) {
+        /** Strip comments - Cribbed From Stack Overflow */
+        $pattern = '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/';
+        $jsonIn = preg_replace($pattern, '', $jsonIn);
+        $_count = 1;
+        while ($_count > 0) {
+            $jsonIn = str_replace('  ', ' ', $jsonIn, $_count);
+        }
+        $jsonRaw = rawurlencode($jsonIn);
+        $jsonRaw = str_replace('%09', '', $jsonRaw);
+        $jsonRaw = str_replace('%0D', '', $jsonRaw);
+        $jsonRaw = str_replace('%0A', '', $jsonRaw);
+        $jsonOut = rawurldecode($jsonRaw);
+        return $jsonOut;
+        return $jsonIn;
+    }
+
+    public static function ReadJsonFile($fileName=null, $path=null){
+        $returnData = null;
+        $returnStatus = null;
+        $fileName = static::JsonDataFileName($fileName);
+        $filePath = static::JsonDataFilePath($path);
+        $jsonFileLocation = $filePath . $fileName;
+        $rawJsonData = '';
+        if (file_exists($jsonFileLocation)) {
+            $jsonFileObject = new FileAccess($jsonFileLocation, 'read');
+            $returnData = $jsonFileObject->ReadFullFile();
+            $returnStatus = true;
+        }
+        else {
+            $returnData = 'JSON Data File (' . $jsonFileLocation . ') Not Found';
+            $returnStatus = false;
+        }
+        return [$returnData, $returnStatus];
+    }
+    
+    /**
+     * Public Static Function: Will convert JSON to an equivalent PHP Array.
+     * 
+     * @param type $rawJsonData
+     * @return type
+     */
+    public static function ConvertJson($rawJsonData) {
+        $returnData = null;
+        $returnStatus = null;
+        $jsonData = static::SanitiseJsonData($rawJsonData);
+        $returnData = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
+        $jsonLastError = json_last_error_msg();
+        if (strtolower($jsonLastError) == 'no error') {
+            $returnStatus = true;
+        }
+        else {
+            $returnData = 'JSON Decode Returned Error: ' . $jsonLastError;
+            $returnStatus = false;
+        }
+        return array($returnData, $returnStatus);
+    }
+
+        /**
+     * Public Static Method: Return the current value of <b>property</b> <i>lastError</i>.
+     * 
+     * $array = $this->GetLastError();
+     * 
+     * @return array 
+     */
+    public static function GetLastError() {
+        return static::$lastError;
+    }
+
+}

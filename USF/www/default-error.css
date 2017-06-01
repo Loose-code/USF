@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-Jan-2016, 18:22:51
+    Author     : Peter
+*/
+body {
+	font-family:verdana, arial, sans-serif;
+	font-size:1em;
+}
+.error-container {
+    width: 600px;
+    border: 2px solid red;
+    margin: 50px auto 20px auto;
+}
+.error-header {
+    width: 100%;
+    height: 39px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #fefefe;
+    background-color: red;
+    text-align: center;
+}
+.error-body {
+    padding: 5px;
+    text-align: justify;
+}
+.error-statement {
+    line-height: 21px;
+    padding-bottom: 21px;
+}
+.error-information {
+    width: 100%;
+}
+.error-line {
+    position: relative;
+    width: 100%;
+    height: 25px;
+}
+.error-prompt {
+    float: left;
+    width: 30%;
+    text-align: right;
+    padding-right: 3px;
+    font-weight: bold;
+    line-height: 21px;
+}
+.error-text {
+    float: left;
+    width: 65%;
+    padding-right: 3px;
+    line-height: 21px;
+}
+.error-expand {
+    height: 75px;
+    overflow: auto;
+}

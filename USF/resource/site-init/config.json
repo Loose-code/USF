@@ -1,0 +1,7 @@
+/* USF Configuration File */
+{
+    "comment" : "USF Default Configuration file",
+    "config" : {
+        "loaded" : true
+    }
+}

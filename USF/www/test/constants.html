@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Defined Constants</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <table align="center" border="1">
+                <thead>
+                    <tr>
+                        <th colspan="3" align="center"><h3>Defined Constants</h3></th>
+                     </tr>
+                    <tr>
+                        <th>Constant</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+<?php
+    $definedConstants = get_defined_constants(true);
+    $userConstants = $definedConstants['user'];
+    foreach ($userConstants as $constant => $value) {
+        $type = gettype($value);
+        if (($type == 'array') || ($type == 'boolean')) {
+            $value = ' - ';
+        }
+        echo "<tr><td>$constant</td><td>$type</td><td>$value</td></tr>\r\n";
+    }
+?>
+            </table>
+    </div>
+    </body>
+</html>

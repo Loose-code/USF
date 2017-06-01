@@ -1,0 +1,26 @@
+<?php
+    header("HTTP/1.0 404 Not Found");
+    // TODO
+    // Add logging and redirect if NARS
+
+    $thisSession = session_id();
+    if (empty($thisSession)) {
+        $webApp = "unspecified";
+    }
+?>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>You have requested a Page that does not exist or is not available. For the <?php echo $webApp; ?> App, click here:</div>
+    </body>
+</html>

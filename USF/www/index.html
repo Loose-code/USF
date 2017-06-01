@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Development Server</title>
+    </head>
+<body>
+    <div>Top Level</div>
+<?php
+    echo "<p>Web App: " . WebAppFromSession('display') . "</p>";
+    echo "<p>Session: " . session_id() . "<p>";
+    phpinfo();
+?>
+    </body>
+</html>

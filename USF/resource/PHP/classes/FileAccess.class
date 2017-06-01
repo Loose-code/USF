@@ -1,0 +1,146 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of FileAccess
+ *
+ * @author Peter
+ */
+class FileAccess {
+    private $crudMode = '';
+    private $dataToProcess = null;
+    private $messages = array(
+        'errorStack'   => array(),
+        'warningStack' => array(),
+        'noticeStack'  => array(),
+        'messageCount' => array(
+            'total'   => 0,
+            'error'   => 0,
+            'warning' => 0,
+            'notice'  => 0
+            ),
+        );
+    private $lastError = '';
+    private $currentFile = '';
+    private $currentFileObject = false;
+
+    public function __construct($fullFileName, $crud) {
+        $fileLock = LOCK_EX;
+        switch ($crud) {
+            case 'create':
+                $fileMode = 'w';
+                break;
+            case 'read':
+                $fileMode = 'r';
+                $fileLock = LOCK_SH;
+                break;
+            case 'update':
+                $fileMode = 'a+';
+                break;
+            case 'delete':
+                $fileMode = 'c';
+                break;
+            default:
+                $this->lastError = 'Invalid CRUD Operation ["' . $crud . '"] for File Operation';
+                $this->ProcessError(__METHOD__, __LINE__, 'fatal');
+        }
+        try {
+            $this->currentFileObject = new SplFileObject($fullFileName, $fileMode);
+            $result = $this->LockFile($fileLock);
+            if ($result) {
+                $this->currentFile = $fullFileName;
+                $this->crudMode = $crud;
+                $this->lastError = '';
+            }
+            else {
+                $this->lastError = $this->messages['errorStack'][0];
+                $this->ProcessError(__METHOD__, __LINE__, 'fatal');
+            }
+        }
+        catch (Exception $thrownError) {
+            throw new Exception('Unable to "' . $crud . '" File. System Returns: ' . $thrownError->getMessage());
+            /** @TODO Convert to interna Error Handling **/
+        }
+    }
+    protected function __clone() {}
+    protected function __wakeup() {}
+    protected function __destroy() {
+        if ($this->currentFileObject) {
+            $this->FileUnlock()->flock(LOCK_UN);
+        }
+    }
+
+    public function FileUnlock($retry=false) {
+        $result = $this->currentFileObject->flock(LOCK_UN);
+        if (!$result) {
+            $count = 'warning';
+            $stack = 'warningStack';
+            if ($retry) {
+                $count = 'error';
+                $stack = 'errorStack';
+            }
+            $this->messages['messageCount']['total']++;
+            $this->messages['messageCount'][$count]++;
+            array_unshift($this->messages[$stack], 'Unable to Unlock File');
+            $result = FileUnlock(true);
+        }
+        return $result;
+    }
+    
+    public function LockFile($fileLock, $retry=false) {
+        $result = $this->currentFileObject->flock($fileLock);
+        if (!$result) {
+            $this->lastError = $this->messages['errorStack'][0];
+            $this->ProcessError(__METHOD__, 'fatal');
+        }
+        return $result;
+    }
+    private function ApplyFileLock($fileLock='LOCK_UN', $retry=false) {
+        $result = $this->currentFileObject->flock($fileLock);
+        if (!$result) {
+            $count = 'warning';
+            $stack = 'warningStack';
+            if ($retry) {
+                $count = 'error';
+                $stack = 'errorStack';
+            }
+            $this->messages['messageCount']['total']++;
+            $this->messages['messageCount'][$count]++;
+            array_unshift($this->messages[$stack], 'Unable to Apply ' . $fileLock . ' on File');
+            $result = $this->ApplyFileLock($fileLock, true);
+        }
+        return $result;
+    }
+    private function ProcessError($method, $codeLine, $severity) {
+        $errorMessage = $method . '(' . $codeLine . '):::' . $this->lastError;
+        $stack = $severity . 'Stack';
+        $this->messages['messageCount']['total']++;
+        switch ($severity) {
+            case 'notice':
+                break;
+            case 'warning':
+                array_unshift($this->messages[$stack], $errorMessage);
+                /** @TODO Implement Error Logging **/
+                break;
+            case 'error':
+                break;
+            case 'fatal':
+                throw new Exception($errorMessage);
+            default:
+        }
+    }
+
+    public function GetCurrentFileObject() {
+        return $this->currentFileObject;
+    }
+    
+    public function ReadFullFile() {
+        $this->currentFileObject->rewind();
+        return $this->currentFileObject->fread($this->currentFileObject->getSize());
+    }
+        }

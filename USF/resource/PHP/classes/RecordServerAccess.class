@@ -1,0 +1,145 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/** @TODO Needs SERIOUS refactoring **/
+/**
+ * Description of newPHPClass
+ *
+ * @author Peter
+ */
+    class RecordServerAccess {
+        private $user          = 'phpServerAccess';
+        private $password      = 'ServerLogging';
+        private $database      = 'server_meta';
+        private $host          = USF_MYSQL_HOST_IP;
+        private $dbConnection  = '';
+        private $accessArchive = array(
+            array('table' => 'access_this_day', 'interval' => ''),
+            array('table' => 'access_last_week','interval' => ''),
+            array('table' => 'access_last_month','interval' => ''),
+            array('table' => 'access_last_year','interval' => ''),
+        );
+        private $errorStatus   = false;
+        private $errorPacket   = array(
+            'action'   => '',
+            'method'   => '',
+            'message'  => '',
+            'severity' => '',
+            'script'   => __FILE__,
+        );
+
+        function __construct ($webApp, $accessTime, $phpSession, $accessComment, $serializedData) {
+            $accessData = array(
+                'webApp'        => $webApp,
+                'accessTime'    => gmdate('Y-m-d H:i:s', $accessTime),
+                'fullRequest'   => $serializedData['url'],
+                'phpSession'    => $phpSession,
+                'accessComment' => $accessComment,
+                'serialServer'  => $serializedData['server'],
+                'serialRequest' => $serializedData['request'],
+                'serialFiles'   => $serializedData['files'],
+            );
+            try {
+                $this->dbConnection = new PDO("mysql:host=$this->host;dbname=$this->database", $this->user, $this->password);
+                $this->dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->RecordAccess($accessData);
+            }
+            catch(PDOException $pdoError) {
+                $this->ProcessError('Initiating Access Recorder', 'PDO', $pdoError->getMessage());
+            }
+        }
+
+        public function PurgeTables($accessTime) {
+            return true;
+        }
+
+        public function GetErrorStatus() {
+            return $this->errorStatus;
+        }
+
+        public function GetErrorPacket() {
+            return $this->errorPacket;
+        }
+
+        private function RecordAccess($accessData) {
+            $tableColumns  = $this->GetTableColumns();
+            $columnMarkers = $this->GetQueryMarkers();
+            $sqlConstruct  = " ($tableColumns) VALUES ($columnMarkers)";
+            foreach ($this->accessArchive as $recordLevel) {
+                $sqlStatement = "INSERT INTO " . $recordLevel['table'] . $sqlConstruct;
+                try {
+                    $query = $this->PrepareQuery($sqlStatement, $recordLevel['table'], 'PDO');
+                    if ($query !== false) {
+                        $this->ExecuteQuery($query, $accessData, 'PDO');
+                    }
+                }
+                catch (PDOException $pdoError) {
+                    $this->ProcessError('Preparing Access Record', 'PDO', $pdoError->getMessage());
+                }
+            }
+        }
+
+        private function PrepareQuery($sqlStatement, $accessAction, $accessType) {
+            try {
+                $query = $this->dbConnection->prepare($sqlStatement);
+            } catch (Exception $pdoError) {
+                $this->ProcessError($accessAction, $accessType, $pdoError->getMessage());
+             }
+            return $query;
+        }
+
+        private function ExecuteQuery($query, $accessData, $accessType) {
+            try {
+                $result = $query->execute($accessData);
+            } catch (Exception $pdoError) {
+                $reportedError = $pdoError->getMessage();
+                $errorInfo = array($reportedError, $query->errorInfo());
+                $this->RecordDbError('Access Record Not Inserted', 'INSERT', $query->queryString . ' USING ' . serialize($accessData), serialize($errorInfo));
+                $this->ProcessError('Writing Access Record', $accessType, $reportedError);
+            }
+        }
+
+        /**
+        * Errors will always cause a PDO Exception. Updates / Inserts
+        * will always return "Rows Affected", which may be 0. Therefor
+        * An insert will always have affected rows or an exception! So
+        * RecordDbError should be used to record the query / operation that caused the Exception
+         * 
+         * @param type $accessAction
+         * @param type $accessType
+         * @param type $sqlStatement
+         * @param type $serialisedErrorInfo
+         */
+        private function RecordDbError($accessAction, $accessType, $sqlStatement, $serialisedErrorInfo) {
+            try {
+                $query = "INSERT INTO schema_error (access_action, access_type, access_time, query, serialised_error) VALUES ('$accessAction', '$accessType', now(), '$sqlStatement', '$serialisedErrorInfo')";
+                $result = $this->dbConnection->exec($query);
+            }
+            catch (PDOException $pdoError) {
+                ProcessErrorEvent($lastError, __LINE__, __METHOD__, $xssCheck);
+                $this->ProcessError('Writing Error Record', 'INSERT', $pdoError->getMessage());
+            }
+        }
+
+        private function ProcessError($accessAction, $actionMethod, $errorInformation, $severity='fatal') {
+            $this->errorStatus = true;
+            $this->errorPacket['action']  = $accessAction;
+            $this->errorPacket['method']  = $actionMethod;
+            $this->errorPacket['message'] = $errorInformation;
+            $this->errorPacket['severity'] = $severity;
+        }
+
+        private function GetTableColumns() {
+            /** TODO Should get columns from a Table Definition **/
+            return 'web_app, access_time, full_request, php_session, access_comment, server_array, request_array, files_array';
+        }
+
+        private function GetQueryMarkers() {
+            /** TODO Markers should be "constructed" from the Table Columns **/
+            return ':webApp, :accessTime, :fullRequest, :phpSession, :accessComment, :serialServer, :serialRequest, :serialFiles';
+        }
+    }

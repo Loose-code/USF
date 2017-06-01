@@ -1,0 +1,717 @@
+<?php
+/**
+ * Description of Logger
+ *
+ * @author Peter
+ */
+class Logger {
+    protected $logId = null;
+    protected $logFilePath = USF_LOG_DIRECTORY_PHP;
+    private $logFilePointer = null;
+    private $logFileName = null;
+    private $lastMessage = '';
+    private $logReference = array();
+    /** @TODO The following should be configurable via config file / Server Constants */
+    protected $reportingLevelMap = array(
+        'FATAL'     => USF_RL_E_FATAL,
+        'ERROR'     => USF_RL_E_ERROR,
+        'WARNING'   => USF_RL_E_WARNING,
+        'CAUTION'   => USF_RL_E_CAUTION,
+        'SYSTEM'    => USF_RL_S_SYSTEM,
+        'STATUS'    => USF_RL_S_STATUS,
+        'INFO'      => USF_RL_S_INFO,
+        'NOTICE'    => USF_RL_S_NOTICE,
+        'DEV'       => USF_RL_DEBUG,
+    );
+    private $devLog = false;
+    protected $defaultReporting = USF_RL_DEFAULT_REPORTING_LEVEL;
+    private $reportingLevel = null;
+    protected $maxReportingLevel = USF_RL_DEBUG;
+    private $reportingLevelStack = array();
+    private $levelStackLimit = 8;
+    private $nestingLevel = 0;
+    private $nestingLimit = 2;
+
+    /**
+     * 
+     * @param type $logFileName
+     * @throws Exception
+     */
+    public function __construct($logFileName=null) {
+        if (empty($logFileName)) {
+            $logFileName = USF_RL_DEFAULT_LOGFILE;
+        }
+        $this->logFileName = $logFileName;
+        if (!is_dir($this->logFilePath)) {
+            mkdir($this->logFilePath, 0666, true);
+        }
+        $fileOpen = @(fopen($this->logFilePath . $this->logFileName, 'cb'));
+        if ($fileOpen) {
+            $this->logFilePointer = $fileOpen;
+            $microTime = explode(' ', microtime());
+            $logId = substr($microTime[0], 2);
+            $this->logId = $logId;
+            $this->WriteLine('Log File (' . $logFileName . ') Started', 'SYSTEM');
+            $logId = $this->AssociateSession();
+            $this->SetLogging('on');
+            return $this;
+        }
+        else {
+            $lastError = error_get_last();
+            throw new Exception('Unable to Open Log File (' . $this->logFileName . '). System returns: ' . $lastError['message']);
+        }
+    }
+
+    /**
+     * Magic Method: Makes a conscious attempt to remove any File Locks
+     */
+    public function __destroy() {
+        flock($this->logFilePointer, LOCK_UN);
+    }
+
+    /**
+     * Magic Method: Prevent any attempt to Clone this object
+     */
+    private function __clone() {}
+
+    /**
+     * Public Method: Associates current USF Session Log with PHP Session.
+     * 
+     * If a USF Session Log is started before the PHP Session Session Log Id is
+     * on the time that the USF Session Log was created. The AssociateSession()
+     * method will associated the existing USF Session Log with the PHP Session
+     * with an appropriate context message. If there is no PHP Session the
+     * method will return FALSE, otherwise it will return TRUE.
+     * 
+     * @return mixed 
+     */
+    public function AssociateSession() {
+        $sessionId = session_id();
+        if ((!empty($sessionId)) && ($this->logId != $sessionId)) {
+                $this->WriteLine('Log File (' . $this->logFileName . ') Associated with PHP Session: ' . $sessionId, 'SYSTEM');
+                $this->logId = $sessionId;
+                $returnValue = $this->logId;
+        }
+        elseif (empty($sessionId)) {
+            $message = 'No PHP Session to Associated with Log File (' . $this->logFileName . ').';
+            $returnValue = false;
+        }
+        elseif ($sessionId == $this->logId) {
+            $message = 'USF Session Log (' . $this->logFileName . ') Already Associated with PHP Session.';
+            $returnValue = true;
+        }
+        else {
+            $message = 'Method AssociateSession() - Nothing Happened.';
+            $returnValue = null;
+        }
+        if (isset($message)) {
+            $this->WriteLine($message, 'CAUTION');
+        }
+        return $returnValue;
+    }
+
+    /**
+     * Public Method: Setter / Getter for Development Logging.
+     * 
+     * Used to start or stop Developer Logging; wherebye certain messages are
+     * logged reguardless of the Reporting level. If the optional parameter
+     * state is ommited, the current status of Developer Logging is returned.
+     * 
+     * @param string [optional] $state If omitted then the current state of
+     * Developer Logging is returned. Otherwise: One of a list of key words:
+     *      'on'  => Switch developer logging on.
+     *      'off' => Switch developer logging off.
+     * 
+     * @return boolean TRUE if Developer Logging is (now) on or FALSE if off.
+     */
+    public function DevLog($state=null){
+        if (!is_null($state)) {
+            if (strtolower($state) == 'on') {
+                $this->devLog = true;
+                $this->WriteLine('Developer Logging is ON', 'SYSTEM');
+            }
+            else {
+                $this->devlog = false;
+                $this->WriteLine('Developer Logging is OFF', 'SYSTEM');
+            }
+        }
+        return $this->devLog;
+    }
+
+    /** 
+     * Public Method: Returns the Log Reference for the last Log write.
+     * 
+     * For every attempt to write a log entry, this reference will be created.
+     * In the event that the write fails, you will have (at least) an idea of 
+     * when the Event occurred.
+     * 
+     * @param array An associated array with details about the Log Reference:
+     *      'time'    => EPOCH time of the log write.
+            'logId'   => The Log Id of the log entry.
+            'success' => Whether or not the log write was successful.
+     */
+    public function GetLogReference() {
+        return $this->logReference;
+    }
+
+    /**
+     * Public Method: Will return the current Log reporting levels.
+     * 
+     * @return array An associated array:
+     *      'current' => The current combined reporting level
+     *      'error' => The current Rrror reporting level
+     *      'system' => The current System reporting level
+     */
+    public function GetReportingLevels() {
+        return $this->SplitReportingLevels();
+    }
+
+    /**
+     * Private Method: Will return the current Log reporting levels.
+     * 
+     * @param integer [optional] If omitted the current reporting level will be
+     * split into its component elements. Otherwise the integer value as
+     * represented by the parameter reportingLevel will be.
+     * 
+     * @return array An associated array:
+     *      'current' => The current combined reporting level
+     *      'error' => The current Rrror reporting level
+     *      'system' => The current System reporting level
+     */
+    private function SplitReportingLevels($reportingLevel=null) {
+        if (is_null($reportingLevel)) {
+            $reportingLevel = $this->reportingLevel;
+        }
+        return array(
+            'current' => bindec($reportingLevel),
+            'error'   => bindec($reportingLevel & USF_RL_ERROR_BITMASK),
+            'system'  => bindec($reportingLevel & USF_RL_SYSTEM_BITMASK),
+            );
+    }
+
+    /**
+     * Public Method: Shortcut to apply a selection of predefined reporting levels.
+     * 
+     * Essentially this is a switch to turn Event Logging 'on' or 'off' or into
+     * 'debug' mode (log everything). Switching logging on will effectively set
+     * Event Logging at the default value. Using 'save' will store the current
+     * reporting level on the stack and then switch logging 'off'. Using 'last'
+     * will start logging with the the most recently pushed reporting level on
+     * the stack or the default level if the stack is empty. Any unrecognised
+     * keywords will "assume" default reporting level.
+     * 
+     * @param string $logging One of a list of keywords:
+     *      'on' => Set reporting levels according to the value of USF_RL_DEFAULT_REPORTING_LEVEL.
+     *      'off' => Set reporting levels according to the value of USF_RL_NONE.
+     *      'save' => Push the current reporting level onto the stack and then set logging to 'off'.
+     *      'last' => Pull the most recent reporting level from the stack and apply it/
+     *      'debug' => Set reporting levels according to the value of USF_RL_DEBUG.
+     * 
+     * @return integer The new combined reporting level.
+     */
+    public function SetLogging($logging) {
+        switch ($logging) {
+            case 'save':
+                /** @TODO store current reporting level and then switch logging 'off' */
+            case 'off':
+                $reportingLevel = USF_RL_NONE;
+                break;
+            case 'on':
+                $reportingLevel = USF_RL_DEFAULT_REPORTING_LEVEL;
+                break;
+            case 'last':
+                /** @TODO retrive last stacked reporting level */
+                break;
+            case 'debug':
+                $reportingLevel = USF_RL_DEBUG;
+                break;
+            default:
+                $reportingLevel = USF_RL_DEFAULT_REPORTING_LEVEL;
+        }
+        $this->reportingLevel = $reportingLevel;
+        return bindec($this->reportingLevel);
+    }
+
+    /**
+     * Private Method: Validates a requested Reporting Level.
+     * 
+     * If the requested reporting level is valid, then it is returned unaltered.
+     * Invalid values will cause a USF_RL_E_CAUTION Event to be logged and lastError
+     * to be updated. If the requested reporting level is neither an integer or
+     * an integer that represents a valid reporting level it will return FALSE.
+     * Thus, effectively, not causing the reporting level to be changed. If the
+     * requested reporting level is less than 0 or if it greater than
+     * maxReportingLevel the maxReportingLevel will be returned.
+     * 
+     * @param integer $reportingLevel The reporting level to be validated.
+     * It takes either an integer or a named constant.
+     * 
+     * @return integer A valid reporting Level as requested or FALSE on failure.
+     */
+    private function ValidateReportingLevel($reportingLevel, $full=false) {
+        $validation = false;
+        if (!is_int($reportingLevel)) {
+            $message = 'Non Integer Value Setting for Reporting Level';
+        }
+        elseif (is_int($reportingLevel)) {
+            if (($reportingLevel > $this->maxReportingLevel) || ($reportingLevel < 0)) {
+                $reportingLevel = $this->maxReportingLevel;
+                $this->LogInternalEvents('Out of Range Value Setting for Reporting Level', 'CAUTION');
+            }
+            elseif ($full) {
+                $levelComponents = $this->SplitReportingLevels($reportingLevel);
+                foreach(USF_RL_LOG_GROUPS as $logGroup) {
+                    $validation = true;
+                    switch ($logGroup) {
+                        case 'error':
+                            $levelComponents[$logGroup] = $this->ValidateByGroup($logGroup, $levelComponents[$logGroup]);
+                            break;
+                        case 'system':
+                            $levelComponents[$logGroup] = $this->ValidateByGroup($logGroup, $levelComponents[$logGroup]);
+                            break;
+                        default:
+                            $validation = false;
+                            $message = 'Unexpected Log Grouping';
+                    }
+                    if ($validation === false) {
+                        break;
+                    }
+                }
+            }
+        }
+        if ($validation === false) {
+            $this->LogInternalEvents($message, 'WARNING');
+            $reportingLevel = false;
+        }
+        else {
+            $reportingLevel  = $levelComponents['system'] & $levelComponents['error'];
+        }
+        return $reportingLevel;
+     }
+
+    private function FilterReporting ($logGroup, $groupComponent) {
+        switch ($logGroup) {
+            case 'error':
+                if ($groupComponent > USF_RL_E_WARNING) {
+                    $groupComponent = USF_RL_E_CAUTION;
+                }
+                elseif ($groupComponent > USF_RL_E_ERROR) {
+                    $groupComponent = USF_RL_E_WARNING;
+                }
+                elseif ($groupComponent > USF_RL_E_FATAL) {
+                    $groupComponent = USF_RL_E_ERROR;
+                }
+                elseif ($groupComponent > USF_RL_E_NONE) {
+                    $groupComponent = USF_RL_E_FATAL;
+                }
+                else {
+                    $groupComponent = USF_RL_E_NONE;
+                }
+                break;
+             case 'system':
+                break;
+        }
+        return $groupComponent;
+    }
+
+    private function ValidateByGroup ($logGroup, $groupComponent) {
+        switch ($logGroup) {
+            case 'error':
+                if ($groupComponent > USF_RL_E_WARNING) {
+                    $groupComponent = USF_RL_E_CAUTION;
+                }
+                elseif ($groupComponent > USF_RL_E_ERROR) {
+                    $groupComponent = USF_RL_E_WARNING;
+                }
+                elseif ($groupComponent > USF_RL_E_FATAL) {
+                    $groupComponent = USF_RL_E_ERROR;
+                }
+                elseif ($groupComponent > USF_RL_E_NONE) {
+                    $groupComponent = USF_RL_E_FATAL;
+                }
+                else {
+                    $groupComponent = USF_RL_E_NONE;
+                }
+                break;
+             case 'system':
+                break;
+        }
+        return $groupComponent;
+     }
+
+    public function SetErrorReportingLevel($requestedLevel){
+        $requestedLevel = ValidateReportingLevel($requestedLevel);
+        $curretLevels = GetReportingLevel();
+        $setReportingLevel = $curretLevels['system'] & ($requestedLevel);
+        return $setReportingLevel;
+    }
+    public function SetSystemReportingLevel($requestedLevel){
+        $requestedLevel = ValidateReportingLevel($requestedLevel);
+        $curretLevels = GetReportingLevel();
+        $setReportingLevel = $curretLevels['error'] & ($requestedLevel);
+        return $setReportingLevel;
+    }
+    
+    
+    /**
+     * Public Method: A "Special Use" to GET or SET any of the Class Properties
+     * 
+     * NOTE This is INTENDED for use by Test Scripts ONLY. Even then it can
+     * only be successfully called if two constants (USF_PHP_MODE and
+     * USF_TESTING_SCRIPT) are correctly set; otherwise an Exception will be
+     * thrown. The former constant is defined in the PHP prepend script and the 
+     * latter is, typically, defined by the testing script.
+     * 
+     * Given a valid property name PropertyValues() will return the current
+     * value of that property if parameter setMode is not present or if anything
+     * parameter setMode evaluates to anything OTHER than TRUE.
+     * 
+     * WARNING If omitted property newValue will be set to NULL. I.e.
+     * $this->PropertyValue('someName', ,true) will cause this->someName to be
+     * set to NULL.
+     * 
+     * DEVELOPER'S NOTE This is very much a conceptual method Inappropriate use
+     * of it could resut in several dragons, and I'm all out of lances.
+     * 
+     *  @example $value = PropertyValue('someProperty') equiv to $value = $this->someProperty;
+     *  @example $value = PropertyValue('someProperty', 451, true) equiv to $this->someProperty = 451;
+     *  @example $value = PropertyValue('someProperty', 451, false) equiv to $value = $this->someProperty;
+     *  @example $value = PropertyValue('someProperty', , true) equiv to $this->someProperty = null;
+     * 
+     * @param string $propertyName A valid property name for this Class.
+     * 
+     * @param mixed [optional] $value An valid value for the property concerned.
+     * 
+     * @param boolean [optional] If TRUE, the current value of the property. If
+     * FALSE the property newValue will be assigned to the property identified
+     * by parameter propertyName. 
+     * 
+     * @return mixed The current or recently set value of the property.
+     * 
+     * @throws Exception Will contain the text "Bad Use of PropertyValues".
+     */
+    public function PropertyValue($propertyName, $newValue=null, $setMode=false) {
+        if ((defined('USF_PHP_MODE')) && (USF_PHP_MODE == 'cli')) {
+            if ((defined('USF_TESTING_SCRIPT')) && (USF_TESTING_SCRIPT == get_class())) {
+                $classProperties = get_object_vars($this);
+                if (array_key_exists($propertyName, $classProperties)) {
+                    $propertyType = gettype($classProperties[$propertyName]);
+                    $construct = "\$this->$propertyName";
+                    if ($setMode !== false) {
+                        switch($propertyType) {
+                            case 'resource':
+                            case 'object':
+                                eval("$construct == \"$newValue\";");
+                                break;
+                            default:
+                                eval("$construct = \"$newValue\";");
+                                break;
+                        }
+                    }
+                    eval("\$accessedProperty = $construct;");
+                    return $accessedProperty;
+                }
+                $message = 'Unrecognised Property [' . $propertyName . ']';
+            }
+            if (!isset($message)) {
+                $message = 'Bad USF_TESTING_SCRIPT';
+            }
+        }
+        if (!isset($message)) {
+            $message = 'Bad USF_PHP_MODE';
+        }
+        throw new Exception('Bad Use of PropertyValues: ' . $message);
+    }
+
+    /**
+     * Public Method: A "Special Use" to access Private or Protected Methods
+     * 
+     * NOTE This is INTENDED for use by Test Scripts ONLY. Even then it can
+     * only be successfully called if two constants (USF_PHP_MODE and
+     * USF_TESTING_SCRIPT) are correctly set; otherwise an Exception will be
+     * thrown. The former constant is defined in the PHP prepend script and the 
+     * latter is, typically, defined by the testing script.
+     * 
+     * Given a valid method name PrivateMethod() acts as a "wrapper" for that
+     * method.
+     * 
+     * DEVELOPER'S NOTE This is very much a conceptual method Inappropriate use
+     * of it could resut in several dragons, and I'm all out of lances.
+     * 
+     *  @example PrivateMethod('SomeMethod') equiv to $this->SomeMethod();
+     *  @example PrivateMethod('SomeMethod','argument') equiv to $this->SomeMethod('argument');
+     *  @example PrivateMethod('SomeMethod',array('argument',10,true) equiv to $this->SomeMethod('argument', 10, true);
+     * 
+     * @param string $methodName A valid method name for this Class.
+     * 
+     * @param array [optional] An array of "arguments" that will be directly
+     * mapped to the Method's signature.
+     * 
+     * @return mixed The result of the selected method.
+     * 
+     * @throws Exception Will contain the text "Bad Use of PrivateMethod".
+     */
+    public function PrivateMethod($methodName, $arguments=null) {
+        if ((defined('USF_PHP_MODE')) && (USF_PHP_MODE == 'cli')) {
+            if ((defined('USF_TESTING_SCRIPT')) && (USF_TESTING_SCRIPT == get_class())) {
+                $classMethods = get_class_methods($this);
+                if (in_array($methodName, $classMethods)) {
+                    if (is_null($arguments)) {
+                        $construct = "\$this->$methodName()";
+                    }
+                    else {
+                        if (!is_array($arguments)) {
+                            $arguments = array($arguments);
+                        }
+                        $argumentConstruct = '';
+                        $argv = array();
+                        $argc = count($arguments);
+                        for ($i=0;$i<$argc;$i++) {
+                            $argumentConstruct .= '$argv['. $i . ']';
+                            if ($i < $argc - 1) {
+                                $argumentConstruct .= ', ';
+                            }
+                        }
+                        $construct = "\$argv=\$arguments;\$this->$methodName($argumentConstruct);return";
+                    }
+                    try {
+                        eval("\$result = $construct;");
+                        return $result;
+                    }
+                    catch (Exception $ex) {
+                        $message = $ex->getMessage();
+                    }
+                }
+                $message = 'Unrecognised Method [' . $methodName . ']';
+            }
+            if (!isset($message)) {
+                $message = 'Bad USF_TESTING_SCRIPT';
+            }
+        }
+        if (!isset($message)) {
+            $message = 'Bad USF_PHP_MODE';
+        }
+        throw new Exception('Bad Use of PrivateMethod: ' . $message);
+    }
+
+    /**
+     * Private Method (void): Will log any internal Events.
+     * 
+     * As we are creating or updating a Log File, it is conceivable that Events
+     * could occur. LogInternalEvents() is a centralised method handle this. A
+     * copy of the parameter message will be written to this->lastMessage. It is
+     * also possible that the act of logging an Event could cause another Event
+     * that has to be logged. Therefore, each access of LogInternalEvent() will
+     * increment the this->nestingLevel until such time that the value of the
+     * this->nestinglimit is reached thus causing an Exception to be thrown.
+     * On a successful write to the this->property nestingLevel will be cleared
+     * (see WriteToFile() method).
+     * 
+     * @TODO Earmarked as a RETURN: VOID Method
+     * 
+     * @param string $message A text message giving context for the Event.
+     * 
+     * @param integer $level The reporting level of the internal Event.
+     * It takes either an integer or a named constant.
+     * 
+     * @throws Exception if the nestingLimit is reached or exceed.
+     */
+    private function LogInternalEvents($message, $level) {
+        $this->lastMessage = $message;
+        $this->nestingLevel++;
+        if ($this->nestingLevel >= $this->nestingLimit) {
+            throw new Exception('Excessive Method Call Nesting [' . $this->nestingLimit . '] Writing: ' . $message);
+        }
+        $this->WriteLine($message, $level);
+    }
+
+    /**
+     * Public Method: Will write a message to the current Log File.
+     * 
+     * 
+     * @param string $message A single line of unformatted plain text to be
+     * written to the Log File.
+     * 
+     * @param string [optional] $requestedLevel One of list of key words
+     * representing the priority of the log request:
+            'FATAL'     => Unrecoverable USF errors requiring termination.
+            'ERROR'     => Recoverable USF errors.
+            'WARNING'   => USF errors that may later cause an USF_RL_E_ERROR.
+            'CAUTION'   => USF cautions - typically default selections.
+            'SYSTEM'    => USF system messages (waypoint markers).
+            'STATUS'    => USF status messages (action results).
+            'INFO'      => USF audit messages.
+            'NOTICE'    => USF developer "notes".
+            'DEV'       => Special use for Developer debug.
+     * 
+     * 
+     * @return mixed One of:
+     *      FALSE => If there was an error during the file write process.
+     *      NULL => If the requested reporting level has been filtered out.
+     *      INTEGER => The number of bytes written to the Log File.
+     */
+    public function WriteLine($message, $requestedLevel='DEFAULT') {
+        $result = null;
+        if ($requestedLevel === 'DEFAULT') {
+            $requestedLevel = $this->defaultReporting;
+        }
+        $reportingLevel = $this->ValidateLevelFilter($requestedLevel);
+        $okToWrite = $this->ApplyLevelFilter($reportingLevel);
+        if ($okToWrite) {
+            $result = $this->WriteToFile($message, $requestedLevel);
+        }
+        return $result;
+    }
+
+    /**
+     * 
+     * @param type $messageBlock
+     * @param type $leadingLine
+     * @param type $reportingLevel
+     * @return type
+     */
+    public function WriteBlock($messageBlock, $leadingLine='',$reportingLevel=false) {
+        if ($reportingLevel === false){
+            $reportingLevel = $this->reportingLevel;
+        }
+        if (!is_array($messageBlock)) {
+            $messageBlock = array($messageBlock);
+        }
+        $blockMessage = $leadingLine . PHP_EOL;
+        foreach ($messageBlock as $key => $value) {
+            $prefix = '';
+            if (is_string($key)) {
+                $prefix = $key . ': ';
+            }
+            $blockMessage .= "\t\t" . $prefix . $value . PHP_EOL;
+        }
+        $writeOk = $this->WriteLine($blockMessage, $reportingLevel);
+        return $writeOk;
+    }
+
+    /**
+     * Private Method: Will check if the requested reporting level is valid.
+     * 
+     * It checks the requested level against a "known" keyword list. on success
+     * it will return the integer valid of the keyword. Othewise it will return
+     * the current value of $this->defaultReporting.
+     * 
+     * @see Method WriteLine() for details about the requested level keyword.
+     * 
+     * @param string $requestedLevel
+     * @return integer
+     */
+    private function ValidateLevelFilter($requestedLevel) {
+        $requestedLevel = strtoupper($requestedLevel);
+        if (array_key_exists($requestedLevel, $this->reportingLevelMap)) {
+            $reportingLevel = $this->reportingLevelMap[$requestedLevel];
+        }
+        else {
+            $reportingLevel = $this->defaultReporting;
+            $this->LogInternalEvents('Unrecognised Reporting Level Requested [' . $requestedLevel . ']', 'CAUTION');;
+        }
+        return $reportingLevel;
+    }
+
+    private function ApplyLevelFilter($reportingLevel) {
+        return true;
+    }
+    /**
+     * 
+     * @param array $messageArray
+     * @return type
+     * @throws Exception
+     */
+    private function WriteToFile($messageArray, $reportingLevel) {
+        $logReference = array(
+            'time'    => time(),
+            'logId'   => $this->logId,
+            'success' => 'no',
+        );
+        if (!is_array($messageArray)) {
+            $messageArray = array($messageArray);
+        }
+        $message = '';
+        foreach($messageArray as $messageString) {
+            $message .= $messageString;
+        }
+        $lockAccquired = flock($this->logFilePointer, LOCK_EX);
+        if (!$lockAccquired) {
+            for ($retryAccquire=0;$retryAccquire<USF_FILELOCK_RETRY_COUNT;$retryAccquire++) {
+                sleep(USF_FILELOCK_SLEEP_PERIOD);
+                $lockAccquired = flock($this->logFilePointer, LOCK_EX);
+                if ($lockAccquired) {
+                    $retryAccquire = USF_FILELOCK_RETRY_COUNT;
+                }
+            }
+        }
+        if ($lockAccquired) {
+            fseek ($this->logFilePointer, 0 ,SEEK_END);
+            $writeOk = fwrite($this->logFilePointer, $logReference['time'] . '>>>' . $logReference['logId'] . '>>>' . strtoupper($reportingLevel) . '>>>' . $message . PHP_EOL);
+            if ($writeOk !== false) {
+                $this->nestingLevel = 0;
+                $logReference['success'] = 'yes';
+            }
+        }
+        else {
+            $lastError = error_get_last();
+            throw new Exception('Unable to Accquire Lock for Log File (' . $this->logFileName . '). System returns: ' . $lastError['message']);
+        }
+        flock($this->logFilePointer, LOCK_UN);
+        $this->logReference = $logReference;
+        return $writeOk;
+    }
+
+
+    
+    
+    
+    public function FilterReport($reportingLevel) {
+         /*
+         'USF_RL_NONE'      => 0,  //No Event Logging
+         'USF_RL_E_FATAL'   => 1,  //Unrecoverable USF errors requiring termination
+         'USF_RL_E_ERROR'   => 3,  //Recoverable USF errors
+         'USF_RL_E_WARNING' => 7,  //USF errors that may later cause an USF_RL_E_ERROR
+         'USF_RL_E_CAUTION' => 15, //USF cautions - typically default selections
+         'USF_RL_S_SYSTEM'  => 16, //USF system messages (waypoint markers)
+         'USF_RL_S_STATUS'  => 32, //USF status messages (action results)
+         'USF_RL_S_INFO'    => 64, //USF audit messages
+         'USF_RL_S_NOTICE'  => 128,//USF developer "notes"
+         'USF_RL_DEBUG'     => 255,//All Events,
+          * 
+          */
+        $returnValue = false;
+        if ($reportingLevel == USF_RL_DEBUG) {
+            $returnValue = true;
+        }
+        elseif ($reportingLevel == USF_RL_NONE) {
+            $returnValue = false;
+        }
+        
+    }
+    /**
+     * 
+     * @param type $reportingLevel
+     * @return boolean
+     * @throws Exception
+     */
+    public function PushLevelStack($reportingLevel) {
+        $stackLevel = count($this->reportingLevelStack);
+        if ($stackLevel < $this->levelStackLimit) {
+            $currentLevel = $this->reportingLevel;
+            $validLevel = $this->ValidateReportingLevel($reportingLevel);
+            if ($validLevel !== false) {
+                array_push($this->reportingLevelStack, $currentLevel);
+                $returnValue = count($this->reportingLevelStack);
+                $this->reportingLevel = $validLevel;
+            }
+            else {
+                 $returnValue = false;
+            }
+        }
+        else {
+            throw new Exception('Reporting Level Stack Exceeded for Log File: ' .  $this->logFile);
+        }
+        return $returnValue;
+    }
+}

@@ -1,0 +1,34 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of HtmlTemplate
+ *
+ * @author Peter
+ */
+class HtmlTemplate {
+    /** @todo 
+     * - use "base" template directory as "default"
+     * - instantiate class with template name and web app as arguments
+     * - constructor will look in default dir for template, then "construct" web app as alternate
+     *   will compile list (and fequency) of all USCREF Tags using "stack / rank" model (first found, first processed)
+     *   USCREF Tags will be either Data, Sub-template, Direct / free content or Helper.
+     *     Sub-templates to be processed first (recursively) - completely.
+     *     Helper Tags will mostly likely be V2
+     * - methods include:
+     *     list all tags (group by type etc, order by rank etc)
+     *     replace tags with content
+     *     remove tags - used or unused
+     *     return HTML
+     * - notes about Tags
+     *     data tags should not be dependant on other data.use sub-templates to resolve dependacy issues
+     *     it should be possible to determine source content directly from the Tag name
+     *     Do we need to diferentiate templates types? Start / end tags etc/
+     * Description//put your code here
+     */
+}

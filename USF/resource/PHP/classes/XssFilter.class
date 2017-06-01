@@ -1,0 +1,338 @@
+<?php
+/**
+ * Description of XssFilter
+ *
+ * @author Peter
+ */
+class XssFilter {
+    protected $phpSession = false;
+    protected $dataToProcess = null;
+    protected $xssExceptionList = null;
+    protected $knownSchemes = null;
+    protected $lastError = false;
+
+    /**
+     * Public Method: Creates a new Instance of this Class.
+     * 
+     * $object = new XssFilter(<i>array</i> $xssData [, <i>boolean</i> $clearSession);
+     * 
+     * This Class is only expected to be called once and "destroyed" after use.
+     * However, to improve performance the Exception List created once and
+     * subsequently stored in the PHP Session. If there is no active PHP
+     * Session then USF Caution Event will be logged.
+     * 
+     * @param array $xssData An associated array of the relavent data Globals.
+     *      Typically:
+     *              'url'     => The full URL,
+                    'server'  => Serialized Global $_SERVER,
+                    'request' => Serialized Global $_REQUEST,
+                    'files'   => Serialized Global $_FILES,
+     * 
+     * @param boolean [optional] $clearSession If set TRUE it will force the
+     *      XSS Exception List to be re-generated.
+     * 
+     * @return object Returns a single Instance of this Class.
+     */
+    public function __construct($xssData, $clearSession=false) {
+            if((isset($_SESSION) && $clearSession === false)) {
+                $this->phpSession = true;
+            }
+            else {
+                $statusMessage = 'No active PHP Session.';
+                if ($clearSession === true) {
+                    $statusMessage = 'PHP Session Data Reset.';
+                }
+                $GLOBALS['initLog']->WriteLine($statusMessage, 'NOTICE');
+            }
+            if(!is_array($xssData)) {
+                $xssData = array($xssData);
+            }
+            foreach ($xssData as $key => $value) {
+                $xssData[$key] = rawurlencode(rawurldecode($value));
+            }
+            $this->dataToProcess = implode('|', $xssData);
+            $this->xssExceptionList = $this->GetXssExceptionList();
+            if ($clearSession === true) {
+                $this->phpSession = true;
+            }
+        return $this;
+    }
+
+    /**
+     * Public Method: Will only allow "approved" Client Request Methods.
+     * 
+     * $boolean = $this->ValidRequestMethod( <i>string</i> $_SERVER['REQUEST_METHOD']);
+     * 
+     * The "approved" Request Methods are "hard coded".
+     * 
+     * @TODO Consider if there are ANY valid reasons to allow HEAD.
+     * 
+     * @param string The Client Request Method i.e. GET, HEAD or PUSH etc.
+     *      Typically the $_SERVER['REQUEST_METHOD'] Global.
+     * 
+     * @return boolean TRUE if approved FALSE otherwise.
+     */
+    public function ValidRequestMethod($requestedMethod) {
+        $this->lastError = false;
+        $xssCheck = 'Access Method';
+        $accessComment = '';
+        $lastError = array(
+            'severity'  => 'fatal',
+        );
+        switch (strtolower($requestedMethod)) {
+            case 'get':
+            case 'post':
+                $returnValue = true;
+                break;
+            case 'head':
+                $validRequest = $this->VerifyRequestMethod($requestedMethod);
+                if ($validRequest) {
+                    $returnValue = true;
+                }
+                else {
+                    $returnValue = false;
+                    $lastError['message'] = 'Requested Method (' . $requestedMethod . ') not available.';
+                    $lastError['code'] = 1;
+                }
+                break;
+            case 'options':
+            case 'put':
+            case 'trace':
+            case 'delete':
+            case 'connect':
+            default:
+                $returnValue = false;
+                $lastError['message'] = 'Requested Method (' . $requestedMethod . ') is inappropriate.';
+                $lastError['code'] = 2;
+        }
+        if (!$returnValue) {
+            $this->lastError = $lastError;
+            $accessComment = $lastError['message'];
+        }
+        return array($returnValue, $xssCheck, $accessComment);
+    }
+
+    /**
+     * Private Method: Conceptual functionality.
+     * 
+     * $boolean = $this->VerifyRequestMethod(<i>string</i> 'HEAD');
+     * 
+     * The intent is to provide a response to "valid" requests. This method
+     * would determine such validity. For the moment all HEAD requests are
+     * denied.
+     * 
+     * @param type $requestedMethod HTTP Request Method.
+     * 
+     * @return boolean TRUE if valid otherwise FALSE. Currently fixed at FALSE
+     */
+    private function VerifyRequestMethod($requestedMethod) {
+        /** @TODO Add code (TBA) to check it is a valid request **/
+        $returnValue = false;
+        return $returnValue;
+    }
+
+    public function ProcessXss() {
+        $signatureMap = array(
+            'user' => '@',
+            'self' => '://',
+            'scheme' => '://',
+            'script' => '<',
+        );
+        foreach ($signatureMap as $thisList => $thisSignature) {
+            $signatureCount = $this->CheckForSignature($thisSignature);
+            if ($signatureCount === false) {
+                $errorPacket = array();
+            }
+            elseif ($signatureCount > 0) {
+                if (!isset($this->knownSchemes)) {
+                    $this->knownSchems = $this->GetKnownSchemes();
+                }
+            }
+            {
+                $exceptionCount = $this->CheckXssException($thisSignature, $thisList, $signatureCount);
+            }
+        }
+    }
+
+    /**
+     * Private Method: Will create a list of excluded XSS Signatures.
+     * 
+     * $array = $this->GetXssExceptionList();
+     * 
+     * The are many reasons why there should be perfectly valid XSS Signatures
+     * within the data supplied to the Server. The Exception List provides a
+     * mechanisim for filtering those from the unwanted. To improve perfomance
+     * the list is generated only when the instance is first instantiated. It is
+     * then stored in, and retrived from the PHP Session.
+     * 
+     * @return array An associated array of acceptable XSS Signatures, by
+     * "category". Current categories are:
+     *      'scheme' => Signatures that include schemes such as HTTP://,
+     *                  HTTPS:// or FTP:// etc.
+     *      'self'   => Various "aliases" of the Server thus to avoiding false
+     *                  positives when the Server redirects.
+     *      'user'   => To avoid false positives when User Authorision is being
+     *                  used and, because it detects the same signature '@',
+     *                  "mailto:".
+     *      'script' => Identifies the URI's that are "allowed" to upload
+     *                  "<script>" content.
+     */
+    private function GetXssExceptionList() {
+        $xssExceptionList = array();
+        $thisWebApp = WebAppFromSession('app');
+        if (($this->phpSession === true) && (array_key_exists('xssExceptionList', $_SESSION))) {
+            $xssExceptionList = $_SESSION['xssExceptionList'];
+        }
+        else {
+            $xssExceptionData = $this->GetXssExceptionData('XssExceptionList', $thisWebApp);
+            foreach ($xssExceptionData as $category => $categoryArray) {
+                $xssExceptionList[$category] = array();
+                if (is_array($categoryArray['principal'])) {
+                    $principal = $categoryArray['principal'][0];
+                }
+                else {
+                    $principal = $categoryArray['principal'];
+                }
+                if (!is_array($categoryArray)) {
+                    $categoryArray = array($categoryArray);
+                }
+                foreach ($categoryArray['content'] as $siteArray) {
+                    $xssExceptionList[$category][] = $siteArray[$principal];
+                }
+            }
+        }
+        if ($this->phpSession === true) {
+            $_SESSION['xssExceptionList'] = $xssExceptionList;
+        }
+        return $xssExceptionList;
+    }
+
+    /**
+     * Private Method: Converts the JSON XSS Data File into a PHP Array.
+     * 
+     * $array = $this->GetXssExceptionData(<i>string</i>$xssDataFilename, <i>string</i>$webApp);
+     * 
+     * Given a "hardcoded" file name for the XSS Data File (xssExceptionList) it
+     * will retrive the USF and the WebApp JSON (from predetermined locations)
+     * and convert them to PHP Arrays. It then merge the arrays ensuring that
+     * there are unquiue values.
+     * 
+     * @uses JsonData.class
+     * 
+     * @note JsonData <b><i>will</i></b> throw an exception if it has an issue.
+     * 
+     * @param string $xssDataFilename A hardcoded filename <i>xssExceptionList</i>.
+     * @param string $webApp The determined Web App i.e. USF or NARS etc.
+     * @return array
+     */
+    private function GetXssExceptionData($xssDataFilename, $webApp) {
+        $jsonData = JsonData::GetInstance();
+        $usfXssJson = $jsonData::ReadJsonFile($xssDataFilename, USF_PHP_INIT_DIRECTORY);
+        $usfXssData = $jsonData::ConvertJson($usfXssJson);
+        $webAppInitLocation = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . $webApp);
+        $webAppXssJson = $jsonData::ReadJsonFile($xssDataFilename, $webAppInitLocation);
+        if (!empty($webAppXssJson)) {
+            $webAppXssData = $jsonData::ConvertJson($webAppXssJson);
+            $exceptionListData = array_merge_recursive($usfXssData[0]['exceptions'], $webAppXssData[0]['exceptions']);
+            $exceptionListData = UsfMethod::UniqueArray($exceptionListData);
+        }
+        else {
+            $exceptionListData = $usfXssData[0]['exceptions'];
+        }
+        $this->AddServerAlias($exceptionListData);
+        return $exceptionListData;
+    }
+
+    private function GetJsonData($xssDataFilename, $xsfDataPath) {
+        $jsonData = JsonData::GetInstance();
+        $usfXssJson = $jsonData::ReadJsonFile($xssDataFilename, $xsfDataPath);
+        list($usfXssData, $convertStatus) = $jsonData::ConvertJson($usfXssJson);
+        if ($convertStatus === false) {
+            $this->lastError = $lastError;
+            $accessComment = $lastError['message'];
+        }
+        return $usfXssData;
+    }
+
+    /**
+     * Private Method: Adds Dynamic XSS Signatures to the configured.
+     * 
+     * $array = $this->AddServerAlias(<i>array</i>&$exceptionListData);
+     * 
+     * Normally the XSS Signature Exception list would be managed (statcally)
+     * through configuration files. However, some of them (typicall the "self"
+     * Category) can only determined whilst the Server is active. This method
+     * will merge those "dynamic" signautes with the static ones.
+     * 
+     * @param array [reference] $exceptionListData XSS Signatures that are part
+     *      of the Configuration.
+     */
+    private function AddServerAlias(&$exceptionListData) {
+        $array = array(
+            'principal' => 'uri',
+            'content' =>array(),
+        );
+        $lookFor = '://';
+        foreach(SERVER_SELF_URI_ALIAS as $serverAlias) {
+            if (strpos($serverAlias, $lookFor) === false) {
+                $serverAlias = $lookFor . $serverAlias;
+            }
+            $array['content'][] = array('uri' => $serverAlias);
+        }
+        $array = UsfMethod::UniqueArray($array);
+        $exceptionListData['self'] = $array;
+    }
+
+    private function CheckXssException($thisSignature, $thisList, $signatureCount) {
+        $returnValue = false;
+        $lastError = array(
+            'message'  => 'XSS Filter - ' . ucfirst($thisList) . ' Exception Count Error',
+            'code'     => 0,
+            'severity' => 'fatal',
+        );
+        $accessData = $this->dataToProcess;
+        $thisSignature = rawurlencode(rawurldecode($thisSignature));
+        $location = stripos($haystack, $accessData);
+        if ($location !== false) {
+            $location = 0;
+        }
+                       if (preg_match($pattern, $accessData) > 0) {
+                            $GLOBALS['initLog']->WriteLine('Scheme Exception Hit on ' . $exceptionCandidate, 'STATUS');
+                            $_hit++;
+                            $returnValue = true;
+                            unset($lastError);
+                        }
+        if (isset($lastError)) {
+            ProcessErrorEvent($lastError, __LINE__, __METHOD__, $xssCheck);
+            die('Fatal Error Encountered: XSS Violation');
+        }
+        return $returnValue;
+    }
+
+    /**
+     * Private Method: Checks for an XSS Signature in the Server Data.
+     * 
+     * $interger = $this->CheckForSignature(<i>string</i> $signature);
+     * 
+     * @param string $signature A literal string representaion of an XSS
+     * Signature e.g. "@", "<script".
+     * 
+     * @return integer A count of the number of occurances of the XSS Signature.
+     */
+    private function CheckForSignature($signature) {
+        $pattern = '/' . rawurlencode($signature) . '/';
+        $signatureCount = preg_match_all($pattern, $this->dataToProcess);
+        return $signatureCount;
+    }
+
+    /**
+     * Public Method: Return the current value of <b>property</b> <i>lastError</i>.
+     * 
+     * $array = $this->GetLastError();
+     * 
+     * @return array 
+     */
+    public function GetLastError() {
+        return $this->lastError;
+    }
+}

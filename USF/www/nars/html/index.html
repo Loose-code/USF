@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../resource/nars-dev.css">
+	</head>
+<body>
+<h1>Hi</h1>
+<?php
+    echo "<p>Time Stamp: ". time()."</p>";
+    echo "<p>Current Working Directory: ".getcwd()."</p>";
+    echo "<p>Server Root: ".$_SERVER['DOCUMENT_ROOT']."</p>";
+    echo "<p>Web App: " . $_SESSION['usfWebApp']['display'] ."</p>";
+    echo "<p>Session: " . session_id() . "<p>";
+// base NARS class with member properties and methods
+
+class nars {
+
+	private $sessionName       = 'NARSSESSION';
+	private $sessionCookiePath = '';
+	private $sessionPath       = '/var/www/nars/narssession';
+
+	public function __construct() {
+		echo "<p>Constructing NARS</p>";
+		ini_set('session.save_path', $this->sessionPath);
+		ini_set('session.cookie_path', $this->sessionCookiePath);
+		ini_set('session.name', $this->sessionName);
+		return $this;
+	}
+   
+} // end of class NARS
+
+
+//if (!isset($COOKIE['NARSSESSION'])) {
+	$thisNars = new nars();
+//}
+var_dump($thisNars);
+//session_start();
+
+
+$sessPath   = ini_get('session.save_path'); 
+$sessCookie = ini_get('session.cookie_path'); 
+$sessName   = ini_get('session.name'); 
+$sessVar    = 'foo'; 
+
+echo '<br>sessPath: ' . $sessPath; 
+echo '<br>sessCookie: ' . $sessCookie; 
+
+echo '<hr>'; 
+
+if( !isset( $_GET['p'] ) ){ 
+    // instantiate new session var 
+    $_SESSION[$sessVar] = 'hello world'; 
+}else{ 
+    if( $_GET['p'] == 1 ){ 
+
+        // printing session value and global cookie PHPSESSID 
+        echo $sessVar . ': '; 
+        if( isset( $_SESSION[$sessVar] ) ){ 
+            echo $_SESSION[$sessVar]; 
+        }else{ 
+            echo '[not exists]'; 
+        } 
+
+        echo '<br>' . $sessName . ': '; 
+
+        if( isset( $_COOKIE[$sessName] ) ){ 
+        echo $_COOKIE[$sessName]; 
+        }else{ 
+            if( isset( $_REQUEST[$sessName] ) ){ 
+            echo $_REQUEST[$sessName]; 
+            }else{ 
+                if( isset( $_SERVER['HTTP_COOKIE'] ) ){ 
+                echo $_SERVER['HTTP_COOKIE']; 
+                }else{ 
+                echo 'problem, check your PHP settings'; 
+                } 
+            } 
+        } 
+
+    }else{ 
+
+        // destroy session by unset() function 
+        unset( $_SESSION[$sessVar] ); 
+
+        // check if was destroyed 
+        if( !isset( $_SESSION[$sessVar] ) ){ 
+            echo '<br>'; 
+            echo $sessName . ' was "unseted"'; 
+        }else{ 
+            echo '<br>'; 
+            echo $sessName . ' was not "unseted"'; 
+        } 
+
+    } 
+} 
+?> 
+        <hr> 
+        <a href="tmp.php?p=1">test 1 (printing session value)</a> 
+        <br> 
+        <a href=".<?php echo USF_WEB_APP_HOME_WEB; ?>destroy.html?xsession=true">test 2 (kill session)</a>
+<?php
+    $thisSession = session_id();
+    echo "<p>Session Id: " . session_id() . "</p>";
+    if (!isset($thisNars)) {
+            $thisNars = new nars();
+    }
+?>
+    </body>
+</html>

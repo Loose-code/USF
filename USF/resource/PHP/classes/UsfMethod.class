@@ -1,0 +1,591 @@
+<?php
+class UsfMethod {
+    protected static $instance = null;
+    protected static $logger = null;
+
+    protected function __construct() {}
+    protected function __clone() {}
+    protected function __wakeup() {}
+    protected function __destroy() {}
+
+    /** 
+     * Public Static Method: Create a singleton instance of this Class.
+     * 
+     * @return object
+     */
+    public static function GetInstance() {
+        if (!isset(static::$instance)) {
+            static::$instance = new static;
+            if (isset($GLOBALS['initLog'])) {
+                static::$logger = $GLOBALS['initLog'];
+            }
+            else {
+                static::$logger = new Logger('initLog');
+            }
+        }
+        return static::$instance;
+    }
+
+    /**
+     * Public Static Method: Regularises Directory Path Separators.
+     * 
+     * $string = UsfMethod::CleanPath(<i>string</i> $pathString[, <i>boolean</i> $webEnviroment = <b>false</b>]);
+     * 
+     * Removes extreaneous double slashes from the Path String and ensures that
+     * they all have the same orientation. Scheme separators will be preserved
+     * if the <b>parameter</b> <i>webEnviroment</i> is <b>TRUE</b>.
+     * 
+     * @param string $pathString The Path String to be regularised.
+     * 
+     * @param boolean $webEnviroment [optional] When <b>TRUE</b>, the return
+     * string would be suitable for use in a URL. Otherwise it would be suitable
+     * for the underlying OS.
+     * 
+     * @return string The regularised Path String.
+     */
+    public static function CleanPath($pathString, $webEnviroment=false) {
+        $string = rawurlencode($pathString);
+        $string = str_replace('%2F', '[SLASH]', $string);     // The '/'
+        $string = str_replace('%5C', '[SLASH]', $string);     // The '\'
+        $string .= '[SLASH]';
+        $count = 1;
+        while ($count > 0) {
+            $string = str_replace('[SLASH][SLASH]', '[SLASH]', $string, $count);
+        }
+        // OS Flavour of the day  - for consistency.
+        $realSlash = rawurlencode(DIRECTORY_SEPARATOR);
+        if ($webEnviroment === true) {
+            // Because the double slash for scheme:// will be a single slash.
+            $string = str_replace('%3A[SLASH]', '%3A[SLASH][SLASH]', $string); 
+            $realSlash = rawurlencode('/');     // Web version
+        }
+        $string = rawurldecode(str_replace('[SLASH]', $realSlash, $string));
+        return $string;
+    }
+
+    /**
+     * Public Static Method: Will ensure that an array contains unique values.
+     * 
+     * Will accept indexed or associated, simple or multidimenstional arrays.
+     * Kudos to PHP User Contributions.
+     * 
+     * $array = UsfMethod::UniqueArray(<i>array</i> $array);
+     * 
+     * @param array $array Array to be manipulated.
+     * 
+     * @return array An array with unique values.
+     */
+    public static function UniqueArray($array) {
+        $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
+        foreach ($result as $key => $value) {
+            if (is_array($value) ) {
+              $result[$key] = self::UniqueArray($value);
+                $result[$key] = array_merge($result[$key]);
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * Public Static Method: Returns an array containing the PHP Session ID and
+     * status.
+     * 
+     * list($sessionId, $sessionStatus) = UsfMethod::GetSessionId();
+     * 
+     * It will return an indexed array with the first element being the result
+     * of Core Function <i>session_id()</i> or the content of the PHP Session
+     * Cookie. If there is no PHP Session the first element it will be an empty
+     * string. The second element will be a "keyword" indicating the status of
+     * the PHP Session i.e.
+     *  'current' => PHP Session is active and started,
+     *  'dormant' => PHP Session is active <b>but</b> not yet started.
+     *  'none'    => No active PHP Session, or Cookie i.e. A "new" Client.
+     * 
+     * @return array PHP Session ID, Session Status.
+     */
+    public static function GetSessionId () {
+        if (session_id()) {
+            $sessionId = session_id();
+            $sessionStatus = 'current';
+        }
+        elseif (array_key_exists(PHP_SESSION_NAME, $_COOKIE)) {
+            $sessionId = $_COOKIE[PHP_SESSION_NAME];
+            $sessionStatus = 'dormant';
+        }
+        else {
+            $sessionId = '';
+            $sessionStatus = 'none';
+        }
+        return array($sessionId, $sessionStatus);
+    }
+
+    /** 
+     * Public Static Method: Starts or Restarts PHP Session.
+     * 
+     * Depending on the value of <b>parameter</b> <i>$thisSessionStatus</i> a PHP
+     * Session will be "continued", restarted (an old or shared Session) or
+     * started. If, for any reason, PHP cannot start a session (i.e. Core
+     * function <i>start_session()</i> returns <b>FALSE</b>) then an USF Fatal
+     * event will occur.
+     * 
+     * @param string $thisSessionId Valid Session ID or empty string.
+     * 
+     * @param string $thisSessionStatus one of a list of keywords depending on
+     * the status of the PHP Session:-
+     *   current - PHP Session has already started.
+     *   dormant - PHP Session is active <b>but</b> not yet started. Provides an
+     *     opportunity to start a PHP Session with a "customsied" Session Id.
+     *   none    - No active PHP Session, or Cookie i.e. A "new" Client.
+     * 
+     * @return boolean TRUE if the Session starts or FALSE on failure.
+     */
+    public static function StartThisSession ($thisSessionId, $thisSessionStatus) {
+        switch ($thisSessionStatus) {
+            case 'current':
+                $sessionStarted = true;
+                break;
+            case 'dormant':
+                session_id($thisSessionId);
+                $sessionStarted = session_start();
+                break;
+            case 'none':
+            default:
+                $sessionStarted = session_start();
+                break;
+        }
+        $codeLine = __LINE__ + 1;
+        if ($sessionStarted === false) {
+            $errorPacket = array(
+                'code' => 1,
+                'message' => 'Unable to start Session, System returns: ' . error_get_last(),
+                'location' => $codeLine,
+                'action' => 'Start PHP Session',
+                'method' => __FUNCTION__,
+                'severity' => 'fatal',
+            );
+            ProcessErrorEvent($errorPacket);
+       }
+        return $sessionStarted;
+    }
+
+    /**
+     * Public Static Method: Retrieve an Object from the PHP Session.
+     * 
+     * $object = UsfMethod::RetrieveObject(<i>string</i> $className, <i>string</i> $objectName[, <i>string</i> $objectArguments=<b>null</b>] [, <i>boolean</i> $clearSession=<b>false</b>]);
+     * 
+     * This method facilitates the process of automated object retrieval or
+     * instantiation. Initially there will be a check to see if the object had
+     * been previouslky stored in the PHP Session, in which case there will be
+     * an attempt to "revive" it and its "sanity" checked. Otherwise a new
+     * instance of it will be created. Failure to create or revive a sane object
+     * will cause a USF Fatal Event. Normally, having no active PHP Session
+     * would also cause a USF Fatal Event. However, by setting <b>parameter</b>
+     * <i>clearSession</i> <b>TRUE</b> this can be avoided as this parameter is
+     * intened to force the creation of new objects rather than the revival of
+     * old ones.
+     * 
+     * @param string $className The "registered" Class Name of the object.
+     * 
+     * @param string $objectName The variable name to be assigned the resulting
+     * object.
+     * 
+     * @param mixed $objectArguments [optional] The paramanters normally
+     * associated with the creation of a new instance of the class. A single
+     * such parameter can be a simple string but multiple parameters must be
+     * an indexed array.
+     * 
+     * @param boolean $clearSession [optional] If <b>TRUE</b> no attempt will be
+     * made to revive any stored objects and new ones will be created in their
+     * place.
+     * 
+     * @return object The Desired Object.
+     * 
+     * @see UsfMethod::StoreObject()
+     */
+    public static function RetrieveObject($className, $objectName, $objectArguments=null, $clearSession=false) {
+        $returnedObject = false;
+        $errorData = null;
+
+        if ($clearSession !== true) {
+            if (!session_id()) {
+                $errorData = [1, 'No active PHP Session when attempting to retrieve ' . $objectName, __LINE__ -1];
+           }
+            if ((array_key_exists('usf_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['usf_objects']))) {
+                $statusMessage = 'Retrieved ' . $objectName . ' (' . $className . ') from PHP Session.';
+                $returnedObject = unserialize($_SESSION['usf_objects'][$objectName]);
+            }
+        }
+        if ($returnedObject === false) {
+            if (!is_array($objectArguments)) {
+                $objectArguments = array($objectArguments);
+            }
+            $argumentConstruct = '';
+            $argc = count($objectArguments);
+            for ($i=0;$i<$argc;$i++) {
+                $argumentConstruct .= '$argv['. $i . ']';
+                if ($i < $argc - 1) {
+                    $argumentConstruct .= ', ';
+                }
+            }
+            $construct = "\$argv = array();\$argv=\$objectArguments;\$returnedObject = new $className($argumentConstruct);return";
+            try {
+                eval("\$returnedObject = $construct;");
+                $statusMessage = 'Constructed New ' . $objectName . ' (' . $className . ').';
+            }
+            catch (Exception $ex) {
+                $errorData = [2, 'Unable to Construct ' . $objectName . ' (' . $className . ').' . $ex->getMessage(), __LINE -1];
+            }
+        }
+        if (is_a($returnedObject, $className)) {
+            $GLOBALS['initLog']->WriteLine($statusMessage, 'NOTICE');
+        }
+        else {
+            $errorData = [3, 'Object' . $objectName . ' (' . $className . ') is not Sane.', __LINE -1];
+        }
+        if (isset($errorData)) {
+            $errorPacket = array(
+                'code' => $errorData[0],
+                'message' => $errorData[1],
+                'location' => $errorData[2],
+                'action' => 'Retrieving ' . $className . ' Object',
+                'method' => __FUNCTION__,
+                'severity' => 'fatal',
+            );
+
+            ProcessErrorEvent($errorPacket);
+            die('Fatal Error Encountered: ' . $errorPacket['message']);
+        }
+        return $returnedObject;
+    }
+
+    public static function CaptureOutput($variable='', $output='debug') {
+        ob_start();
+        switch ($output) {
+            case 'print':
+                print_r($variable);
+                break;
+            case 'dump':
+                var_dump($variable);
+                break;
+            case 'debug':
+                debug_print_backtrace();
+                break;
+            default:
+                echo $variable;
+        }
+        $dump = ob_get_contents();
+        ob_end_clean();
+        return $dump;
+}
+
+    /**
+     * Determines what "web apps" are available and creates an association
+     * between the Server Request and a Web App.
+     * 
+     * @param string $requestUri The Request URL.
+     * @return array An associated array containg 5 elements:
+     *      'available' => An array of "available Web Apps that is "built" once
+     *                     per USF / PHP Session.
+     *      'webApp'    => Essentially the 'root directory' extracted from
+     *                     the URI Path component.
+     *      'display'   => A textual represntation of the Web App for display
+     *                     purposes.
+     *      'phpRoot'   => PHP path to the Web App resources (rather than the
+     *                     USF Path)
+     *      'web'       => Web path to the Web App resources.
+     */
+    public static function WebAppFromUrl($requestUri) {
+        // Retrive previously created list of Web Apps or Create a new one.
+        if (!isset(static::$instance)) {
+            self::GetInstance();
+        }
+        if ((!array_key_exists('usfWebApp', $_SESSION)) || empty($_SESSION['usfWebApp']['available'])) {
+            static::$logger->WriteLine('Constructing Available Web Apps', 'INFO');
+            $availableWebApps = array();
+            $dirContents = dir(USF_WEB_ROOT_DIRECTORY_PHP);
+            while (($entry = $dirContents->read()) !== false) {
+                $fullPath = UsfMethod::CleanPath(USF_WEB_ROOT_DIRECTORY_PHP . $entry);
+                if (($entry !== '.') && ($entry !== '..') && (is_dir($fullPath))) {
+                    array_push($availableWebApps, $entry);
+                }
+            }
+            $dirContents->close();
+            $_SESSION['usfWebApp']['available'] = $availableWebApps;
+        }
+        // Extract a potential Web App from the URL and then validate it.
+        $cleanedRequest = preg_replace('/^\//','',$requestUri);
+        $array = explode('/', $cleanedRequest);
+        $checkWebApp = array_shift($array);
+        $availableWebApps = $_SESSION['usfWebApp']['available'];
+        if (!empty($checkWebApp)) {
+            foreach($availableWebApps as $candidateWebApp) {
+                if ($checkWebApp == $candidateWebApp){
+                    $thisWebApp = $candidateWebApp;
+                    break;
+                }
+            }
+        }
+        // Create supporting variables.
+        $usfWebApp = array(
+            'available' => $availableWebApps,
+        );
+        if (isset($thisWebApp)) {
+            $usfWebApp['webApp'] = DIRECTORY_SEPARATOR . $thisWebApp;
+            $usfWebApp['display'] = $thisWebApp;
+            $usfWebApp['phpRoot'] = UsfMethod::CleanPath(USF_WEB_ROOT_DIRECTORY_PHP . $thisWebApp);
+            $usfWebApp['webRoot'] = UsfMethod::CleanPath(USF_ROOT_DIRECTORY_WEB . $thisWebApp, true);
+        }
+        else {
+            $usfWebApp['webApp'] = USF_ROOT_DIRECTORY_WEB;
+            $usfWebApp['display'] = USF_TITLE;
+            $usfWebApp['phpRoot'] = USF_WEB_ROOT_DIRECTORY_PHP;
+            $usfWebApp['webRoot'] = USF_ROOT_DIRECTORY_WEB;
+        }
+//die(var_dump($usfWebApp));
+        return $usfWebApp;
+    }
+
+}
+
+
+    function WebAppFromSession($return=false) {
+        $webApp = '/';
+        $webAppDisplay = USF_TITLE;
+        $webAppPhpRoot = USF_CODE_DIRECTORY_PHP;
+        $webAppWebRoot = USF_ROOT_DIRECTORY_WEB;
+        if (!empty(session_id())) {
+            if ((array_key_exists('usfWebApp', $_SESSION)) && (array_key_exists('webApp', $_SESSION['usfWebApp']))) {
+                $webApp = $_SESSION['usfWebApp']['webApp'];
+                $webAppDisplay = $_SESSION['usfWebApp']['display'];
+                $webAppPhpRoot = $_SESSION['usfWebApp']['phpRoot'];
+                $webAppWebRoot = $_SESSION['usfWebApp']['webRoot'];
+            }
+        }
+        switch ($return) {
+            case 'app':
+                $returnValue = $webApp;
+                break;
+            case 'php':
+                $returnValue = $webAppPhpRoot;
+                break;
+            case 'path':
+                $returnValue = $webApp;
+                break;
+            case 'display':
+                $returnValue = $webAppDisplay;
+                break;
+            default:
+                $returnValue = $webApp;
+        }
+        return $returnValue;
+    }
+
+    /**
+     * DEPRECATED Will return the name of a file without Path or Type info
+     * 
+     * NOTE: "type" is any and all characters after the last occurrance of "."
+     * 
+     * @param string $fileName Full OS Path, ideally the result of __FILE__
+     * @return string
+     */
+    function GetFileFromPath ($fileName) {
+        $baseName = pathinfo($fileName, PATHINFO_FILENAME);
+    return $baseName;
+    }
+
+
+    function RedirectWebApp($webApp) {
+        ob_end_clean();
+        //if ($webApp == USF_ROOT_DIRECTORY_WEB) {
+        //    $webApp = '';
+        //}
+        header("location: $webApp");
+        die('Fatal Error Encountered: Failed Redirection to ' . $webApp);
+    }
+
+    function DestroySession() {
+        /** @TODO Look into using reset session as an error recovery method **/
+        if (!empty(session_id())) {
+            $_SESSION = array();
+            unset($_SESSION);
+            if (!headers_sent()) {
+                if (ini_get("session.use_cookies")) {
+                    $params = session_get_cookie_params();
+                    setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+                }
+            }
+            $sessionDestroyed = session_destroy();
+            if ($sessionDestroyed) {
+                ob_end_clean();
+                header('location: /destroy.html?redirected=true');
+                die('Fatal Error Encountered: Failed Redirecting to Session Destroy');
+            }
+            else {
+                /* Fatal Process Error? */
+            }
+        }
+        else {
+            $GLOBALS['initLog']->WriteLine("Attempt to destroy a non-Session", 'INFO');
+        }
+    }
+
+    /**
+     * Will attempt to log and error to the active System Log.
+     * 
+     * If the Initialisation Log is still Active, errors will be logged there in
+     * order to "caputure" any initialisation errors. Otherwise, the USF Log
+     * will be used. Even if there is no active Log, or the Log Event is not 
+     * written, a Reference Id will be returned.
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error with the following elements:
+     *  'action'   => The Script, Class or "logic block" within which the error
+     *                occurred.
+        'method'   => The "location" of the error - Method or Function and Line.
+        'message'  => A textual (hopefully unique) description of the error.
+     *  'severity' => The Logger Reporting Level as decribed for the
+     *                Logger Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.
+     * 
+     * @note This will (eventually) be a Private Method for an Error Logging
+     * Class.
+     * 
+     * @return string A reference number associated with the Log Entry.
+     */
+    function LogError($errorPacket) {
+        if (isset($GLOBALS['initLog'])) {
+            $GLOBALS['initLog']->WriteBlock($errorPacket, $errorPacket['action'], $errorPacket['severity']);
+            $errorReference = 'I:' . implode(':', $GLOBALS['initLog']->GetLogReference());
+        }
+        elseif (isset($GLOBALS['usfLog'])) {
+            $GLOBALS['usfLog']->WriteBlock($errorPacket, $errorPacket['action'], $errorPacket['severity']);
+            $errorReference = 'S:'. implode(':', $GLOBALS['usfLog']->GetLogReference());
+        }
+        else {
+            $errorSource = preg_replace ('/[^A-Z0-9]/', '', strtoupper(pathinfo($errorPacket['action'], PATHINFO_FILENAME)));
+            $errorReference = $errorSource . ':' . time();
+        }
+        return $errorReference;
+    }
+
+    /**
+     * Will Log and report an error.
+     * 
+     * $array = ProcessErrorEvent( ARRAY $errorPacket);
+     * 
+     * If there is an active Logger Instance then the error will be logged
+     * according to the current reporting level. An attempt will be made to
+     * "push" a notice about the error through to the Client (filtered by the
+     * Client's preferences). Errors with a FATAL severity will cause an
+     * appropriate Error Display in the Client's Browser and USF Web App to be
+     * be halted. A simplifed "backtrack" dump will be added to the log data.
+     * 
+     * @see Logger Class for more information about reporting levels etc.
+     * 
+     * @param array $errorPacket An associated array containing information
+     * about the error with (at least) the following elements:
+     *  'code'     => A number uniquiely identifying the error within a
+     *                "logical" block of code.
+     *  'message'  => A textual (hopefully unique) description of the error.
+     *  'location' => Expected to be the __LINE__ Magic Constant.,
+     *  'action'   => Anticipated to be either __CLASS__ or __FILE__ Magic
+     *                Constants. However, it could be a unique description of
+     *                the "logic" being proccessed i.e. "XSS Filtering".
+     *  'method'   => Anticipated to be either __METHOD__ or __FUNCTION__ Magic
+     *                Constants. However, it could be a unique description of
+     *                the "logic" being proccessed i.e. "Access Method".
+     *  'severity' => The Logger Reporting Level as decribed for the Logger
+     *                Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.,
+     * 
+     * @return array An associated array containing information about the error.
+     * Essentially <i>$errorPack</i> modified or otherwise.
+     */
+    function ProcessErrorEvent($errorPacket) {
+        if (strtolower($errorPacket['severity']) == 'fatal') {
+            FatalErrorEvent($errorPacket);
+            die('Fatal Error Encountered: ' . $errorPacket['action']);
+        }
+        else {
+            $errorReference = LogError($errorPacket);
+            PushUsfNotice($errorPacket, $errorReference);
+        }
+        return $errorPacket;
+    }
+
+    /**
+     * Will generate and output a HTML page for the Client's Browser.
+     * 
+     * The page will provide useful information about the "fatal" error.
+     * Normally it is expected that this function would be called by
+     * ProcessError().
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error @see <i>ProcessErrorEvent()</i>
+     * 
+     * @return void.
+     */
+    function FatalErrorEvent($errorPacket, $errorReference=null) {
+        /**
+         * @TODO Add Retry / Reset (new session) / Refresh (Session back up?)
+         */
+        $errorPacket['dump'] = PHP_EOL . UsfMethod::CaptureOutput();
+        if (is_null($errorReference)) {
+            $errorReference = LogError($errorPacket);
+        }
+        $templateFile = USF_HTML_TEMPLATE_DIRECTORY . DIRECTORY_SEPARATOR . 'fatal-process-error.html';
+        $htmlOut = file_get_contents($templateFile);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_REFERENCE### -->', $errorReference, $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_ACTION -->', $errorPacket['action'], $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_METHOD -->', $errorPacket['method'] . '->' . $errorPacket['location'], $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_MESSAGE -->', $errorPacket['message'], $htmlOut);
+        while (ob_get_level() != 0) {
+            ob_end_clean();
+        }
+        die($htmlOut);
+    }
+
+    /**
+     * Future Feature: Will push a notice to the Client's Browser.
+     * 
+     * Simialar in concept to the function ProcessFatalError() in that the
+     * intention is to issue notices of non-fatal USF Events.
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error with the following elements:
+     *  'action'   => The Script, Class or "logic block" within which the error
+     *                occurred.
+        'method'   => The "location" of the error - Method or Function and Line.
+        'message'  => A textual (hopefully unique) description of the error.
+     *  'severity' => The Logger Reporting Level as decribed for the
+     *                Logger Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.
+     * 
+     * @param string [optional] $errorReference A Log Reference as provided,
+     *      typically, by function LogError() that will help to locate an entry
+     *      in a Log File. If ommitted, as in some instances where this function
+     *      may be called directly the case where no Log File is running, this
+     *      function will generate a Reference Id.
+     * 
+     * @return void.
+     */
+    function PushUsfNotice($errorPacket, $errorReference) {
+        /** @TODO Do This */
+    }
+    
+
+    /**
+     * 
+     * @param type $includeArray
+     */
+    function PreloadIncludeCheck($includeArray) {
+        $returnValue = array();
+        clearstatcache();
+        foreach ($includeArray as $fileName) {
+            $includeFile = UsfMethod::CleanPath(WEB_APP_CONFIG_DIRECTORY_PHP . $fileName . '.inc', true);
+            if (is_readable($includeFile)) {
+                $returnValue[] = $includeFile;
+            }
+            else {
+                $GLOBALS['initLog']->WriteLine('Site Include File ' . $includeFile . ' not found.', 'STATUS');
+            }
+        }
+        return $returnValue;
+    }
