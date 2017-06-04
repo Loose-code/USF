@@ -36,12 +36,13 @@
         'USF_RL_S_STATUS'  => 32,  //USF status messages (action results)
         'USF_RL_S_INFO'    => 64,  //USF audit messages
         'USF_RL_S_NOTICE'  => 128, //USF developer "notes"
-        'USF_RL_S_DEBUG'   => 240, //All  "system" Events
+        'USF_RL_S_DEBUG'   => 240, //All "system" Events
         'USF_RL_DEBUG'     => 255, //All Events
 
          'DESTROY_SESSION_DIRECT_ACCESS' => '/destroy.html', // URI to directly destroy current PHP / USF Session.
-         'USF_FILELOCK_SLEEP_PERIOD' => 3,  //Number of seconds to "sleep" before attempting to accquire a file lock.
-         'USF_FILELOCK_RETRY_COUNT'  => 2,  //Number of times to attempt to accquire a file lock.
+         'USF_FILELOCK_SLEEP_PERIOD'     => 3,  //Number of seconds to "sleep" before attempting to accquire a file lock.
+         'USF_FILELOCK_RETRY_COUNT'      => 2,  //Number of times to attempt to accquire a file lock.
+         'USF_XSS_DATA_FILE'             => 'xss-exception-list',
      );
      foreach ($serverWideConstants as $key => $value) {
          $thisDefinitionString = 'define($key, "$value");';

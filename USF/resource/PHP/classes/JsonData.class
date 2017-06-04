@@ -9,9 +9,7 @@ class JsonData {
     protected static $lastError = null;
 
     protected function __construct() {}
-    protected function __clone() {}
-    protected function __wakeup() {}
-    protected function __destroy() {}
+    public function __destruct() {}
 
     public static function GetInstance () {
         if (!isset(static::$instance)) {
@@ -19,28 +17,62 @@ class JsonData {
         }
         return static::$instance;
     }
-    
+
+    /**
+     * Private Static Method: Sanitises the file name for JSON files.
+     * 
+     * $string = self::JsonDataFileName(<i>string</i> $fileName);
+     * 
+     * Everything before (and including) the last directory path separator, plus
+     * everything after the <i>next</i> period '.' will be trimmed from
+     * <b>parameter</b> <i>fileName</i>. A "file type" of <i>.json</> will be
+     * appended and the final result returned. If <b>parameter</b> <i>fileName</i>
+     * is omitted <i>config.json</i> will be returned.
+     * 
+     * @param string $fileName The name of the JSON file to be accessed.
+     * @return string 
+     */
     private static function JsonDataFileName ($fileName) {
-        if (!is_null($fileName)) {
-            $_array = explode('.', $fileName);
-            $fileName = array_shift($_array);
-        }
-        if (is_null($fileName)) {
-            $fileName = 'config';
-        }
+        $_array = explode('.', basename($fileName));
+        $fileName = array_shift($_array);
         $fileName .= '.json';
         return $fileName;
     }
 
+    /**
+     * Private Static Method: Cleans ups a constructed Directory Path string.
+     * 
+     * $string = self::JsonDataFilePath(<i>string</i> &filePath);
+     * 
+     * @param string $filePath Directory Path to the JSON file to be accessed.
+     * 
+     * @return string 
+     */
     private static function JsonDataFilePath($filePath) {
-        if (is_null($filePath)) {
-            $filePath = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . WebAppFromSession('app'));
-        }
-        return $filePath;
+        return UsfMethod::CleanPath($filePath);
     }
 
     /**
-     * Private Static: Will Check if operations are being carried out on an
+     * Private Static Method: 
+     * 
+     * @param string $fileName [optional] The name of the JSON file to be accessed.
+     * 
+     * @param string $filePath [optional] Directory Path to the JSON file to be accessed.
+     * 
+     * @return string Full path and filename to a JSON Data File.
+     */
+    public static function JsonDataFile($fileName=null, $filePath=null) {
+        if (is_null($fileName)) {
+            $fileName = 'config';
+        }
+        if (is_null($filePath)) {
+            $filePath = USF_SITE_CONFIG_DIRECTORY_PHP . WebAppFromSession('app');
+        }
+        return self::JsonDataFilePath($filePath) . self::JsonDataFileName($fileName);
+    }
+
+    /**
+     * Private Static Method: Will Check if operations are being carried out on an
      * Object that is an instance of the FileAccess Class.
      * 
      * @param object [reference] $fileAccessObject An Instance of the FileAcess
@@ -50,34 +82,26 @@ class JsonData {
      */
     private static function CheckFileObject(&$fileAccessObject) {
         $returnValue = null;
-
-        $errorData = [1, 'Argument is not an Object', __LINE__ + 1];
+        $errorData = [1, 'Argument is not an Object', __LINE__ + 1, 'fatal'];
         if (is_object($fileAccessObject)) {
-            $errorData = [2, 'Object is not a File Access Object', __LINE__ + 1];
+            $errorData = [2, 'Object is not a File Access Object', __LINE__ + 1, 'fatal'];
             if (property_exists($fileAccessObject, 'currentFileObject')) {
                 $fileObject = $fileAccessObject->GetCurrentFileObject();
-                $errorData = [3, 'File Access Object does not Appear to be a File', __LINE__ + 1];
+                $errorData = [3, 'File Access Object does not Appear to be a File', __LINE__ + 1, 'fatal'];
                 if ((is_object($fileObject)) && (is_a($fileObject, 'SplFileObject'))) {
                     $returnValue = true;
                 }
             }
         }
-        if (!isset($returnValue)) {
-            $errorPacket = array(
-                'code' => $errorData[0],
-                'message' => $errorData[1],
-                'location' => $errorData[2],
-                'action' => __CLASS__,
-                'method' => __FUNCTION__,
-                'severity' => 'fatal',
-            );
-            static::$lastError = ProcessErrorEvent($errorPacket);
+        if (empty($returnValue)) {
+            static::ProcessLocalError($errorData, __METHOD__);
+            $returnValue = false;
         }
         return $returnValue;
     }
 
     /**
-     * Public Static: Will create an empty file specifically for JSON data.
+     * Public Static Method: Will create an empty file specifically for JSON data.
      * 
      * It is anticipated that this will mostly be used for Site Configuration
      * Files. If a file currently exists at the specified location the operation
@@ -96,32 +120,48 @@ class JsonData {
      * USF_SITE_CONFIG_DIRECTORY_PHP will be used. ALSO: If a valid Web App has been
      * determined, then that will be used to modify the path accordingly.
      * 
-     * @return boolean TRUE on success, FALSE on failure. Property $lastError
+     * @return boolean TRUE on success, FALSE on failure.
      */
-    public static function CreateJsonFile($fileName=null, $path=null) {
-        $returnValue = false;
-        $fileName = static::JsonDataFileName($fileName);
-        $filePath = static::JsonDataFilePath($path);
-        $jsonFile = $filePath . $fileName;
-        if (!file_exists($jsonFile)) {
-            $returnValue = new FileAccess($jsonFile, 'create');
+    public static function CreateJsonFile($fileName=null, $filePath=null) {
+        $returnValue = null;
+        $jsonDataFile = self::JsonDataFile($fileName, $filePath);
+        $errorData = [1, 'Cannot Create JSON Data File: ' .  $jsonDataFile, __LINE__ + 1, 'warning'];
+        if (!file_exists($jsonDataFile)) {
+            $returnValue = new FileAccess($jsonDataFile, 'create');
+            // @todo Test $returnValue and possibly write a header?
         }
         else {
-            /** @todo File exists, so we can't "create" it. What to do? */
+            self::ProcessLocalError($errorData, __METHOD__);
         }
         return $returnValue;
     }
+
     /**
      * 
      * @param type $fileAccessObject
      */
     public static function DeleteJsonFile($fileAccessObject) {
         if (static::CheckFileObject($fileAccessObject)) {
-            //unlink($fileObject);
+            /** @todo 
+             *  delete the JSON file and / or the file access object
+             */
         }
-        
     }
-    
+
+    /**
+     * Public Static Method: Removes white space and comments from a JSON Data File
+     * 
+     * $string = static::SanitiseJasonData(<i>string</i> $jsonData);
+     * 
+     * PHP's JSON encode and decode functions are, well... snowflakes. The
+     * purpose of this method is to reduce the chances of them having a (silent)
+     * a hissy fit. It is admitted that this is a bit of brute force approach,
+     * but it can be refined or replaced ($result = json_lint('something') would
+     * be nice)
+     * 
+     * @param string $jsonIn JSON data to be sanitised.
+     * @return string Sanitised JSON data.
+     */
     public static function SanitiseJsonData($jsonIn) {
         /** Strip comments - Cribbed From Stack Overflow */
         $pattern = '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/';
@@ -136,33 +176,33 @@ class JsonData {
         $jsonRaw = str_replace('%0A', '', $jsonRaw);
         $jsonOut = rawurldecode($jsonRaw);
         return $jsonOut;
-        return $jsonIn;
     }
 
-    public static function ReadJsonFile($fileName=null, $path=null){
+    public static function ReadJsonFile($fileName=null, $filePath=null){
         $returnData = null;
         $returnStatus = null;
-        $fileName = static::JsonDataFileName($fileName);
-        $filePath = static::JsonDataFilePath($path);
-        $jsonFileLocation = $filePath . $fileName;
-        $rawJsonData = '';
-        if (file_exists($jsonFileLocation)) {
-            $jsonFileObject = new FileAccess($jsonFileLocation, 'read');
+        $jsonDataFile = self::JsonDataFile($fileName, $filePath);
+        $errorData = [1, 'JSON Data File (' . $jsonDataFile. ') Not Found', __LINE__ + 1, 'warning'];
+        if (file_exists($jsonDataFile)) {
+            $jsonFileObject = new FileAccess($jsonDataFile, 'read');
             $returnData = $jsonFileObject->ReadFullFile();
             $returnStatus = true;
         }
         else {
-            $returnData = 'JSON Data File (' . $jsonFileLocation . ') Not Found';
+            static::ProcessLocalError($errorData, __METHOD__);
             $returnStatus = false;
         }
-        return [$returnData, $returnStatus];
+        return ['result' => $returnData, 'status' => $returnStatus];
     }
     
     /**
-     * Public Static Function: Will convert JSON to an equivalent PHP Array.
+     * Public Static Method: Will convert JSON to an equivalent PHP Array.
      * 
-     * @param type $rawJsonData
-     * @return type
+     * @param string $rawJsonData 
+     * @return array A two element indexed array. The first element will contain
+     * the PHP (variable) equivalent of the input JSON. The second element is a
+     * status indicator that would be TRUE if there were no conversion errors,
+     * FALSE otherwise. Also, on failure
      */
     public static function ConvertJson($rawJsonData) {
         $returnData = null;
@@ -170,17 +210,19 @@ class JsonData {
         $jsonData = static::SanitiseJsonData($rawJsonData);
         $returnData = json_decode($jsonData, true, 512, JSON_BIGINT_AS_STRING);
         $jsonLastError = json_last_error_msg();
+        $errorData = [1, 'JSON Decode Returned Error: ' . $jsonLastError, __LINE__ + 1, 'warning'];
         if (strtolower($jsonLastError) == 'no error') {
             $returnStatus = true;
         }
         else {
-            $returnData = 'JSON Decode Returned Error: ' . $jsonLastError;
+            static::ProcessLocalError($errorData, __METHOD__);
+            $returnData = $jsonLastError;
             $returnStatus = false;
         }
-        return array($returnData, $returnStatus);
+        return ['result' => $returnData, 'status' => $returnStatus];
     }
 
-        /**
+    /**
      * Public Static Method: Return the current value of <b>property</b> <i>lastError</i>.
      * 
      * $array = $this->GetLastError();
@@ -191,4 +233,16 @@ class JsonData {
         return static::$lastError;
     }
 
+    private static function ProcessLocalError($errorData, $callingMethod) {
+        $errorPacket = array(
+            'code' => $errorData[0],
+            'message' => $errorData[1],
+            'location' => $errorData[2],
+            'action' => __CLASS__,
+            'method' => $callingMethod,
+            'severity' => $errorData[3],
+        );
+        static::$lastError = ProcessErrorEvent($errorPacket);
+        return true;
+    }
 }

@@ -4,9 +4,6 @@ class UsfMethod {
     protected static $logger = null;
 
     protected function __construct() {}
-    protected function __clone() {}
-    protected function __wakeup() {}
-    protected function __destroy() {}
 
     /** 
      * Public Static Method: Create a singleton instance of this Class.
@@ -209,7 +206,7 @@ class UsfMethod {
         if ($clearSession !== true) {
             if (!session_id()) {
                 $errorData = [1, 'No active PHP Session when attempting to retrieve ' . $objectName, __LINE__ -1];
-           }
+            }
             if ((array_key_exists('usf_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['usf_objects']))) {
                 $statusMessage = 'Retrieved ' . $objectName . ' (' . $className . ') from PHP Session.';
                 $returnedObject = unserialize($_SESSION['usf_objects'][$objectName]);
@@ -569,7 +566,6 @@ class UsfMethod {
     function PushUsfNotice($errorPacket, $errorReference) {
         /** @TODO Do This */
     }
-    
 
     /**
      * 

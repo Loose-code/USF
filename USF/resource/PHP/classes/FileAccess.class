@@ -12,135 +12,137 @@
  * @author Peter
  */
 class FileAccess {
+    private $fileLockRetryCount = USF_FILELOCK_RETRY_COUNT;
+    private $fileLockSleepPeriod = USF_FILELOCK_SLEEP_PERIOD;
+    private $logger = null;
     private $crudMode = '';
-    private $dataToProcess = null;
-    private $messages = array(
-        'errorStack'   => array(),
-        'warningStack' => array(),
-        'noticeStack'  => array(),
-        'messageCount' => array(
-            'total'   => 0,
-            'error'   => 0,
-            'warning' => 0,
-            'notice'  => 0
-            ),
-        );
+    private $dataWriteBuffer = null;
     private $lastError = '';
     private $currentFile = '';
     private $currentFileObject = false;
+    private $messages = array();
 
     public function __construct($fullFileName, $crud) {
+        $this->logger = new Logger('fileLog', false);
         $fileLock = LOCK_EX;
         switch ($crud) {
             case 'create':
-                $fileMode = 'w';
+                $fileMode = 'wb';
                 break;
             case 'read':
-                $fileMode = 'r';
+                $fileMode = 'rb';
                 $fileLock = LOCK_SH;
                 break;
             case 'update':
-                $fileMode = 'a+';
+                $fileMode = 'a+b';
                 break;
             case 'delete':
-                $fileMode = 'c';
+                $fileMode = 'cb';
                 break;
             default:
-                $this->lastError = 'Invalid CRUD Operation ["' . $crud . '"] for File Operation';
-                $this->ProcessError(__METHOD__, __LINE__, 'fatal');
+                $errorData = [1, 'Invalid CRUD Operation ["' . $crud . '"] for File Operation', __LINE__, 'fatal'];
+                $this->ProcessLocalError($errorData, __METHOD__);
         }
         try {
             $this->currentFileObject = new SplFileObject($fullFileName, $fileMode);
-            $result = $this->LockFile($fileLock);
+            $result = $this->ApplyFileLock($fileLock);
             if ($result) {
                 $this->currentFile = $fullFileName;
                 $this->crudMode = $crud;
                 $this->lastError = '';
             }
             else {
-                $this->lastError = $this->messages['errorStack'][0];
-                $this->ProcessError(__METHOD__, __LINE__, 'fatal');
+                // Should not get here. Current policy is for the called method to handle
+                $this->lastError = $this->messages[] = $this->lastError;
             }
         }
         catch (Exception $thrownError) {
             throw new Exception('Unable to "' . $crud . '" File. System Returns: ' . $thrownError->getMessage());
-            /** @TODO Convert to interna Error Handling **/
-        }
-    }
-    protected function __clone() {}
-    protected function __wakeup() {}
-    protected function __destroy() {
-        if ($this->currentFileObject) {
-            $this->FileUnlock()->flock(LOCK_UN);
+            /** @TODO Convert to internal Error Handling **/
         }
     }
 
-    public function FileUnlock($retry=false) {
-        $result = $this->currentFileObject->flock(LOCK_UN);
-        if (!$result) {
-            $count = 'warning';
-            $stack = 'warningStack';
-            if ($retry) {
-                $count = 'error';
-                $stack = 'errorStack';
+    /**
+     * Magic Method: __destruct() Ensures that any file lock is removed.
+     */
+    public function __destruct() {
+        if (!empty($this->dataWriteBuffer)) {
+            $result = $this->WriteBuffer();
+            if (!$result) {
+                $this->logger->WriteLine('Unable to flush buffer to ' . $this->currentFile, 'error');
             }
-            $this->messages['messageCount']['total']++;
-            $this->messages['messageCount'][$count]++;
-            array_unshift($this->messages[$stack], 'Unable to Unlock File');
-            $result = FileUnlock(true);
         }
-        return $result;
+        if ($this->currentFileObject) {
+            $this->currentFileObject->flock(LOCK_UN);
+        }
     }
-    
-    public function LockFile($fileLock, $retry=false) {
+
+    private function ApplyFileLock($fileLock='LOCK_UN', $retry=null) {
+        if (is_null($retry)) {
+            $retry=$this->fileLockRetryCount;
+        }
         $result = $this->currentFileObject->flock($fileLock);
         if (!$result) {
-            $this->lastError = $this->messages['errorStack'][0];
-            $this->ProcessError(__METHOD__, 'fatal');
-        }
-        return $result;
-    }
-    private function ApplyFileLock($fileLock='LOCK_UN', $retry=false) {
-        $result = $this->currentFileObject->flock($fileLock);
-        if (!$result) {
-            $count = 'warning';
-            $stack = 'warningStack';
-            if ($retry) {
-                $count = 'error';
-                $stack = 'errorStack';
+            $errorData = [1, 'Unable to Apply ' . $fileLock . ' on File: ' . $this->currentFile, __LINE__ + 1, 'fatal'];
+            if ($retry > 0) {
+                sleep($this->fileLockSleepPeriod);
+                $retry--;
+                $result = $this->ApplyFileLock($fileLock, $retry);
             }
-            $this->messages['messageCount']['total']++;
-            $this->messages['messageCount'][$count]++;
-            array_unshift($this->messages[$stack], 'Unable to Apply ' . $fileLock . ' on File');
-            $result = $this->ApplyFileLock($fileLock, true);
+            else {
+                $this->ProcessLocalError($errorData, __METHOD__);
+            }
         }
         return $result;
-    }
-    private function ProcessError($method, $codeLine, $severity) {
-        $errorMessage = $method . '(' . $codeLine . '):::' . $this->lastError;
-        $stack = $severity . 'Stack';
-        $this->messages['messageCount']['total']++;
-        switch ($severity) {
-            case 'notice':
-                break;
-            case 'warning':
-                array_unshift($this->messages[$stack], $errorMessage);
-                /** @TODO Implement Error Logging **/
-                break;
-            case 'error':
-                break;
-            case 'fatal':
-                throw new Exception($errorMessage);
-            default:
-        }
     }
 
     public function GetCurrentFileObject() {
         return $this->currentFileObject;
     }
-    
+
     public function ReadFullFile() {
         $this->currentFileObject->rewind();
         return $this->currentFileObject->fread($this->currentFileObject->getSize());
     }
+
+    private function ProcessLocalError($errorData, $callingMethod) {
+        $errorPacket = array(
+            'code' => $errorData[0],
+            'message' => $errorData[1],
+            'location' => $errorData[2],
+            'action' => __CLASS__,
+            'method' => $callingMethod,
+            'severity' => $errorData[3],
+        );
+        $this->lastError = ProcessErrorEvent($errorPacket);
+        return true;
+    }
+
+    public function RetryFileLockCount($count=null) {
+        if (is_null($count)) {
+            $count = $this->fileLockRetryCount;
         }
+        elseif (!is_int($count)) {
+            $count = USF_FILELOCK_RETRY_COUNT;
+        }
+        else {
+            $count = max(abs($count), 10);
+        }
+        $this->fileLockRetryCount = $count;
+        return $this->fileLockRetryCount;
+    }
+
+    public function SleepFileLockPeriod($period=null) {
+        if (is_null($period)) {
+            $period = $this->fileLockSleepPeriod;
+        }
+        elseif (!is_int($period)) {
+            $period = USF_FILELOCK_SLEEP_PERIOD;
+        }
+        else {
+            $period = max(abs($period), 10);
+        }
+        $this->fileLockSleepPeriod = $period;
+        return $this->fileLockSleepPeriod;
+    }
+}

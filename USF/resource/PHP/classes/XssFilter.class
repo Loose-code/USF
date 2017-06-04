@@ -5,6 +5,8 @@
  * @author Peter
  */
 class XssFilter {
+    private $logger = null;
+    private $xssDataFile = USF_XSS_DATA_FILE;
     protected $phpSession = false;
     protected $dataToProcess = null;
     protected $xssExceptionList = null;
@@ -21,7 +23,7 @@ class XssFilter {
      * subsequently stored in the PHP Session. If there is no active PHP
      * Session then USF Caution Event will be logged.
      * 
-     * @param array $xssData An associated array of the relavent data Globals.
+     * @param array $xssData An associated array of the relevant data Globals.
      *      Typically:
      *              'url'     => The full URL,
                     'server'  => Serialized Global $_SERVER,
@@ -34,6 +36,7 @@ class XssFilter {
      * @return object Returns a single Instance of this Class.
      */
     public function __construct($xssData, $clearSession=false) {
+        $this->logger = new Logger('initLog', false);
             if((isset($_SESSION) && $clearSession === false)) {
                 $this->phpSession = true;
             }
@@ -161,9 +164,9 @@ class XssFilter {
      * 
      * The are many reasons why there should be perfectly valid XSS Signatures
      * within the data supplied to the Server. The Exception List provides a
-     * mechanisim for filtering those from the unwanted. To improve perfomance
+     * mechanism for filtering those from the unwanted. To improve performance
      * the list is generated only when the instance is first instantiated. It is
-     * then stored in, and retrived from the PHP Session.
+     * then stored in, and retrieved from the PHP Session.
      * 
      * @return array An associated array of acceptable XSS Signatures, by
      * "category". Current categories are:
@@ -171,20 +174,19 @@ class XssFilter {
      *                  HTTPS:// or FTP:// etc.
      *      'self'   => Various "aliases" of the Server thus to avoiding false
      *                  positives when the Server redirects.
-     *      'user'   => To avoid false positives when User Authorision is being
-     *                  used and, because it detects the same signature '@',
+     *      'user'   => To avoid false positives when User Authorisation is in
+     *                  use and, because it has the same signature, '@'
      *                  "mailto:".
      *      'script' => Identifies the URI's that are "allowed" to upload
      *                  "<script>" content.
      */
     private function GetXssExceptionList() {
         $xssExceptionList = array();
-        $thisWebApp = WebAppFromSession('app');
         if (($this->phpSession === true) && (array_key_exists('xssExceptionList', $_SESSION))) {
             $xssExceptionList = $_SESSION['xssExceptionList'];
         }
         else {
-            $xssExceptionData = $this->GetXssExceptionData('XssExceptionList', $thisWebApp);
+            $xssExceptionData = $this->GetXssExceptionData();
             foreach ($xssExceptionData as $category => $categoryArray) {
                 $xssExceptionList[$category] = array();
                 if (is_array($categoryArray['principal'])) {
@@ -210,48 +212,55 @@ class XssFilter {
     /**
      * Private Method: Converts the JSON XSS Data File into a PHP Array.
      * 
-     * $array = $this->GetXssExceptionData(<i>string</i>$xssDataFilename, <i>string</i>$webApp);
+     * $array = $this->GetXssExceptionData();
      * 
-     * Given a "hardcoded" file name for the XSS Data File (xssExceptionList) it
-     * will retrive the USF and the WebApp JSON (from predetermined locations)
-     * and convert them to PHP Arrays. It then merge the arrays ensuring that
-     * there are unquiue values.
+     * Using a predefined filename for the XSS JSON Data File <i>xss-exception-list</i>
+     * this method will retrieve the USF and the WebApp XSS exception data from
+     * predetermined locations. It will convert and merge them into a PHP Array
+     * ensuring that it unique values. It will also add a list of Server Aliases
+     * as defined at runtime.
      * 
      * @uses JsonData.class
      * 
-     * @note JsonData <b><i>will</i></b> throw an exception if it has an issue.
-     * 
-     * @param string $xssDataFilename A hardcoded filename <i>xssExceptionList</i>.
-     * @param string $webApp The determined Web App i.e. USF or NARS etc.
-     * @return array
+     * @return array The converted JSON Data as an array og PHP variables.
      */
-    private function GetXssExceptionData($xssDataFilename, $webApp) {
-        $jsonData = JsonData::GetInstance();
-        $usfXssJson = $jsonData::ReadJsonFile($xssDataFilename, USF_PHP_INIT_DIRECTORY);
-        $usfXssData = $jsonData::ConvertJson($usfXssJson);
-        $webAppInitLocation = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . $webApp);
-        $webAppXssJson = $jsonData::ReadJsonFile($xssDataFilename, $webAppInitLocation);
-        if (!empty($webAppXssJson)) {
-            $webAppXssData = $jsonData::ConvertJson($webAppXssJson);
-            $exceptionListData = array_merge_recursive($usfXssData[0]['exceptions'], $webAppXssData[0]['exceptions']);
-            $exceptionListData = UsfMethod::UniqueArray($exceptionListData);
+    private function GetXssExceptionData() {
+        $logEvent = null;
+        $thisWebApp = WebAppFromSession('app');
+        $usfXssData = $this->GetJsonData($this->xssDataFile, USF_PHP_INIT_DIRECTORY);
+        if ($usfXssData['status'] === false) {
+            $logEvent = ['No USF XSS Exception Data', 'notice'];
         }
-        else {
-            $exceptionListData = $usfXssData[0]['exceptions'];
+        $webAppInitLocation = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . $thisWebApp);
+        $webAppXssData = $this->GetJsonData($this->xssDataFile, $webAppInitLocation);
+        if ($webAppXssData['status'] === false) {
+            $logEvent = ['No Web App XSS Exception Data', 'notice'];
         }
+        $exceptionListData = array_merge_recursive($usfXssData['result']['exceptions'], $webAppXssData['result']['exceptions']);
+        $exceptionListData = UsfMethod::UniqueArray($exceptionListData);
         $this->AddServerAlias($exceptionListData);
+        if (!empty($logEvent)) {
+            $this->logger->WriteLine($logEvent[0], $logEvent[1]);
+        }
         return $exceptionListData;
     }
 
     private function GetJsonData($xssDataFilename, $xsfDataPath) {
-        $jsonData = JsonData::GetInstance();
-        $usfXssJson = $jsonData::ReadJsonFile($xssDataFilename, $xsfDataPath);
-        list($usfXssData, $convertStatus) = $jsonData::ConvertJson($usfXssJson);
-        if ($convertStatus === false) {
-            $this->lastError = $lastError;
-            $accessComment = $lastError['message'];
+        $returnData = null;
+        $returnStatus = null;
+        $readJson = JsonData::ReadJsonFile($xssDataFilename, $xsfDataPath);
+        if ($readJson['status'] === true) {
+            $convertJson = JsonData::ConvertJson($readJson['result']);
+            if ($convertJson['status'] === true) {
+                $returnData = $convertJson['result'];
+                $returnStatus = true;
+            }
         }
-        return $usfXssData;
+        if (empty($returnData)) {
+            $returnData = array('exceptions' => array(),);
+            $returnStatus = true;
+        }
+        return ['result' => $returnData, 'status' => $returnStatus];
     }
 
     /**
@@ -292,19 +301,13 @@ class XssFilter {
         );
         $accessData = $this->dataToProcess;
         $thisSignature = rawurlencode(rawurldecode($thisSignature));
-        $location = stripos($haystack, $accessData);
+        $location = stripos($thisSignature, $accessData);
         if ($location !== false) {
             $location = 0;
         }
-                       if (preg_match($pattern, $accessData) > 0) {
-                            $GLOBALS['initLog']->WriteLine('Scheme Exception Hit on ' . $exceptionCandidate, 'STATUS');
-                            $_hit++;
-                            $returnValue = true;
-                            unset($lastError);
-                        }
         if (isset($lastError)) {
-            ProcessErrorEvent($lastError, __LINE__, __METHOD__, $xssCheck);
-            die('Fatal Error Encountered: XSS Violation');
+            //ProcessErrorEvent($lastError, __LINE__, __METHOD__, $xssCheck);
+            //die('Fatal Error Encountered: XSS Violation');
         }
         return $returnValue;
     }
@@ -314,7 +317,7 @@ class XssFilter {
      * 
      * $interger = $this->CheckForSignature(<i>string</i> $signature);
      * 
-     * @param string $signature A literal string representaion of an XSS
+     * @param string $signature A literal string representation of a XSS
      * Signature e.g. "@", "<script".
      * 
      * @return integer A count of the number of occurances of the XSS Signature.

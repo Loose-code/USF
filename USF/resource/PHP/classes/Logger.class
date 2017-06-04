@@ -5,6 +5,7 @@
  * @author Peter
  */
 class Logger {
+    private $verbose = true;
     protected $logId = null;
     protected $logFilePath = USF_LOG_DIRECTORY_PHP;
     private $logFilePointer = null;
@@ -34,10 +35,12 @@ class Logger {
 
     /**
      * 
-     * @param type $logFileName
+     * @param string$logFileName
+     * @param boolean $verbose [optional]
      * @throws Exception
      */
-    public function __construct($logFileName=null) {
+    public function __construct($logFileName=null, $verbose=true) {
+        $this->verbose = $verbose;
         if (empty($logFileName)) {
             $logFileName = USF_RL_DEFAULT_LOGFILE;
         }
@@ -51,7 +54,7 @@ class Logger {
             $microTime = explode(' ', microtime());
             $logId = substr($microTime[0], 2);
             $this->logId = $logId;
-            $this->WriteLine('Log File (' . $logFileName . ') Started', 'SYSTEM');
+            $this->LogInternalEvent('Log File (' . $logFileName . ') Started', 'SYSTEM');
             $logId = $this->AssociateSession();
             $this->SetLogging('on');
             return $this;
@@ -65,14 +68,9 @@ class Logger {
     /**
      * Magic Method: Makes a conscious attempt to remove any File Locks
      */
-    public function __destroy() {
+    public function __destruct() {
         flock($this->logFilePointer, LOCK_UN);
     }
-
-    /**
-     * Magic Method: Prevent any attempt to Clone this object
-     */
-    private function __clone() {}
 
     /**
      * Public Method: Associates current USF Session Log with PHP Session.
@@ -88,7 +86,7 @@ class Logger {
     public function AssociateSession() {
         $sessionId = session_id();
         if ((!empty($sessionId)) && ($this->logId != $sessionId)) {
-                $this->WriteLine('Log File (' . $this->logFileName . ') Associated with PHP Session: ' . $sessionId, 'SYSTEM');
+                $this->LogInternalEvent('Log File (' . $this->logFileName . ') Associated with PHP Session: ' . $sessionId, 'SYSTEM');
                 $this->logId = $sessionId;
                 $returnValue = $this->logId;
         }
@@ -105,7 +103,7 @@ class Logger {
             $returnValue = null;
         }
         if (isset($message)) {
-            $this->WriteLine($message, 'CAUTION');
+            $this->LogInternalEvent($message, 'CAUTION');
         }
         return $returnValue;
     }
@@ -128,11 +126,11 @@ class Logger {
         if (!is_null($state)) {
             if (strtolower($state) == 'on') {
                 $this->devLog = true;
-                $this->WriteLine('Developer Logging is ON', 'SYSTEM');
+                $this->LogInternalEvent('Developer Logging is ON', 'SYSTEM');
             }
             else {
                 $this->devlog = false;
-                $this->WriteLine('Developer Logging is OFF', 'SYSTEM');
+                $this->LogInternalEvent('Developer Logging is OFF', 'SYSTEM');
             }
         }
         return $this->devLog;
@@ -250,18 +248,21 @@ class Logger {
      */
     private function ValidateReportingLevel($reportingLevel, $full=false) {
         $validation = false;
+        $reportingLevel = false;
+        $logEvent = null;
+        
         if (!is_int($reportingLevel)) {
-            $message = 'Non Integer Value Setting for Reporting Level';
+            $logEvent = ['Non Integer Value Setting for Reporting Level', 'warning'];
+            $reportingLevel = $this->defaultReporting;
         }
         elseif (is_int($reportingLevel)) {
             if (($reportingLevel > $this->maxReportingLevel) || ($reportingLevel < 0)) {
                 $reportingLevel = $this->maxReportingLevel;
-                $this->LogInternalEvents('Out of Range Value Setting for Reporting Level', 'CAUTION');
+                $logEvent = ['Out of Range Value Setting for Reporting Level', 'warning'];
             }
             elseif ($full) {
                 $levelComponents = $this->SplitReportingLevels($reportingLevel);
-                foreach(USF_RL_LOG_GROUPS as $logGroup) {
-                    $validation = true;
+                foreach(array_keys($levelComponents) as $logGroup) {
                     switch ($logGroup) {
                         case 'error':
                             $levelComponents[$logGroup] = $this->ValidateByGroup($logGroup, $levelComponents[$logGroup]);
@@ -269,18 +270,18 @@ class Logger {
                         case 'system':
                             $levelComponents[$logGroup] = $this->ValidateByGroup($logGroup, $levelComponents[$logGroup]);
                             break;
+                        case 'current':
+                            nop;
+                            break;
                         default:
-                            $validation = false;
-                            $message = 'Unexpected Log Grouping';
-                    }
-                    if ($validation === false) {
-                        break;
+                            $logEvent = ['Unexpected Log Grouping', 'warning'];
+                            continue 2;
                     }
                 }
             }
         }
         if ($validation === false) {
-            $this->LogInternalEvents($message, 'WARNING');
+            $this->LogInternalEvent($logEvent[0], $logEvent[1]);
             $reportingLevel = false;
         }
         else {
@@ -498,14 +499,16 @@ class Logger {
      * Private Method (void): Will log any internal Events.
      * 
      * As we are creating or updating a Log File, it is conceivable that Events
-     * could occur. LogInternalEvents() is a centralised method handle this. A
-     * copy of the parameter message will be written to this->lastMessage. It is
-     * also possible that the act of logging an Event could cause another Event
-     * that has to be logged. Therefore, each access of LogInternalEvent() will
-     * increment the this->nestingLevel until such time that the value of the
-     * this->nestinglimit is reached thus causing an Exception to be thrown.
-     * On a successful write to the this->property nestingLevel will be cleared
-     * (see WriteToFile() method).
+     * could occur, <b>method</b> <i>LogInternalEvents()</i> is a centralised
+     * method to handle this. Also, when the class is instantiated in quiet mode
+     * (<b>property</b> <i>verbose</i> is FALSE) only those internal Events with
+     * a severity level of 'FATAL' will be physically logged. It is also
+     * possible that the act of logging an Event could cause another Event that
+     * has to be logged. Therefore, each access of LogInternalEvent() will cause
+     * an increment in a nesting count (<b>property</b> <i>nestingCount</i>)
+     * until such time that a nesting limit (<b>property</b> <i>nestingLimit</i>)
+     * is reached when an Exception will be thrown. As usual, <b>property</b>
+     * <i>lastMessage</i> will have a copy of the Event Message being written.
      * 
      * @TODO Earmarked as a RETURN: VOID Method
      * 
@@ -516,34 +519,35 @@ class Logger {
      * 
      * @throws Exception if the nestingLimit is reached or exceed.
      */
-    private function LogInternalEvents($message, $level) {
+    private function LogInternalEvent($message, $reportingLevel) {
         $this->lastMessage = $message;
         $this->nestingLevel++;
         if ($this->nestingLevel >= $this->nestingLimit) {
             throw new Exception('Excessive Method Call Nesting [' . $this->nestingLimit . '] Writing: ' . $message);
         }
-        $this->WriteLine($message, $level);
+        $okToWrite = $this->ApplyLevelFilter($reportingLevel);
+        if ($okToWrite) {
+            $this->WriteLine($message, $reportingLevel);
+        }
     }
 
     /**
      * Public Method: Will write a message to the current Log File.
      * 
-     * 
      * @param string $message A single line of unformatted plain text to be
      * written to the Log File.
      * 
      * @param string [optional] $requestedLevel One of list of key words
-     * representing the priority of the log request:
-            'FATAL'     => Unrecoverable USF errors requiring termination.
-            'ERROR'     => Recoverable USF errors.
-            'WARNING'   => USF errors that may later cause an USF_RL_E_ERROR.
-            'CAUTION'   => USF cautions - typically default selections.
-            'SYSTEM'    => USF system messages (waypoint markers).
-            'STATUS'    => USF status messages (action results).
-            'INFO'      => USF audit messages.
-            'NOTICE'    => USF developer "notes".
-            'DEV'       => Special use for Developer debug.
-     * 
+     * representing the severity of the log request:
+     *   'FATAL'     => Unrecoverable USF errors requiring termination.
+     *   'ERROR'     => Recoverable USF errors.
+     *   'WARNING'   => USF errors that may later cause an USF_RL_E_ERROR.
+     *   'CAUTION'   => USF cautions - typically default selections.
+     *   'SYSTEM'    => USF system messages (waypoint markers).
+     *   'STATUS'    => USF status messages (action results).
+     *   'INFO'      => USF audit messages.
+     *   'NOTICE'    => USF developer "notes".
+     *   'DEV'       => Special use for Developer debug.
      * 
      * @return mixed One of:
      *      FALSE => If there was an error during the file write process.
@@ -608,7 +612,7 @@ class Logger {
         }
         else {
             $reportingLevel = $this->defaultReporting;
-            $this->LogInternalEvents('Unrecognised Reporting Level Requested [' . $requestedLevel . ']', 'CAUTION');;
+            $this->LogInternalEvent('Unrecognised Reporting Level Requested [' . $requestedLevel . ']', 'CAUTION');;
         }
         return $reportingLevel;
     }
@@ -650,6 +654,7 @@ class Logger {
             $writeOk = fwrite($this->logFilePointer, $logReference['time'] . '>>>' . $logReference['logId'] . '>>>' . strtoupper($reportingLevel) . '>>>' . $message . PHP_EOL);
             if ($writeOk !== false) {
                 $this->nestingLevel = 0;
+                $this->lastMessage = '';
                 $logReference['success'] = 'yes';
             }
         }

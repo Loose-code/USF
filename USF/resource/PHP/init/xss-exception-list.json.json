@@ -1,0 +1,52 @@
+/* XSS Exception List USF Initialisation */
+{
+    "comment" : "XSS Exception List USF Initialisation. Please observe exampled data and format. Thank you.",
+    "exceptions" : {
+        "scheme" : {
+            "principal" : "uri",
+            "content" : [
+                {
+                    "uri" : "http://www.example.com",
+                    "description" : "Valid test website address",
+                    "added" : 20170323,
+                    "author" : "P Irving"
+                },
+                {
+                    "uri" : "ftp://www.example.com",
+                    "description" : "Valid test ftp address",
+                    "added" : 20170323,
+                    "author" : "P Irving"
+                }
+            ]
+        },
+        "coding" : {
+            "principal" : "page",
+            "content" : [
+                {
+                    "page" : "admin/tools/upload.html",
+                    "description" : "Generic upload page for Admin Users",
+                    "added" : 20170326,
+                    "author" : "P Irving"
+                }
+            ]
+        },
+        "contact" : {
+            "principal" : "user",
+            "content" : [
+                {
+                    "user" : "@example.co.uk",
+                    "description" : "User Authorisation",
+                    "added" : 20170326,
+                    "author" : "P Irving"
+                },
+                {
+                    "user" : "@example.com",
+                    "description" : "User Email",
+                    "added" : 20170326,
+                    "author" : "P Irving"
+                }
+            ]
+            
+        }
+    }
+}
