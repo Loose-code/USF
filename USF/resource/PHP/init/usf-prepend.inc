@@ -102,7 +102,12 @@
         FatalErrorEvent($errorPacket);
     }
     $accessLog->PurgeTables($accessTime);
+    If ($accessLog->GetErrorStatus() === true) {
+        $errorPacket = $accessLog->GetErrorPacket();
+        FatalErrorEvent($errorPacket);
+    }
     unset($accessComment, $accessLog);
+    
 
 // Do we have to destroy the Session?
     if ($destroySession) {

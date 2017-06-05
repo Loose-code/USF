@@ -276,3 +276,1011 @@
 1496609105>>>89jq47toqk51lh7ls4t8nqsp87>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
 1496609105>>>89jq47toqk51lh7ls4t8nqsp87>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
 1496609105>>>89jq47toqk51lh7ls4t8nqsp87>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496674345>>>72917900>>>SYSTEM>>>Log File (initLog) Started
+1496674345>>>72917900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496674345>>>72917900>>>NOTICE>>>Constructed New usfLog (Logger).
+1496674345>>>72917900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674345>>>i4r9118m0776j8u1bq9nsr1gl7>>>INFO>>>Constructing Available Web Apps
+1496674345>>>73818400>>>SYSTEM>>>Log File (initLog) Started
+1496674345>>>73818400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674345>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496674345>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496674345>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496674916>>>31333200>>>SYSTEM>>>Log File (initLog) Started
+1496674916>>>31333200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496674916>>>31333200>>>NOTICE>>>Constructed New usfLog (Logger).
+1496674916>>>31333200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674916>>>31676500>>>SYSTEM>>>Log File (initLog) Started
+1496674916>>>31676500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674916>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496674916>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496674916>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496674954>>>38665300>>>SYSTEM>>>Log File (initLog) Started
+1496674954>>>38665300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496674954>>>38665300>>>NOTICE>>>Constructed New usfLog (Logger).
+1496674954>>>38665300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674954>>>39012300>>>SYSTEM>>>Log File (initLog) Started
+1496674954>>>39012300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496674954>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496674954>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496674954>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675082>>>41560500>>>SYSTEM>>>Log File (initLog) Started
+1496675082>>>41560500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496675082>>>41560500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496675082>>>41560500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675082>>>41936700>>>SYSTEM>>>Log File (initLog) Started
+1496675082>>>41936700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675082>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496675082>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675082>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675287>>>57937000>>>SYSTEM>>>Log File (initLog) Started
+1496675287>>>57937000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496675287>>>57937000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496675287>>>57937000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675287>>>58269100>>>SYSTEM>>>Log File (initLog) Started
+1496675287>>>58269100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496675287>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496675293>>>11031700>>>SYSTEM>>>Log File (initLog) Started
+1496675293>>>11031700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496675293>>>11031700>>>NOTICE>>>Constructed New usfLog (Logger).
+1496675293>>>11031700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675293>>>11814400>>>SYSTEM>>>Log File (initLog) Started
+1496675293>>>11814400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496675293>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496678107>>>32919900>>>SYSTEM>>>Log File (initLog) Started
+1496678107>>>32919900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496678107>>>32919900>>>NOTICE>>>Constructed New usfLog (Logger).
+1496678107>>>32919900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678107>>>37187700>>>SYSTEM>>>Log File (initLog) Started
+1496678107>>>37187700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496678107>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496678134>>>92410400>>>SYSTEM>>>Log File (initLog) Started
+1496678134>>>92410400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496678134>>>92410400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496678134>>>92410400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678134>>>92700600>>>SYSTEM>>>Log File (initLog) Started
+1496678134>>>92700600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678134>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496678134>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678134>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678195>>>00525100>>>SYSTEM>>>Log File (initLog) Started
+1496678195>>>00525100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496678195>>>00525100>>>NOTICE>>>Constructed New usfLog (Logger).
+1496678195>>>00525100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678195>>>00623200>>>SYSTEM>>>Log File (initLog) Started
+1496678195>>>00623200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678195>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496678195>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678195>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678229>>>61924100>>>SYSTEM>>>Log File (initLog) Started
+1496678229>>>61924100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496678229>>>61924100>>>NOTICE>>>Constructed New usfLog (Logger).
+1496678229>>>61924100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678229>>>62024700>>>SYSTEM>>>Log File (initLog) Started
+1496678229>>>62024700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496678229>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496678229>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496678229>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679072>>>03426800>>>SYSTEM>>>Log File (initLog) Started
+1496679072>>>03426800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496679072>>>03426800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496679072>>>03426800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679072>>>03739700>>>SYSTEM>>>Log File (initLog) Started
+1496679072>>>03739700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679072>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496679072>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679072>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679098>>>05256700>>>SYSTEM>>>Log File (initLog) Started
+1496679098>>>05256700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496679098>>>05256700>>>NOTICE>>>Constructed New usfLog (Logger).
+1496679098>>>05256700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679098>>>05541900>>>SYSTEM>>>Log File (initLog) Started
+1496679098>>>05541900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679098>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496679098>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679098>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679134>>>46092400>>>SYSTEM>>>Log File (initLog) Started
+1496679134>>>46092400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496679134>>>46092400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496679134>>>46092400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679134>>>46229700>>>SYSTEM>>>Log File (initLog) Started
+1496679134>>>46229700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496679134>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496679134>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496679134>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496681286>>>36433700>>>SYSTEM>>>Log File (initLog) Started
+1496681286>>>36433700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496681286>>>36433700>>>NOTICE>>>Constructed New usfLog (Logger).
+1496681286>>>36433700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496681286>>>39509300>>>SYSTEM>>>Log File (initLog) Started
+1496681286>>>39509300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496681286>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496681290>>>62784400>>>SYSTEM>>>Log File (initLog) Started
+1496681290>>>62784400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496681290>>>62784400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496681290>>>62784400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496681290>>>63359500>>>SYSTEM>>>Log File (initLog) Started
+1496681290>>>63359500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496681290>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496682415>>>88874600>>>SYSTEM>>>Log File (initLog) Started
+1496682415>>>88874600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496682415>>>88874600>>>NOTICE>>>Constructed New usfLog (Logger).
+1496682415>>>88874600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682415>>>89787400>>>SYSTEM>>>Log File (initLog) Started
+1496682415>>>89787400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682415>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496682415>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682415>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682457>>>37527400>>>SYSTEM>>>Log File (initLog) Started
+1496682457>>>37527400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496682457>>>37527400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496682457>>>37527400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682457>>>37853500>>>SYSTEM>>>Log File (initLog) Started
+1496682457>>>37853500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496682457>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496682528>>>69519500>>>SYSTEM>>>Log File (initLog) Started
+1496682528>>>69519500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496682528>>>69519500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496682528>>>69519500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682528>>>69843900>>>SYSTEM>>>Log File (initLog) Started
+1496682528>>>69843900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496682528>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496682564>>>00816000>>>SYSTEM>>>Log File (initLog) Started
+1496682564>>>00816000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496682564>>>00816000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496682564>>>00816000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682564>>>00917100>>>SYSTEM>>>Log File (initLog) Started
+1496682564>>>00917100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>CAUTION>>>Unrecognised Reporting Level Requested []
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>>>>
+		
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>CAUTION>>>Unrecognised Reporting Level Requested []
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>>>>
+		
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>CAUTION>>>Unrecognised Reporting Level Requested []
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>>>>
+		
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>CAUTION>>>Unrecognised Reporting Level Requested []
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>>>>
+		
+
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496682564>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496683783>>>08063000>>>SYSTEM>>>Log File (initLog) Started
+1496683783>>>08063000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496683783>>>08063000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496683783>>>08063000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683783>>>11814500>>>SYSTEM>>>Log File (initLog) Started
+1496683783>>>11814500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496683783>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496683838>>>58257500>>>SYSTEM>>>Log File (initLog) Started
+1496683838>>>58257500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496683838>>>58257500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496683838>>>58257500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683838>>>58595400>>>SYSTEM>>>Log File (initLog) Started
+1496683838>>>58595400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683838>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496683838>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683838>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683839>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496683839>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496683839>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496683914>>>21248500>>>SYSTEM>>>Log File (initLog) Started
+1496683914>>>21248500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496683914>>>21248500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496683914>>>21248500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683914>>>21757500>>>SYSTEM>>>Log File (initLog) Started
+1496683914>>>21757500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683914>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496683914>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683914>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683984>>>38067400>>>SYSTEM>>>Log File (initLog) Started
+1496683984>>>38067400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496683984>>>38067400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496683984>>>38067400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683984>>>38399000>>>SYSTEM>>>Log File (initLog) Started
+1496683984>>>38399000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496683984>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496684032>>>69256800>>>SYSTEM>>>Log File (initLog) Started
+1496684032>>>69256800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496684032>>>69256800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496684032>>>69256800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684032>>>70348900>>>SYSTEM>>>Log File (initLog) Started
+1496684032>>>70348900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684032>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496684032>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684032>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684033>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496684033>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496684033>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496684081>>>61828800>>>SYSTEM>>>Log File (initLog) Started
+1496684081>>>61828800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496684081>>>61828800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496684081>>>61828800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684081>>>62158100>>>SYSTEM>>>Log File (initLog) Started
+1496684081>>>62158100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684081>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496684081>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684081>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684082>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496684082>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496684082>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496684572>>>73816300>>>SYSTEM>>>Log File (initLog) Started
+1496684572>>>73816300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496684572>>>73816300>>>NOTICE>>>Constructed New usfLog (Logger).
+1496684572>>>73816300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684572>>>74140400>>>SYSTEM>>>Log File (initLog) Started
+1496684572>>>74140400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496684572>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496684634>>>14680900>>>SYSTEM>>>Log File (initLog) Started
+1496684634>>>14680900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496684634>>>14680900>>>NOTICE>>>Constructed New usfLog (Logger).
+1496684634>>>14680900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684634>>>15220400>>>SYSTEM>>>Log File (initLog) Started
+1496684634>>>15220400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496684634>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496685051>>>77671400>>>SYSTEM>>>Log File (initLog) Started
+1496685051>>>77671400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496685051>>>77671400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496685051>>>77671400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685051>>>78001300>>>SYSTEM>>>Log File (initLog) Started
+1496685051>>>78001300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685051>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496685051>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685051>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685214>>>70231100>>>SYSTEM>>>Log File (initLog) Started
+1496685214>>>70231100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496685214>>>70231100>>>NOTICE>>>Constructed New usfLog (Logger).
+1496685214>>>70231100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685214>>>70579900>>>SYSTEM>>>Log File (initLog) Started
+1496685214>>>70579900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685214>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496685214>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685214>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685214>>>i4r9118m0776j8u1bq9nsr1gl7>>>FATAL>>>Purging Expired Records
+		action: Purging Expired Records
+		method: PDO
+		message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM access_last_year where access_time <= now() - interval 600 YEAR' at line 1
+		severity: fatal
+		script: C:\Users\Peter\Documents\www\USF\resource\PHP\classes\RecordServerAccess.class
+		dump: 
+#0  UsfMethod::CaptureOutput() called at [C:\Users\Peter\Documents\www\USF\resource\PHP\classes\UsfMethod.class:527]
+#1  FatalErrorEvent(Array ([action] => Purging Expired Records,[method] => PDO,[message] => SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM access_last_year where access_time <= now() - interval 600 YEAR' at line 1,[severity] => fatal,[script] => C:\Users\Peter\Documents\www\USF\resource\PHP\classes\RecordServerAccess.class)) called at [C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc:107]
+#2  require_once(C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc) called at [C:\php7x64\server-prepend.inc:27]
+
+
+1496685386>>>02988800>>>SYSTEM>>>Log File (initLog) Started
+1496685386>>>02988800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496685386>>>02988800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496685386>>>02988800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685386>>>03116500>>>SYSTEM>>>Log File (initLog) Started
+1496685386>>>03116500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685386>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496685386>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685386>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685386>>>i4r9118m0776j8u1bq9nsr1gl7>>>FATAL>>>Purging Expired Records
+		action: Purging Expired Records
+		method: PDO
+		message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM access_last_year where access_time <= now() - interval 600 YEAR' at line 1
+		severity: fatal
+		script: C:\Users\Peter\Documents\www\USF\resource\PHP\classes\RecordServerAccess.class
+		location: 0
+		dump: 
+#0  UsfMethod::CaptureOutput() called at [C:\Users\Peter\Documents\www\USF\resource\PHP\classes\UsfMethod.class:527]
+#1  FatalErrorEvent(Array ([action] => Purging Expired Records,[method] => PDO,[message] => SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM access_last_year where access_time <= now() - interval 600 YEAR' at line 1,[severity] => fatal,[script] => C:\Users\Peter\Documents\www\USF\resource\PHP\classes\RecordServerAccess.class,[location] => 0)) called at [C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc:107]
+#2  require_once(C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc) called at [C:\php7x64\server-prepend.inc:27]
+
+
+1496685522>>>81853000>>>SYSTEM>>>Log File (initLog) Started
+1496685522>>>81853000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496685522>>>81853000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496685522>>>81853000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685522>>>82174000>>>SYSTEM>>>Log File (initLog) Started
+1496685522>>>82174000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685522>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496685522>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685522>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685524>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496685524>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496685524>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496685961>>>78696000>>>SYSTEM>>>Log File (initLog) Started
+1496685961>>>78696000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496685961>>>78696000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496685961>>>78696000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685961>>>80399000>>>SYSTEM>>>Log File (initLog) Started
+1496685961>>>80399000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496685961>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496685961>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685961>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496685966>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496685966>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496685966>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496686211>>>40866500>>>SYSTEM>>>Log File (initLog) Started
+1496686211>>>40866500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496686211>>>40866500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496686211>>>40866500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686211>>>41262400>>>SYSTEM>>>Log File (initLog) Started
+1496686211>>>41262400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686211>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496686211>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686211>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686224>>>96946500>>>SYSTEM>>>Log File (initLog) Started
+1496686224>>>96946500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496686224>>>96946500>>>NOTICE>>>Constructed New usfLog (Logger).
+1496686224>>>96946500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686224>>>97516100>>>SYSTEM>>>Log File (initLog) Started
+1496686224>>>97516100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686224>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496686224>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686224>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686258>>>81762800>>>SYSTEM>>>Log File (initLog) Started
+1496686258>>>81762800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496686258>>>81762800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496686258>>>81762800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686258>>>82407300>>>SYSTEM>>>Log File (initLog) Started
+1496686258>>>82407300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496686258>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496686258>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686258>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496686259>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/2017060558purge.log
+1496686259>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496686259>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496686259>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496687974>>>75369300>>>SYSTEM>>>Log File (initLog) Started
+1496687974>>>75369300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496687974>>>75369300>>>NOTICE>>>Constructed New usfLog (Logger).
+1496687974>>>75369300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496687974>>>76053800>>>SYSTEM>>>Log File (initLog) Started
+1496687974>>>76053800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496687974>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496687974>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496687974>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496687975>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496687975>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496687975>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496688001>>>97282600>>>SYSTEM>>>Log File (initLog) Started
+1496688001>>>97282600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496688001>>>97282600>>>NOTICE>>>Constructed New usfLog (Logger).
+1496688001>>>97282600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688001>>>98229500>>>SYSTEM>>>Log File (initLog) Started
+1496688001>>>98229500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688001>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496688001>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688001>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688002>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496688002>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496688002>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496688030>>>78396200>>>SYSTEM>>>Log File (initLog) Started
+1496688030>>>78396200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496688030>>>78396200>>>NOTICE>>>Constructed New usfLog (Logger).
+1496688030>>>78396200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688030>>>78496600>>>SYSTEM>>>Log File (initLog) Started
+1496688030>>>78496600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688030>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496688030>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688030>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688031>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/2017060530purge.log
+1496688037>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496688037>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496688037>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496688849>>>33189800>>>SYSTEM>>>Log File (initLog) Started
+1496688849>>>33189800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496688849>>>33189800>>>NOTICE>>>Constructed New usfLog (Logger).
+1496688849>>>33189800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688849>>>34020500>>>SYSTEM>>>Log File (initLog) Started
+1496688849>>>34020500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: i4r9118m0776j8u1bq9nsr1gl7
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>PHP Session Data Reset.
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/20170605purge.log
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.

@@ -105,6 +105,17 @@ class FileAccess {
         return $this->currentFileObject->fread($this->currentFileObject->getSize());
     }
 
+    public function WriteLine($writeData) {
+        $writeDataLength = strlen($writeData);
+        $this->currentFileObject->fseek(0, SEEK_END);
+        $result = $this->currentFileObject->fwrite($writeData, $writeDataLength);
+        $errorData = [1, 'Incomplete Write Operation for File: ' . $this->currentFile, __LINE__ + 1, 'fatal'];
+        if ($result != $writeDataLength) {
+            $this->ProcessLocalError($errorData, __METHOD__);
+        }
+        $this->currentFileObject->fwrite(PHP_EOL);
+        return true;
+    }
     private function ProcessLocalError($errorData, $callingMethod) {
         $errorPacket = array(
             'code' => $errorData[0],

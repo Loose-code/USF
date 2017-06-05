@@ -18,10 +18,10 @@
         private $host          = USF_MYSQL_HOST_IP;
         private $dbConnection  = '';
         private $accessArchive = array(
-            array('table' => 'access_this_day', 'interval' => ''),
-            array('table' => 'access_last_week','interval' => ''),
-            array('table' => 'access_last_month','interval' => ''),
-            array('table' => 'access_last_year','interval' => ''),
+            array('table' => 'access_this_day', 'interval' => 'DAY'),
+            array('table' => 'access_last_week','interval' => 'WEEK'),
+            array('table' => 'access_last_month','interval' => 'MONTH'),
+            array('table' => 'access_last_year','interval' => 'YEAR'),
         );
         private $errorStatus   = false;
         private $errorPacket   = array(
@@ -54,6 +54,35 @@
         }
 
         public function PurgeTables($accessTime) {
+            $dateSignature = gmdate('Ymd', $accessTime);
+            $purgeLogFile = USF_LOG_DIRECTORY_PHP . $dateSignature . 'purge.log';
+            if (!file_exists($purgeLogFile)) {
+                $purgeLog = new FileAccess($purgeLogFile, 'create');
+                $GLOBALS['initLog']->WriteLine('Created Purge Log File: ' . $purgeLogFile, 'notice');
+                foreach ($this->accessArchive as $recordLevel) {
+                    $sqlStatement = 'DELETE FROM ' . $recordLevel['table'] . ' where access_time <= now() - interval 12 ' . $recordLevel['interval'];
+                    try {
+                        $query = $this->dbConnection->prepare($sqlStatement);
+                        if ($query !== false) {
+                            $result = $query->execute();
+                            if ($result) {
+                                $removed = $query->rowcount();
+                                $purgeLog->WriteLine($dateSignature . '::' . $removed . ' Records removed from table ' . $recordLevel['table']);
+                            }
+                            else {
+                                $this->ProcessError('Executing Purging Query', 'PDO', UsfMethod::CaptureOutput($result));
+                            }
+                        }
+                        else {
+                            $this->ProcessError('Preparing Purging Query', 'PDO', UsfMethod::CaptureOutput($query));
+                        }
+                    }
+                    catch (PDOException $pdoError) {
+                        $this->ProcessError('Purging Expired Records', 'PDO', $pdoError->getMessage());
+                    }
+                }
+                unset($purgeLog);
+            }
             return true;
         }
 
@@ -103,6 +132,29 @@
             }
         }
 
+        private function ReadQuery($sqlStatement) {
+            try {
+                $result = $this->dbConnection->query($sqlStatement);
+                if ($result) {
+                    var_dump($result);
+                }
+            } catch (Exception $pdoError) {
+                $this->ProcessError('Selecting Rows', 'PDO', $pdoError->getMessage());
+            }
+        }
+
+        private function DeleteQuery($sqlStatement) {
+            try {
+                $query = $this->dbConnection->prepare($sqlStatement);
+                $result = $query->execute($sqlStatement);
+                if ($result) {
+                    return $query->rowcount();
+                }
+            } catch (Exception $pdoError) {
+                $this->ProcessError('Deleting Rows', 'PDO', $pdoError->getMessage());
+            }
+        }
+
         /**
         * Errors will always cause a PDO Exception. Updates / Inserts
         * will always return "Rows Affected", which may be 0. Therefor
@@ -131,6 +183,7 @@
             $this->errorPacket['method']  = $actionMethod;
             $this->errorPacket['message'] = $errorInformation;
             $this->errorPacket['severity'] = $severity;
+            $this->errorPacket['location'] = 0;
         }
 
         private function GetTableColumns() {
