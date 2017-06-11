@@ -1284,3 +1284,3347 @@
 1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
 1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
 1496688849>>>i4r9118m0776j8u1bq9nsr1gl7>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496925362>>>96199100>>>SYSTEM>>>Log File (initLog) Started
+1496925362>>>96199100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496925362>>>96199100>>>NOTICE>>>Constructed New usfLog (Logger).
+1496925362>>>96199100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: v169tv7ptc7fv9s83i9jlg2847
+1496925362>>>v169tv7ptc7fv9s83i9jlg2847>>>INFO>>>Constructing Available Web Apps
+1496925362>>>96609900>>>SYSTEM>>>Log File (initLog) Started
+1496925362>>>96609900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: v169tv7ptc7fv9s83i9jlg2847
+1496925362>>>v169tv7ptc7fv9s83i9jlg2847>>>NOTICE>>>PHP Session Data Reset.
+1496925362>>>v169tv7ptc7fv9s83i9jlg2847>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496925362>>>v169tv7ptc7fv9s83i9jlg2847>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496925363>>>v169tv7ptc7fv9s83i9jlg2847>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/20170608purge.log
+1496925363>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496925363>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496925363>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496925498>>>03286700>>>SYSTEM>>>Log File (initLog) Started
+1496925498>>>03286700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496925498>>>03286700>>>NOTICE>>>Constructed New usfLog (Logger).
+1496925498>>>03286700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: v169tv7ptc7fv9s83i9jlg2847
+1496925498>>>03691000>>>SYSTEM>>>Log File (initLog) Started
+1496925498>>>03691000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: v169tv7ptc7fv9s83i9jlg2847
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>NOTICE>>>PHP Session Data Reset.
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496925498>>>v169tv7ptc7fv9s83i9jlg2847>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496938039>>>42333000>>>SYSTEM>>>Log File (initLog) Started
+1496938039>>>42333000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496938039>>>42333000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496938039>>>42333000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: djgomqq1id2552nat2ihpqe8h2
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>INFO>>>Constructing Available Web Apps
+1496938039>>>42708100>>>SYSTEM>>>Log File (initLog) Started
+1496938039>>>42708100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: djgomqq1id2552nat2ihpqe8h2
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>NOTICE>>>PHP Session Data Reset.
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496938039>>>djgomqq1id2552nat2ihpqe8h2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496938141>>>31847300>>>SYSTEM>>>Log File (initLog) Started
+1496938141>>>31847300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496938190>>>56061700>>>SYSTEM>>>Log File (initLog) Started
+1496938190>>>56061700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496940173>>>55763000>>>SYSTEM>>>Log File (initLog) Started
+1496940173>>>55763000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496940173>>>55763000>>>NOTICE>>>Constructed New usfLog (Logger).
+1496940173>>>55763000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ilgvgrq5q9049lmi37kvdvg8o2
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>INFO>>>Constructing Available Web Apps
+1496940173>>>56148900>>>SYSTEM>>>Log File (initLog) Started
+1496940173>>>56148900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ilgvgrq5q9049lmi37kvdvg8o2
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>NOTICE>>>PHP Session Data Reset.
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>SYSTEM>>>New Session: ilgvgrq5q9049lmi37kvdvg8o2
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496940173>>>ilgvgrq5q9049lmi37kvdvg8o2>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496940322>>>32701400>>>SYSTEM>>>Log File (initLog) Started
+1496940322>>>32701400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496940322>>>32701400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496940322>>>32701400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>INFO>>>Constructing Available Web Apps
+1496940322>>>33246800>>>SYSTEM>>>Log File (initLog) Started
+1496940322>>>33246800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>SYSTEM>>>New Session: bhi2avcr33edl2f91s9n0i6kk6
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496940322>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1496940347>>>19971400>>>SYSTEM>>>Log File (initLog) Started
+1496940347>>>19971400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1496940347>>>19971400>>>NOTICE>>>Constructed New usfLog (Logger).
+1496940347>>>19971400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1496940347>>>20074700>>>SYSTEM>>>Log File (initLog) Started
+1496940347>>>20074700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-constants.inc/ not found.
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-methods.inc/ not found.
+1496940347>>>bhi2avcr33edl2f91s9n0i6kk6>>>STATUS>>>Site Include File C://Users/Peter/Documents/www/USF/resource/site-init/site-init.inc/ not found.
+1497018205>>>62108100>>>SYSTEM>>>Log File (initLog) Started
+1497018205>>>62108100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497018205>>>62108100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497018205>>>62108100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018205>>>65205700>>>SYSTEM>>>Log File (initLog) Started
+1497018205>>>65205700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018205>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497018205>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497018205>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497018496>>>85466400>>>SYSTEM>>>Log File (initLog) Started
+1497018496>>>85466400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497018496>>>85466400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497018496>>>85466400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018496>>>85565400>>>SYSTEM>>>Log File (initLog) Started
+1497018496>>>85565400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018496>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497018496>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497018624>>>99116700>>>SYSTEM>>>Log File (initLog) Started
+1497018624>>>99116700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497018624>>>99116700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497018624>>>99116700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018624>>>99421100>>>SYSTEM>>>Log File (initLog) Started
+1497018624>>>99421100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018624>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497018624>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497018625>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/20170609purge.log
+1497018896>>>38123600>>>SYSTEM>>>Log File (initLog) Started
+1497018896>>>38123600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497018896>>>38123600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497018896>>>38123600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018896>>>38484800>>>SYSTEM>>>Log File (initLog) Started
+1497018896>>>38484800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018896>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497018896>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497018989>>>64599600>>>SYSTEM>>>Log File (initLog) Started
+1497018989>>>64599600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497018989>>>64599600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497018989>>>64599600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018989>>>65010200>>>SYSTEM>>>Log File (initLog) Started
+1497018989>>>65010200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497018989>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497018989>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019453>>>09675800>>>SYSTEM>>>Log File (initLog) Started
+1497019453>>>09675800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019453>>>09675800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019453>>>09675800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019453>>>10040100>>>SYSTEM>>>Log File (initLog) Started
+1497019453>>>10040100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019453>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019453>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019563>>>99962600>>>SYSTEM>>>Log File (initLog) Started
+1497019563>>>99962600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019564>>>99962600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019564>>>99962600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019564>>>00449800>>>SYSTEM>>>Log File (initLog) Started
+1497019564>>>00449800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019564>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019564>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019625>>>92924400>>>SYSTEM>>>Log File (initLog) Started
+1497019625>>>92924400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019625>>>92924400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019625>>>92924400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019625>>>93027600>>>SYSTEM>>>Log File (initLog) Started
+1497019625>>>93027600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019625>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019625>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019659>>>02154600>>>SYSTEM>>>Log File (initLog) Started
+1497019659>>>02154600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019659>>>02154600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019659>>>02154600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019659>>>02430200>>>SYSTEM>>>Log File (initLog) Started
+1497019659>>>02430200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019659>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019659>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019693>>>71416700>>>SYSTEM>>>Log File (initLog) Started
+1497019693>>>71416700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019693>>>71416700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019693>>>71416700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019693>>>71730900>>>SYSTEM>>>Log File (initLog) Started
+1497019693>>>71730900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019693>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019693>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019762>>>95424900>>>SYSTEM>>>Log File (initLog) Started
+1497019762>>>95424900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019762>>>95424900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019762>>>95424900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019762>>>95776000>>>SYSTEM>>>Log File (initLog) Started
+1497019762>>>95776000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019762>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019762>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019799>>>26306200>>>SYSTEM>>>Log File (initLog) Started
+1497019799>>>26306200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019799>>>26306200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019799>>>26306200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019799>>>26594600>>>SYSTEM>>>Log File (initLog) Started
+1497019799>>>26594600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019799>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019799>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019961>>>26970400>>>SYSTEM>>>Log File (initLog) Started
+1497019961>>>26970400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019961>>>26970400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019961>>>26970400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019961>>>27438700>>>SYSTEM>>>Log File (initLog) Started
+1497019961>>>27438700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019961>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019961>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019966>>>74654600>>>SYSTEM>>>Log File (initLog) Started
+1497019966>>>74654600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019966>>>74654600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019966>>>74654600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019966>>>74838300>>>SYSTEM>>>Log File (initLog) Started
+1497019966>>>74838300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019966>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019966>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497019988>>>14869200>>>SYSTEM>>>Log File (initLog) Started
+1497019988>>>14869200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497019988>>>14869200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497019988>>>14869200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019988>>>14963400>>>SYSTEM>>>Log File (initLog) Started
+1497019988>>>14963400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497019988>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497019988>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020024>>>33489600>>>SYSTEM>>>Log File (initLog) Started
+1497020024>>>33489600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020024>>>33489600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020024>>>33489600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020024>>>33779100>>>SYSTEM>>>Log File (initLog) Started
+1497020024>>>33779100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020024>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020024>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020066>>>81166000>>>SYSTEM>>>Log File (initLog) Started
+1497020066>>>81166000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020066>>>81166000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020066>>>81166000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020066>>>81519600>>>SYSTEM>>>Log File (initLog) Started
+1497020066>>>81519600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020066>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020066>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020119>>>47971200>>>SYSTEM>>>Log File (initLog) Started
+1497020119>>>47971200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020119>>>47971200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020119>>>47971200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020119>>>48347300>>>SYSTEM>>>Log File (initLog) Started
+1497020119>>>48347300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020119>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020119>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020171>>>99906900>>>SYSTEM>>>Log File (initLog) Started
+1497020171>>>99906900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020171>>>99906900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020171>>>99906900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020172>>>00001600>>>SYSTEM>>>Log File (initLog) Started
+1497020172>>>00001600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020172>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020172>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020281>>>53945600>>>SYSTEM>>>Log File (initLog) Started
+1497020281>>>53945600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020281>>>53945600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020281>>>53945600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020281>>>54531300>>>SYSTEM>>>Log File (initLog) Started
+1497020281>>>54531300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020281>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020281>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020675>>>22252300>>>SYSTEM>>>Log File (initLog) Started
+1497020675>>>22252300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020675>>>22252300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020675>>>22252300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020675>>>22762600>>>SYSTEM>>>Log File (initLog) Started
+1497020675>>>22762600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020675>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020675>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020742>>>97864300>>>SYSTEM>>>Log File (initLog) Started
+1497020742>>>97864300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497020742>>>97864300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497020742>>>97864300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020742>>>97975800>>>SYSTEM>>>Log File (initLog) Started
+1497020742>>>97975800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497020742>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497020742>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497020742>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497021657>>>89589300>>>SYSTEM>>>Log File (initLog) Started
+1497021657>>>89589300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497021657>>>89589300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497021657>>>89589300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497021657>>>90222700>>>SYSTEM>>>Log File (initLog) Started
+1497021657>>>90222700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497021657>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497021657>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497021657>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022496>>>83189700>>>SYSTEM>>>Log File (initLog) Started
+1497022496>>>83189700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497022496>>>83189700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497022496>>>83189700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022496>>>83521400>>>SYSTEM>>>Log File (initLog) Started
+1497022496>>>83521400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022496>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497022496>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022597>>>41556800>>>SYSTEM>>>Log File (initLog) Started
+1497022597>>>41556800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497022597>>>41556800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497022597>>>41556800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022597>>>42144900>>>SYSTEM>>>Log File (initLog) Started
+1497022597>>>42144900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022597>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497022597>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022597>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022597>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497022694>>>63773100>>>SYSTEM>>>Log File (initLog) Started
+1497022694>>>63773100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497022694>>>63773100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497022694>>>63773100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022694>>>64045700>>>SYSTEM>>>Log File (initLog) Started
+1497022694>>>64045700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022694>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497022694>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022694>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022694>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497022945>>>96556300>>>SYSTEM>>>Log File (initLog) Started
+1497022945>>>96556300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497022945>>>96556300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497022945>>>96556300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022945>>>96990400>>>SYSTEM>>>Log File (initLog) Started
+1497022945>>>96990400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497022945>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497022945>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022945>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497022945>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023034>>>10822600>>>SYSTEM>>>2017-06-09 03:43:54Log File (initLog) Started
+1497023034>>>10822600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023034>>>10822600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023034>>>10822600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023034>>>16413300>>>SYSTEM>>>2017-06-09 03:43:54Log File (initLog) Started
+1497023034>>>16413300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023034>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023034>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023034>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023034>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023133>>>52707100>>>SYSTEM>>>2017-06-09 03:45:33::Log File (initLog) Started
+1497023133>>>52707100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023133>>>52707100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023133>>>52707100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023133>>>52821400>>>SYSTEM>>>2017-06-09 03:45:33::Log File (initLog) Started
+1497023133>>>52821400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023133>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023133>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023168>>>31616400>>>SYSTEM>>>2017-06-09 03:46:08::Log File (initLog) Started
+1497023168>>>31616400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023168>>>31616400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023168>>>31616400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023168>>>31744000>>>SYSTEM>>>2017-06-09 03:46:08::Log File (initLog) Started
+1497023168>>>31744000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023168>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023168>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023168>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023168>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023239>>>55482300>>>SYSTEM>>>2017-06-09 03:47:19::Log File (initLog) Started
+1497023239>>>55482300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023239>>>55482300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023239>>>55482300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023239>>>55816100>>>SYSTEM>>>2017-06-09 03:47:19::Log File (initLog) Started
+1497023239>>>55816100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023239>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023239>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023239>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023239>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023239>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023491>>>47851100>>>SYSTEM>>>2017-06-09 03:51:31::Log File (initLog) Started
+1497023491>>>47851100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023491>>>47851100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023491>>>47851100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023491>>>48179400>>>SYSTEM>>>2017-06-09 03:51:31::Log File (initLog) Started
+1497023491>>>48179400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023491>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023491>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023491>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023491>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023491>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023594>>>15866100>>>SYSTEM>>>2017-06-09 03:53:14::Log File (initLog) Started
+1497023594>>>15866100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023594>>>15866100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023594>>>15866100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023594>>>16226000>>>SYSTEM>>>2017-06-09 03:53:14::Log File (initLog) Started
+1497023594>>>16226000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023594>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023594>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023594>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023594>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023594>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023639>>>02925600>>>SYSTEM>>>2017-06-09 03:53:59::Log File (initLog) Started
+1497023639>>>02925600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023639>>>02925600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023639>>>02925600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023639>>>03300400>>>SYSTEM>>>2017-06-09 03:53:59::Log File (initLog) Started
+1497023639>>>03300400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023639>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023639>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023639>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023639>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023639>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023904>>>48030600>>>SYSTEM>>>2017-06-09 03:58:24::Log File (initLog) Started
+1497023904>>>48030600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023904>>>48030600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023904>>>48030600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023904>>>49416700>>>SYSTEM>>>2017-06-09 03:58:24::Log File (initLog) Started
+1497023904>>>49416700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023904>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023904>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023904>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023904>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023904>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497023939>>>43530400>>>SYSTEM>>>2017-06-09 03:58:59::Log File (initLog) Started
+1497023939>>>43530400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497023939>>>43530400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497023939>>>43530400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023939>>>43825500>>>SYSTEM>>>2017-06-09 03:58:59::Log File (initLog) Started
+1497023939>>>43825500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497023939>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497023939>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023939>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497023939>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497023939>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497024128>>>39456900>>>SYSTEM>>>2017-06-09 04:02:08::Log File (initLog) Started
+1497024128>>>39456900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497024128>>>39456900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497024128>>>39456900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024128>>>39768300>>>SYSTEM>>>2017-06-09 04:02:08::Log File (initLog) Started
+1497024128>>>39768300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024128>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497024128>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024128>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497024128>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024128>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497024360>>>53924200>>>SYSTEM>>>2017-06-09 04:06:00::Log File (initLog) Started
+1497024360>>>53924200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497024360>>>53924200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497024360>>>53924200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024360>>>54288400>>>SYSTEM>>>2017-06-09 04:06:00::Log File (initLog) Started
+1497024360>>>54288400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024360>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497024360>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024360>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497024360>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024360>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497024397>>>74432400>>>SYSTEM>>>2017-06-09 04:06:37::Log File (initLog) Started
+1497024397>>>74432400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497024397>>>74432400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497024397>>>74432400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024397>>>74757200>>>SYSTEM>>>2017-06-09 04:06:37::Log File (initLog) Started
+1497024397>>>74757200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024397>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497024397>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024397>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497024397>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024397>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497024528>>>79471000>>>SYSTEM>>>2017-06-09 04:08:48::Log File (initLog) Started
+1497024528>>>79471000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497024528>>>79471000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497024528>>>79471000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024528>>>79587100>>>SYSTEM>>>2017-06-09 04:08:48::Log File (initLog) Started
+1497024528>>>79587100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024528>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497024528>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024528>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497024528>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024528>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497024736>>>17712800>>>SYSTEM>>>2017-06-09 04:12:16::Log File (initLog) Started
+1497024736>>>17712800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497024736>>>17712800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497024736>>>17712800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024736>>>18049100>>>SYSTEM>>>2017-06-09 04:12:16::Log File (initLog) Started
+1497024736>>>18049100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497024736>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497024736>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024736>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497024736>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497024736>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497025944>>>07892900>>>SYSTEM>>>2017-06-09 04:32:24::Log File (initLog) Started
+1497025944>>>07892900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497025944>>>07892900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497025944>>>07892900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497025944>>>08402400>>>SYSTEM>>>2017-06-09 04:32:24::Log File (initLog) Started
+1497025944>>>08402400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497025944>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497025944>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497025944>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497025944>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497025944>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026037>>>06542400>>>SYSTEM>>>2017-06-09 04:33:57::Log File (initLog) Started
+1497026037>>>06542400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026037>>>06542400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026037>>>06542400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026037>>>07126700>>>SYSTEM>>>2017-06-09 04:33:57::Log File (initLog) Started
+1497026037>>>07126700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026037>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026037>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026037>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026037>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026037>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026085>>>60969100>>>SYSTEM>>>2017-06-09 04:34:45::Log File (initLog) Started
+1497026085>>>60969100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026085>>>60969100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026085>>>60969100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026085>>>61074700>>>SYSTEM>>>2017-06-09 04:34:45::Log File (initLog) Started
+1497026085>>>61074700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026085>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026085>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026085>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026085>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026085>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026135>>>57714000>>>SYSTEM>>>2017-06-09 04:35:35::Log File (initLog) Started
+1497026135>>>57714000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026135>>>57714000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026135>>>57714000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026135>>>57837900>>>SYSTEM>>>2017-06-09 04:35:35::Log File (initLog) Started
+1497026135>>>57837900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026135>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026135>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026135>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026135>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026135>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026249>>>69485200>>>SYSTEM>>>2017-06-09 04:37:29::Log File (initLog) Started
+1497026249>>>69485200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026249>>>69485200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026249>>>69485200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026249>>>69909700>>>SYSTEM>>>2017-06-09 04:37:29::Log File (initLog) Started
+1497026249>>>69909700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026249>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026249>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026249>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026249>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026249>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026331>>>95113700>>>SYSTEM>>>2017-06-09 04:38:51::Log File (initLog) Started
+1497026331>>>95113700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026331>>>95113700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026331>>>95113700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026331>>>95218500>>>SYSTEM>>>2017-06-09 04:38:51::Log File (initLog) Started
+1497026331>>>95218500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026331>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026331>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026331>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026331>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026331>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026363>>>99492300>>>SYSTEM>>>2017-06-09 04:39:23::Log File (initLog) Started
+1497026363>>>99492300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026363>>>99492300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026363>>>99492300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026363>>>99796600>>>SYSTEM>>>2017-06-09 04:39:23::Log File (initLog) Started
+1497026363>>>99796600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026363>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026363>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026363>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026363>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026363>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026425>>>65546600>>>SYSTEM>>>2017-06-09 04:40:25::Log File (initLog) Started
+1497026425>>>65546600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026425>>>65546600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026425>>>65546600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026425>>>66016300>>>SYSTEM>>>2017-06-09 04:40:25::Log File (initLog) Started
+1497026425>>>66016300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026425>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026425>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026425>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026425>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026425>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026647>>>43145600>>>SYSTEM>>>2017-06-09 04:44:07::Log File (initLog) Started
+1497026647>>>43145600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026647>>>43145600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026647>>>43145600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026647>>>43535700>>>SYSTEM>>>2017-06-09 04:44:07::Log File (initLog) Started
+1497026647>>>43535700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026647>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026647>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026647>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026647>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026647>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026730>>>22787300>>>SYSTEM>>>2017-06-09 04:45:30::Log File (initLog) Started
+1497026730>>>22787300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026730>>>22787300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026730>>>22787300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026730>>>23275200>>>SYSTEM>>>2017-06-09 04:45:30::Log File (initLog) Started
+1497026730>>>23275200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026730>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026730>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026730>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026730>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026730>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497026868>>>32914700>>>SYSTEM>>>2017-06-09 04:47:48::Log File (initLog) Started
+1497026868>>>32914700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497026868>>>32914700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497026868>>>32914700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026868>>>33013400>>>SYSTEM>>>2017-06-09 04:47:48::Log File (initLog) Started
+1497026868>>>33013400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497026868>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497026868>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026868>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497026868>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497026868>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027000>>>91425100>>>SYSTEM>>>2017-06-09 04:50:00::Log File (initLog) Started
+1497027000>>>91425100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027000>>>91425100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027000>>>91425100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027000>>>91556000>>>SYSTEM>>>2017-06-09 04:50:00::Log File (initLog) Started
+1497027000>>>91556000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027000>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027000>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027000>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027000>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027000>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027096>>>92061400>>>SYSTEM>>>2017-06-09 04:51:36::Log File (initLog) Started
+1497027096>>>92061400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027096>>>92061400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027096>>>92061400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027096>>>92394300>>>SYSTEM>>>2017-06-09 04:51:36::Log File (initLog) Started
+1497027096>>>92394300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027096>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027096>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027096>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027096>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027096>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027287>>>50826600>>>SYSTEM>>>2017-06-09 04:54:47::Log File (initLog) Started
+1497027287>>>50826600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027287>>>50826600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027287>>>50826600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027287>>>51121100>>>SYSTEM>>>2017-06-09 04:54:47::Log File (initLog) Started
+1497027287>>>51121100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027287>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027287>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027287>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027287>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027287>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027313>>>58882200>>>SYSTEM>>>2017-06-09 04:55:13::Log File (initLog) Started
+1497027313>>>58882200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027313>>>58882200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027313>>>58882200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027313>>>59190900>>>SYSTEM>>>2017-06-09 04:55:13::Log File (initLog) Started
+1497027313>>>59190900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027313>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027313>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027313>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027313>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027313>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027866>>>48759800>>>SYSTEM>>>2017-06-09 05:04:26::Log File (initLog) Started
+1497027866>>>48759800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027866>>>48759800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027866>>>48759800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027866>>>49104400>>>SYSTEM>>>2017-06-09 05:04:26::Log File (initLog) Started
+1497027866>>>49104400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027866>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027866>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027866>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027866>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027866>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027959>>>45765700>>>SYSTEM>>>2017-06-09 05:05:59::Log File (initLog) Started
+1497027959>>>45765700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027959>>>45765700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027959>>>45765700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027959>>>46276000>>>SYSTEM>>>2017-06-09 05:05:59::Log File (initLog) Started
+1497027959>>>46276000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027959>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027959>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027959>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027959>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027959>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497027990>>>62408900>>>SYSTEM>>>2017-06-09 05:06:30::Log File (initLog) Started
+1497027990>>>62408900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497027990>>>62408900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497027990>>>62408900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027990>>>62535200>>>SYSTEM>>>2017-06-09 05:06:30::Log File (initLog) Started
+1497027990>>>62535200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497027990>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497027990>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027990>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497027990>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497027990>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028029>>>64348500>>>SYSTEM>>>2017-06-09 05:07:09::Log File (initLog) Started
+1497028029>>>64348500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028029>>>64348500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028029>>>64348500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028029>>>64626900>>>SYSTEM>>>2017-06-09 05:07:09::Log File (initLog) Started
+1497028029>>>64626900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028029>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028029>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028029>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028029>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028029>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028186>>>20868700>>>SYSTEM>>>2017-06-09 05:09:46::Log File (initLog) Started
+1497028186>>>20868700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028186>>>20868700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028186>>>20868700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028186>>>21241900>>>SYSTEM>>>2017-06-09 05:09:46::Log File (initLog) Started
+1497028186>>>21241900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028186>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028186>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028186>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028186>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028186>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028240>>>18168400>>>SYSTEM>>>2017-06-09 05:10:40::Log File (initLog) Started
+1497028240>>>18168400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028240>>>18168400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028240>>>18168400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028240>>>18453700>>>SYSTEM>>>2017-06-09 05:10:40::Log File (initLog) Started
+1497028240>>>18453700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028240>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028240>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028240>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028240>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028240>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028325>>>81920300>>>SYSTEM>>>2017-06-09 05:12:05::Log File (initLog) Started
+1497028325>>>81920300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028325>>>81920300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028325>>>81920300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028325>>>82214100>>>SYSTEM>>>2017-06-09 05:12:05::Log File (initLog) Started
+1497028325>>>82214100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028325>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028325>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028325>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028325>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028325>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028344>>>53546000>>>SYSTEM>>>2017-06-09 05:12:24::Log File (initLog) Started
+1497028344>>>53546000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028344>>>53546000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028344>>>53546000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028344>>>54031800>>>SYSTEM>>>2017-06-09 05:12:24::Log File (initLog) Started
+1497028344>>>54031800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028344>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028344>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028344>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028344>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028344>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028366>>>70561500>>>SYSTEM>>>2017-06-09 05:12:46::Log File (initLog) Started
+1497028366>>>70561500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028366>>>70561500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028366>>>70561500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028366>>>70666300>>>SYSTEM>>>2017-06-09 05:12:46::Log File (initLog) Started
+1497028366>>>70666300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028366>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028366>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028479>>>13594200>>>SYSTEM>>>2017-06-09 05:14:39::Log File (initLog) Started
+1497028479>>>13594200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028479>>>13594200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028479>>>13594200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028479>>>13895200>>>SYSTEM>>>2017-06-09 05:14:39::Log File (initLog) Started
+1497028479>>>13895200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028479>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028479>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028479>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028479>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028479>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028499>>>08769300>>>SYSTEM>>>2017-06-09 05:14:59::Log File (initLog) Started
+1497028499>>>08769300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028499>>>08769300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028499>>>08769300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028499>>>08877700>>>SYSTEM>>>2017-06-09 05:14:59::Log File (initLog) Started
+1497028499>>>08877700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028499>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028499>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028499>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028499>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028499>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028538>>>50903800>>>SYSTEM>>>2017-06-09 05:15:38::Log File (initLog) Started
+1497028538>>>50903800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028538>>>50903800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028538>>>50903800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028538>>>51181000>>>SYSTEM>>>2017-06-09 05:15:38::Log File (initLog) Started
+1497028538>>>51181000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028538>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028538>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028538>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028538>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028538>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028640>>>53143100>>>SYSTEM>>>2017-06-09 05:17:20::Log File (initLog) Started
+1497028640>>>53143100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028640>>>53143100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028640>>>53143100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028640>>>53458300>>>SYSTEM>>>2017-06-09 05:17:20::Log File (initLog) Started
+1497028640>>>53458300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028640>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028640>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028640>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028640>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028640>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497028823>>>76650400>>>SYSTEM>>>2017-06-09 05:20:23::Log File (initLog) Started
+1497028823>>>76650400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497028823>>>76650400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497028823>>>76650400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028823>>>76950300>>>SYSTEM>>>2017-06-09 05:20:23::Log File (initLog) Started
+1497028823>>>76950300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497028823>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497028823>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028823>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497028823>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497028823>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029326>>>89023100>>>SYSTEM>>>2017-06-09 05:28:46::Log File (initLog) Started
+1497029326>>>89023100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029326>>>89023100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029326>>>89023100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029326>>>90604400>>>SYSTEM>>>2017-06-09 05:28:46::Log File (initLog) Started
+1497029326>>>90604400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029326>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029326>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029326>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029326>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029326>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029395>>>90652200>>>SYSTEM>>>2017-06-09 05:29:55::Log File (initLog) Started
+1497029395>>>90652200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029395>>>90652200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029395>>>90652200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029395>>>90926200>>>SYSTEM>>>2017-06-09 05:29:55::Log File (initLog) Started
+1497029395>>>90926200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029395>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029395>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029395>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029395>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029395>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029624>>>26523400>>>SYSTEM>>>2017-06-09 05:33:44::Log File (initLog) Started
+1497029624>>>26523400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029624>>>26523400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029624>>>26523400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029624>>>26819000>>>SYSTEM>>>2017-06-09 05:33:44::Log File (initLog) Started
+1497029624>>>26819000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029624>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029624>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029624>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029624>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029624>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029654>>>98359200>>>SYSTEM>>>2017-06-09 05:34:14::Log File (initLog) Started
+1497029654>>>98359200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029654>>>98359200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029654>>>98359200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029654>>>98650500>>>SYSTEM>>>2017-06-09 05:34:14::Log File (initLog) Started
+1497029654>>>98650500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029654>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029654>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029654>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029654>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029654>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029678>>>07903300>>>SYSTEM>>>2017-06-09 05:34:38::Log File (initLog) Started
+1497029678>>>07903300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029678>>>07903300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029678>>>07903300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029678>>>08194000>>>SYSTEM>>>2017-06-09 05:34:38::Log File (initLog) Started
+1497029678>>>08194000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029678>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029678>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029678>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029678>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029678>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029735>>>49074700>>>SYSTEM>>>2017-06-09 05:35:35::Log File (initLog) Started
+1497029735>>>49074700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029735>>>49074700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029735>>>49074700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029735>>>49544300>>>SYSTEM>>>2017-06-09 05:35:35::Log File (initLog) Started
+1497029735>>>49544300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029735>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029735>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029735>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029735>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029735>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029844>>>29880400>>>SYSTEM>>>2017-06-09 05:37:24::Log File (initLog) Started
+1497029844>>>29880400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029844>>>29880400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029844>>>29880400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029844>>>29993100>>>SYSTEM>>>2017-06-09 05:37:24::Log File (initLog) Started
+1497029844>>>29993100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029844>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029844>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029844>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029844>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029844>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029867>>>57258600>>>SYSTEM>>>2017-06-09 05:37:47::Log File (initLog) Started
+1497029867>>>57258600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029867>>>57258600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029867>>>57258600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029867>>>57359300>>>SYSTEM>>>2017-06-09 05:37:47::Log File (initLog) Started
+1497029867>>>57359300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029867>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029867>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029867>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029867>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029867>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029894>>>67069100>>>SYSTEM>>>2017-06-09 05:38:14::Log File (initLog) Started
+1497029894>>>67069100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029894>>>67069100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029894>>>67069100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029894>>>67167000>>>SYSTEM>>>2017-06-09 05:38:14::Log File (initLog) Started
+1497029894>>>67167000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029894>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029894>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029894>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029894>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029894>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029916>>>03679900>>>SYSTEM>>>2017-06-09 05:38:36::Log File (initLog) Started
+1497029916>>>03679900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029916>>>03679900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029916>>>03679900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029916>>>03976700>>>SYSTEM>>>2017-06-09 05:38:36::Log File (initLog) Started
+1497029916>>>03976700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029916>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029916>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029916>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029916>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029916>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029970>>>58406900>>>SYSTEM>>>2017-06-09 05:39:30::Log File (initLog) Started
+1497029970>>>58406900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029970>>>58406900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029970>>>58406900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029970>>>58917300>>>SYSTEM>>>2017-06-09 05:39:30::Log File (initLog) Started
+1497029970>>>58917300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029970>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029970>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029970>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497029970>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029970>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029986>>>38463600>>>SYSTEM>>>2017-06-09 05:39:46::Log File (initLog) Started
+1497029986>>>38463600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029986>>>38463600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029986>>>38463600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029986>>>38552400>>>SYSTEM>>>2017-06-09 05:39:46::Log File (initLog) Started
+1497029986>>>38552400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029986>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029986>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029986>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497029989>>>95305800>>>SYSTEM>>>2017-06-09 05:39:49::Log File (initLog) Started
+1497029989>>>95305800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497029989>>>95305800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497029989>>>95305800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029989>>>95820000>>>SYSTEM>>>2017-06-09 05:39:49::Log File (initLog) Started
+1497029989>>>95820000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497029989>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497029989>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497029989>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030052>>>31427600>>>SYSTEM>>>2017-06-09 05:40:52::Log File (initLog) Started
+1497030052>>>31427600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030052>>>31427600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030052>>>31427600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030052>>>33158600>>>SYSTEM>>>2017-06-09 05:40:52::Log File (initLog) Started
+1497030052>>>33158600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030052>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030052>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030052>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030166>>>33183000>>>SYSTEM>>>2017-06-09 05:42:46::Log File (initLog) Started
+1497030166>>>33183000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030166>>>33183000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030166>>>33183000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030166>>>33661100>>>SYSTEM>>>2017-06-09 05:42:46::Log File (initLog) Started
+1497030166>>>33661100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030166>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030166>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030166>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030184>>>14099200>>>SYSTEM>>>2017-06-09 05:43:04::Log File (initLog) Started
+1497030184>>>14099200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030184>>>14099200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030184>>>14099200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030184>>>14200600>>>SYSTEM>>>2017-06-09 05:43:04::Log File (initLog) Started
+1497030184>>>14200600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030184>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030184>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030184>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030204>>>26327900>>>SYSTEM>>>2017-06-09 05:43:24::Log File (initLog) Started
+1497030204>>>26327900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030204>>>26327900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030204>>>26327900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030204>>>26464100>>>SYSTEM>>>2017-06-09 05:43:24::Log File (initLog) Started
+1497030204>>>26464100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030204>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030204>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030204>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030258>>>15582000>>>SYSTEM>>>2017-06-09 05:44:18::Log File (initLog) Started
+1497030258>>>15582000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030258>>>15582000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030258>>>15582000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030258>>>15915600>>>SYSTEM>>>2017-06-09 05:44:18::Log File (initLog) Started
+1497030258>>>15915600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030258>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030258>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030258>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030292>>>93346800>>>SYSTEM>>>2017-06-09 05:44:52::Log File (initLog) Started
+1497030292>>>93346800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030292>>>93346800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030292>>>93346800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030292>>>93704500>>>SYSTEM>>>2017-06-09 05:44:52::Log File (initLog) Started
+1497030292>>>93704500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030292>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030292>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030292>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497030292>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030292>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030337>>>89014900>>>SYSTEM>>>2017-06-09 05:45:37::Log File (initLog) Started
+1497030337>>>89014900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030337>>>89014900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030337>>>89014900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030337>>>89497200>>>SYSTEM>>>2017-06-09 05:45:37::Log File (initLog) Started
+1497030337>>>89497200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030337>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030337>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030337>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497030337>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030337>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030406>>>69120200>>>SYSTEM>>>2017-06-09 05:46:46::Log File (initLog) Started
+1497030406>>>69120200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030406>>>69120200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030406>>>69120200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030406>>>69220000>>>SYSTEM>>>2017-06-09 05:46:46::Log File (initLog) Started
+1497030406>>>69220000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030406>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030406>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030406>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030460>>>15574800>>>SYSTEM>>>2017-06-09 05:47:40::Log File (initLog) Started
+1497030460>>>15574800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030460>>>15574800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030460>>>15574800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030460>>>15923600>>>SYSTEM>>>2017-06-09 05:47:40::Log File (initLog) Started
+1497030460>>>15923600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030460>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030460>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030460>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030491>>>06508400>>>SYSTEM>>>2017-06-09 05:48:11::Log File (initLog) Started
+1497030491>>>06508400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030491>>>06508400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030491>>>06508400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030491>>>06636200>>>SYSTEM>>>2017-06-09 05:48:11::Log File (initLog) Started
+1497030491>>>06636200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030491>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030491>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030491>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030873>>>97090700>>>SYSTEM>>>2017-06-09 05:54:33::Log File (initLog) Started
+1497030873>>>97090700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030873>>>97090700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030873>>>97090700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030873>>>98291100>>>SYSTEM>>>2017-06-09 05:54:33::Log File (initLog) Started
+1497030873>>>98291100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030873>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030873>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030873>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030925>>>28555900>>>SYSTEM>>>2017-06-09 05:55:25::Log File (initLog) Started
+1497030925>>>28555900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030925>>>28555900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030925>>>28555900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030925>>>28945100>>>SYSTEM>>>2017-06-09 05:55:25::Log File (initLog) Started
+1497030925>>>28945100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030925>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030925>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030925>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497030934>>>96267700>>>SYSTEM>>>2017-06-09 05:55:34::Log File (initLog) Started
+1497030934>>>96267700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497030934>>>96267700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497030934>>>96267700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030934>>>96376200>>>SYSTEM>>>2017-06-09 05:55:34::Log File (initLog) Started
+1497030934>>>96376200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497030934>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497030934>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497030934>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497031442>>>30746000>>>SYSTEM>>>2017-06-09 06:04:02::Log File (initLog) Started
+1497031442>>>30746000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497031442>>>30746000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497031442>>>30746000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031442>>>31104700>>>SYSTEM>>>2017-06-09 06:04:02::Log File (initLog) Started
+1497031442>>>31104700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031442>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497031442>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031442>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497031442>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031442>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497031770>>>52908900>>>SYSTEM>>>2017-06-09 06:09:30::Log File (initLog) Started
+1497031770>>>52908900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497031770>>>52908900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497031770>>>52908900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031770>>>53399000>>>SYSTEM>>>2017-06-09 06:09:30::Log File (initLog) Started
+1497031770>>>53399000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031770>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497031770>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031770>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497031770>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031770>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497031843>>>16860400>>>SYSTEM>>>2017-06-09 06:10:43::Log File (initLog) Started
+1497031843>>>16860400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497031843>>>16860400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497031843>>>16860400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031843>>>17158300>>>SYSTEM>>>2017-06-09 06:10:43::Log File (initLog) Started
+1497031843>>>17158300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031843>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497031843>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031843>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497031843>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031843>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497031880>>>06942500>>>SYSTEM>>>2017-06-09 06:11:20::Log File (initLog) Started
+1497031880>>>06942500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497031880>>>06942500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497031880>>>06942500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031880>>>07045000>>>SYSTEM>>>2017-06-09 06:11:20::Log File (initLog) Started
+1497031880>>>07045000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497031880>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497031880>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031880>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497031880>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497031880>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034003>>>64768800>>>SYSTEM>>>2017-06-09 06:46:43::Log File (initLog) Started
+1497034003>>>64768800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034003>>>64768800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034003>>>64768800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034003>>>65004600>>>SYSTEM>>>2017-06-09 06:46:43::Log File (initLog) Started
+1497034003>>>65004600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034003>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034003>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034003>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034003>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034003>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034054>>>05835900>>>SYSTEM>>>2017-06-09 06:47:34::Log File (initLog) Started
+1497034054>>>05835900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034054>>>05835900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034054>>>05835900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034054>>>05933200>>>SYSTEM>>>2017-06-09 06:47:34::Log File (initLog) Started
+1497034054>>>05933200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034054>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034054>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034054>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034054>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034054>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034113>>>90136600>>>SYSTEM>>>2017-06-09 06:48:33::Log File (initLog) Started
+1497034113>>>90136600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034113>>>90136600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034113>>>90136600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034113>>>90231200>>>SYSTEM>>>2017-06-09 06:48:33::Log File (initLog) Started
+1497034113>>>90231200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034113>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034113>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034113>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034113>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034113>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034145>>>35898600>>>SYSTEM>>>2017-06-09 06:49:05::Log File (initLog) Started
+1497034145>>>35898600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034145>>>35898600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034145>>>35898600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034145>>>36160800>>>SYSTEM>>>2017-06-09 06:49:05::Log File (initLog) Started
+1497034145>>>36160800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034145>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034145>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034145>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034145>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034145>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034168>>>32992000>>>SYSTEM>>>2017-06-09 06:49:28::Log File (initLog) Started
+1497034168>>>32992000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034168>>>32992000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034168>>>32992000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034168>>>33086900>>>SYSTEM>>>2017-06-09 06:49:28::Log File (initLog) Started
+1497034168>>>33086900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034168>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034168>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034168>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034168>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034168>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034211>>>92892200>>>SYSTEM>>>2017-06-09 06:50:11::Log File (initLog) Started
+1497034211>>>92892200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034211>>>92892200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034211>>>92892200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034211>>>93583400>>>SYSTEM>>>2017-06-09 06:50:11::Log File (initLog) Started
+1497034211>>>93583400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034211>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034211>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034211>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034211>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034211>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034243>>>74873900>>>SYSTEM>>>2017-06-09 06:50:43::Log File (initLog) Started
+1497034243>>>74873900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034243>>>74873900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034243>>>74873900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034243>>>74996800>>>SYSTEM>>>2017-06-09 06:50:43::Log File (initLog) Started
+1497034243>>>74996800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034243>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034243>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034243>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034243>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034243>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034324>>>77417000>>>SYSTEM>>>2017-06-09 06:52:04::Log File (initLog) Started
+1497034324>>>77417000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034324>>>77417000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034324>>>77417000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034324>>>78050200>>>SYSTEM>>>2017-06-09 06:52:04::Log File (initLog) Started
+1497034324>>>78050200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034324>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034324>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034324>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034324>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034324>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034366>>>61996500>>>SYSTEM>>>2017-06-09 06:52:46::Log File (initLog) Started
+1497034366>>>61996500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034366>>>61996500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034366>>>61996500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034366>>>62464300>>>SYSTEM>>>2017-06-09 06:52:46::Log File (initLog) Started
+1497034366>>>62464300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034366>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034366>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034366>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034413>>>64904100>>>SYSTEM>>>2017-06-09 06:53:33::Log File (initLog) Started
+1497034413>>>64904100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034413>>>64904100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034413>>>64904100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034413>>>65004900>>>SYSTEM>>>2017-06-09 06:53:33::Log File (initLog) Started
+1497034413>>>65004900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034413>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034413>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034413>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034413>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034413>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034429>>>42837400>>>SYSTEM>>>2017-06-09 06:53:49::Log File (initLog) Started
+1497034429>>>42837400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034429>>>42837400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034429>>>42837400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034429>>>43118600>>>SYSTEM>>>2017-06-09 06:53:49::Log File (initLog) Started
+1497034429>>>43118600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034429>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034429>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034429>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497034429>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034429>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034449>>>19032700>>>SYSTEM>>>2017-06-09 06:54:09::Log File (initLog) Started
+1497034449>>>19032700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034449>>>19032700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034449>>>19032700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034449>>>19317500>>>SYSTEM>>>2017-06-09 06:54:09::Log File (initLog) Started
+1497034449>>>19317500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034449>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034449>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034449>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034503>>>11470000>>>SYSTEM>>>2017-06-09 06:55:03::Log File (initLog) Started
+1497034503>>>11470000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034503>>>11470000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034503>>>11470000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034503>>>12006200>>>SYSTEM>>>2017-06-09 06:55:03::Log File (initLog) Started
+1497034503>>>12006200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034503>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034503>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034503>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034555>>>51382200>>>SYSTEM>>>2017-06-09 06:55:55::Log File (initLog) Started
+1497034555>>>51382200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034555>>>51382200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034555>>>51382200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034555>>>51483800>>>SYSTEM>>>2017-06-09 06:55:55::Log File (initLog) Started
+1497034555>>>51483800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034555>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034555>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034555>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034741>>>07657100>>>SYSTEM>>>2017-06-09 06:59:01::Log File (initLog) Started
+1497034741>>>07657100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034741>>>07657100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034741>>>07657100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034741>>>08504100>>>SYSTEM>>>2017-06-09 06:59:01::Log File (initLog) Started
+1497034741>>>08504100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034741>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034741>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034741>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034784>>>62602600>>>SYSTEM>>>2017-06-09 06:59:44::Log File (initLog) Started
+1497034784>>>62602600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034784>>>62602600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034784>>>62602600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034784>>>62889000>>>SYSTEM>>>2017-06-09 06:59:44::Log File (initLog) Started
+1497034784>>>62889000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034784>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034784>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034784>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497034829>>>62675500>>>SYSTEM>>>2017-06-09 07:00:29::Log File (initLog) Started
+1497034829>>>62675500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497034829>>>62675500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497034829>>>62675500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034829>>>63023500>>>SYSTEM>>>2017-06-09 07:00:29::Log File (initLog) Started
+1497034829>>>63023500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497034829>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497034829>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497034829>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497035355>>>78106900>>>SYSTEM>>>2017-06-09 07:09:15::Log File (initLog) Started
+1497035355>>>78106900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497035355>>>78106900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497035355>>>78106900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497035355>>>78657200>>>SYSTEM>>>2017-06-09 07:09:15::Log File (initLog) Started
+1497035355>>>78657200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497035355>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497035355>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497035355>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036110>>>70474500>>>SYSTEM>>>2017-06-09 07:21:50::Log File (initLog) Started
+1497036110>>>70474500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036110>>>70474500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036110>>>70474500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036110>>>70793500>>>SYSTEM>>>2017-06-09 07:21:50::Log File (initLog) Started
+1497036110>>>70793500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036110>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036110>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036110>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036161>>>08667900>>>SYSTEM>>>2017-06-09 07:22:41::Log File (initLog) Started
+1497036161>>>08667900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036161>>>08667900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036161>>>08667900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036161>>>08953800>>>SYSTEM>>>2017-06-09 07:22:41::Log File (initLog) Started
+1497036161>>>08953800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036161>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036161>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036161>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036190>>>45346200>>>SYSTEM>>>2017-06-09 07:23:10::Log File (initLog) Started
+1497036190>>>45346200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036190>>>45346200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036190>>>45346200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036190>>>45628100>>>SYSTEM>>>2017-06-09 07:23:10::Log File (initLog) Started
+1497036190>>>45628100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036190>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036190>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036190>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036231>>>02692700>>>SYSTEM>>>2017-06-09 07:23:51::Log File (initLog) Started
+1497036231>>>02692700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036231>>>02692700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036231>>>02692700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036231>>>03117300>>>SYSTEM>>>2017-06-09 07:23:51::Log File (initLog) Started
+1497036231>>>03117300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036231>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036231>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036231>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036334>>>45914900>>>SYSTEM>>>2017-06-09 07:25:34::Log File (initLog) Started
+1497036334>>>45914900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036334>>>45914900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036334>>>45914900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036334>>>46108000>>>SYSTEM>>>2017-06-09 07:25:34::Log File (initLog) Started
+1497036334>>>46108000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036334>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036334>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036334>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497036914>>>02337800>>>SYSTEM>>>2017-06-09 07:35:14::Log File (initLog) Started
+1497036914>>>02337800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497036914>>>02337800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497036914>>>02337800>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036914>>>02784300>>>SYSTEM>>>2017-06-09 07:35:14::Log File (initLog) Started
+1497036914>>>02784300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497036914>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497036914>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497036914>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497037000>>>91539600>>>SYSTEM>>>2017-06-09 07:36:40::Log File (initLog) Started
+1497037000>>>91539600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497037000>>>91539600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497037000>>>91539600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037000>>>92054000>>>SYSTEM>>>2017-06-09 07:36:40::Log File (initLog) Started
+1497037000>>>92054000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037000>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497037000>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497037000>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497037672>>>17321900>>>SYSTEM>>>2017-06-09 07:47:52::Log File (initLog) Started
+1497037672>>>17321900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497037672>>>17321900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497037672>>>17321900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037672>>>18784600>>>SYSTEM>>>2017-06-09 07:47:52::Log File (initLog) Started
+1497037672>>>18784600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037672>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497037672>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497037672>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497037685>>>80597100>>>SYSTEM>>>2017-06-09 07:48:05::Log File (initLog) Started
+1497037685>>>80597100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497037685>>>80597100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497037685>>>80597100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037685>>>80697400>>>SYSTEM>>>2017-06-09 07:48:05::Log File (initLog) Started
+1497037685>>>80697400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037685>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497037685>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497037685>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497037955>>>60347300>>>SYSTEM>>>2017-06-09 07:52:35::Log File (initLog) Started
+1497037955>>>60347300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497037955>>>60347300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497037955>>>60347300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037955>>>60490300>>>SYSTEM>>>2017-06-09 07:52:35::Log File (initLog) Started
+1497037955>>>60490300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037955>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497037955>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497037955>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497037992>>>57116000>>>SYSTEM>>>2017-06-09 07:53:12::Log File (initLog) Started
+1497037992>>>57116000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497037992>>>57116000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497037992>>>57116000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037992>>>57426100>>>SYSTEM>>>2017-06-09 07:53:12::Log File (initLog) Started
+1497037992>>>57426100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497037992>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497037992>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497037992>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038010>>>72493100>>>SYSTEM>>>2017-06-09 07:53:30::Log File (initLog) Started
+1497038010>>>72493100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038010>>>72493100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038010>>>72493100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038010>>>72768300>>>SYSTEM>>>2017-06-09 07:53:30::Log File (initLog) Started
+1497038010>>>72768300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038010>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038010>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038010>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038072>>>87108900>>>SYSTEM>>>2017-06-09 07:54:32::Log File (initLog) Started
+1497038072>>>87108900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038072>>>87108900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038072>>>87108900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038072>>>88944000>>>SYSTEM>>>2017-06-09 07:54:32::Log File (initLog) Started
+1497038072>>>88944000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038072>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038072>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038072>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038144>>>96839700>>>SYSTEM>>>2017-06-09 07:55:44::Log File (initLog) Started
+1497038144>>>96839700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038144>>>96839700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038144>>>96839700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038144>>>97158000>>>SYSTEM>>>2017-06-09 07:55:44::Log File (initLog) Started
+1497038144>>>97158000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038144>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038144>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038144>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038238>>>82036900>>>SYSTEM>>>2017-06-09 07:57:18::Log File (initLog) Started
+1497038238>>>82036900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038238>>>82036900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038238>>>82036900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038238>>>82309700>>>SYSTEM>>>2017-06-09 07:57:18::Log File (initLog) Started
+1497038238>>>82309700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038238>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038238>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038238>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038353>>>85208000>>>SYSTEM>>>2017-06-09 07:59:13::Log File (initLog) Started
+1497038353>>>85208000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038353>>>85208000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038353>>>85208000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038353>>>85512500>>>SYSTEM>>>2017-06-09 07:59:13::Log File (initLog) Started
+1497038353>>>85512500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038353>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038353>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038353>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497038388>>>28299300>>>SYSTEM>>>2017-06-09 07:59:48::Log File (initLog) Started
+1497038388>>>28299300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497038388>>>28299300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497038388>>>28299300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038388>>>28608100>>>SYSTEM>>>2017-06-09 07:59:48::Log File (initLog) Started
+1497038388>>>28608100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497038388>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497038388>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497038388>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497039251>>>67228000>>>SYSTEM>>>2017-06-09 08:14:11::Log File (initLog) Started
+1497039251>>>67228000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497039251>>>67228000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497039251>>>67228000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039251>>>67517400>>>SYSTEM>>>2017-06-09 08:14:11::Log File (initLog) Started
+1497039251>>>67517400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039251>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497039251>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039251>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497039270>>>17130200>>>SYSTEM>>>2017-06-09 08:14:30::Log File (initLog) Started
+1497039270>>>17130200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497039270>>>17130200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497039270>>>17130200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039270>>>17397400>>>SYSTEM>>>2017-06-09 08:14:30::Log File (initLog) Started
+1497039270>>>17397400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039270>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497039270>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039270>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497039289>>>95680200>>>SYSTEM>>>2017-06-09 08:14:49::Log File (initLog) Started
+1497039289>>>95680200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497039289>>>95680200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497039289>>>95680200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039289>>>95946200>>>SYSTEM>>>2017-06-09 08:14:49::Log File (initLog) Started
+1497039289>>>95946200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: bhi2avcr33edl2f91s9n0i6kk6
+1497039289>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>PHP Session Data Reset.
+1497039289>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039289>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No USF XSS Exception Data
+1497039289>>>bhi2avcr33edl2f91s9n0i6kk6>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039289>>>bhi2avcr33edl2f91s9n0i6kk6>>>NOTICE>>>No Web App XSS Exception Data
+1497039331>>>98293100>>>SYSTEM>>>2017-06-09 08:15:31::Log File (initLog) Started
+1497039331>>>98293100>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497039331>>>98293100>>>NOTICE>>>Constructed New usfLog (Logger).
+1497039331>>>98293100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ur6og6d9nebkep4526cac50il1
+1497039331>>>ur6og6d9nebkep4526cac50il1>>>INFO>>>Constructing Available Web Apps
+1497039332>>>02780200>>>SYSTEM>>>2017-06-09 08:15:32::Log File (initLog) Started
+1497039332>>>02780200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ur6og6d9nebkep4526cac50il1
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>NOTICE>>>PHP Session Data Reset.
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\PHP\init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>NOTICE>>>No USF XSS Exception Data
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-lists.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>NOTICE>>>No Web App XSS Exception Data
+1497039332>>>ur6og6d9nebkep4526cac50il1>>>SYSTEM>>>New Session: ur6og6d9nebkep4526cac50il1
+1497039400>>>24008500>>>SYSTEM>>>2017-06-09 08:16:40::Log File (initLog) Started
+1497039400>>>24008500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497039400>>>24008500>>>NOTICE>>>Constructed New usfLog (Logger).
+1497039400>>>24008500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ur6og6d9nebkep4526cac50il1
+1497039400>>>24348100>>>SYSTEM>>>2017-06-09 08:16:40::Log File (initLog) Started
+1497039400>>>24348100>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ur6og6d9nebkep4526cac50il1
+1497039400>>>ur6og6d9nebkep4526cac50il1>>>NOTICE>>>PHP Session Data Reset.
+1497039400>>>ur6og6d9nebkep4526cac50il1>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497039400>>>ur6og6d9nebkep4526cac50il1>>>NOTICE>>>No Web App XSS Exception Data
+1497184516>>>02996600>>>SYSTEM>>>2017-06-11 12:35:16::Log File (initLog) Started
+1497184516>>>02996600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497184516>>>02996600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497184516>>>02996600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>INFO>>>Constructing Available Web Apps
+1497184516>>>03745200>>>SYSTEM>>>2017-06-11 12:35:16::Log File (initLog) Started
+1497184516>>>03745200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>NOTICE>>>PHP Session Data Reset.
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>NOTICE>>>No Web App XSS Exception Data
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>SYSTEM>>>New Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497184516>>>mv62153l9ng0bvrnk6h3qdgsb3>>>NOTICE>>>Created Purge Log File: C:/Users/Peter/Documents/www/USF/resource/logs/20170611purge.log
+1497185331>>>88435200>>>SYSTEM>>>2017-06-11 12:48:51::Log File (initLog) Started
+1497185331>>>88435200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497185331>>>88435200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497185331>>>88435200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497185331>>>88726700>>>SYSTEM>>>2017-06-11 12:48:51::Log File (initLog) Started
+1497185331>>>88726700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497185331>>>mv62153l9ng0bvrnk6h3qdgsb3>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497185331>>>mv62153l9ng0bvrnk6h3qdgsb3>>>NOTICE>>>No Web App XSS Exception Data
+1497185358>>>37305000>>>SYSTEM>>>2017-06-11 12:49:18::Log File (initLog) Started
+1497185358>>>37305000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497185358>>>37305000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497185358>>>37305000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497185358>>>37810300>>>SYSTEM>>>2017-06-11 12:49:18::Log File (initLog) Started
+1497185358>>>37810300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192438>>>13022400>>>SYSTEM>>>2017-06-11 02:47:18::Log File (initLog) Started
+1497192438>>>13022400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497192438>>>13022400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497192438>>>13022400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192438>>>13345500>>>SYSTEM>>>2017-06-11 02:47:18::Log File (initLog) Started
+1497192438>>>13345500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192441>>>89855300>>>SYSTEM>>>2017-06-11 02:47:21::Log File (initLog) Started
+1497192441>>>89855300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497192441>>>89855300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497192441>>>89855300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192441>>>90696000>>>SYSTEM>>>2017-06-11 02:47:21::Log File (initLog) Started
+1497192441>>>90696000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192870>>>16984000>>>SYSTEM>>>2017-06-11 02:54:30::Log File (initLog) Started
+1497192870>>>16984000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497192870>>>16984000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497192870>>>16984000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192870>>>17340500>>>SYSTEM>>>2017-06-11 02:54:30::Log File (initLog) Started
+1497192870>>>17340500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192948>>>93454300>>>SYSTEM>>>2017-06-11 02:55:48::Log File (initLog) Started
+1497192948>>>93454300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497192948>>>93454300>>>NOTICE>>>Constructed New usfLog (Logger).
+1497192948>>>93454300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497192948>>>93956900>>>SYSTEM>>>2017-06-11 02:55:48::Log File (initLog) Started
+1497192948>>>93956900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193027>>>46220900>>>SYSTEM>>>2017-06-11 02:57:07::Log File (initLog) Started
+1497193027>>>46220900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193027>>>46220900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193027>>>46220900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193027>>>46331600>>>SYSTEM>>>2017-06-11 02:57:07::Log File (initLog) Started
+1497193027>>>46331600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193171>>>70794900>>>SYSTEM>>>2017-06-11 02:59:31 Log File (initLog) Started
+1497193171>>>70794900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193171>>>70794900>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193171>>>70794900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193171>>>70926700>>>SYSTEM>>>2017-06-11 02:59:31 Log File (initLog) Started
+1497193171>>>70926700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193177>>>95482200>>>SYSTEM>>>2017-06-11 02:59:37 Log File (initLog) Started
+1497193177>>>95482200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193177>>>95482200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193177>>>95482200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193177>>>96446300>>>SYSTEM>>>2017-06-11 02:59:37 Log File (initLog) Started
+1497193177>>>96446300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193230>>>61892400>>>SYSTEM>>>2017-06-11 03:00:30 Log File (initLog) Started
+1497193230>>>61892400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193230>>>61892400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193230>>>61892400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193230>>>62708500>>>SYSTEM>>>2017-06-11 03:00:30 Log File (initLog) Started
+1497193230>>>62708500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193307>>>25486700>>>SYSTEM>>>2017-06-11 03:01:47 Log File (initLog) Started
+1497193307>>>25486700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193307>>>25486700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193307>>>25486700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193307>>>25650600>>>SYSTEM>>>2017-06-11 03:01:47 Log File (initLog) Started
+1497193307>>>25650600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193314>>>38385000>>>SYSTEM>>>2017-06-11 03:01:54 Log File (initLog) Started
+1497193314>>>38385000>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193314>>>38385000>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193314>>>38385000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193314>>>38722200>>>SYSTEM>>>2017-06-11 03:01:54 Log File (initLog) Started
+1497193314>>>38722200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193359>>>05733400>>>SYSTEM>>>2017-06-11 03:02:39 Log File (initLog) Started
+1497193359>>>05733400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193402>>>46211600>>>SYSTEM>>>2017-06-11 03:03:22 Log File (initLog) Started
+1497193402>>>46211600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193449>>>63995900>>>SYSTEM>>>2017-06-11 03:04:09 Log File (initLog) Started
+1497193449>>>63995900>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193485>>>64304300>>>SYSTEM>>>2017-06-11 03:04:45 Log File (initLog) Started
+1497193485>>>64304300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193785>>>33604700>>>SYSTEM>>>2017-06-11 03:09:45 Log File (initLog) Started
+1497193785>>>33604700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193785>>>33604700>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193785>>>33604700>>>FATAL>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: fatal
+		dump: 
+#0  UsfMethod::CaptureOutput() called at [C:\Users\Peter\Documents\www\USF\resource\PHP\classes\UsfMethod.class:534]
+#1  FatalErrorEvent(Array ([code] => 2,[message] => Object [Logger]::usfLog Not Stored.,[location] => 213,[action] => Retrieving Logger Object,[method] => RetrieveObject,[severity] => fatal)) called at [C:\Users\Peter\Documents\www\USF\resource\PHP\classes\UsfMethod.class:508]
+#2  ProcessErrorEvent(Array ([code] => 2,[message] => Object [Logger]::usfLog Not Stored.,[location] => 213,[action] => Retrieving Logger Object,[method] => RetrieveObject,[severity] => fatal)) called at [C:\Users\Peter\Documents\www\USF\resource\PHP\classes\UsfMethod.class:259]
+#3  UsfMethod::RetrieveObject(Logger, usfLog, Array ([0] => usfLog)) called at [C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc:34]
+#4  require_once(C:\Users\Peter\Documents\www\USF\resource\PHP\init\usf-prepend.inc) called at [C:\php7x64\server-prepend.inc:27]
+
+
+1497193934>>>89166800>>>SYSTEM>>>2017-06-11 03:12:14 Log File (initLog) Started
+1497193934>>>89166800>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193934>>>89166800>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193934>>>89166800>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497193974>>>28850400>>>SYSTEM>>>2017-06-11 03:12:54 Log File (initLog) Started
+1497193974>>>28850400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497193974>>>28850400>>>NOTICE>>>Constructed New usfLog (Logger).
+1497193974>>>28850400>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497193974>>>28850400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497193974>>>29144700>>>SYSTEM>>>2017-06-11 03:12:54 Log File (initLog) Started
+1497193974>>>29144700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: mv62153l9ng0bvrnk6h3qdgsb3
+1497194016>>>10921200>>>SYSTEM>>>2017-06-11 03:13:36 Log File (initLog) Started
+1497194016>>>10921200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194016>>>10921200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497194016>>>10921200>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497194016>>>10921200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194016>>>crg3653jdjmpqgc390oj8hod72>>>INFO>>>Constructing Available Web Apps
+1497194016>>>12001000>>>SYSTEM>>>2017-06-11 03:13:36 Log File (initLog) Started
+1497194016>>>12001000>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194016>>>crg3653jdjmpqgc390oj8hod72>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497194016>>>crg3653jdjmpqgc390oj8hod72>>>NOTICE>>>No Web App XSS Exception Data
+1497194016>>>crg3653jdjmpqgc390oj8hod72>>>SYSTEM>>>New Session: crg3653jdjmpqgc390oj8hod72
+1497194043>>>85317600>>>SYSTEM>>>2017-06-11 03:14:03 Log File (initLog) Started
+1497194043>>>85317600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194043>>>85317600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497194043>>>85317600>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497194043>>>85317600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194043>>>85628900>>>SYSTEM>>>2017-06-11 03:14:03 Log File (initLog) Started
+1497194043>>>85628900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194109>>>94433600>>>SYSTEM>>>2017-06-11 03:15:09 Log File (initLog) Started
+1497194109>>>94433600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194109>>>94433600>>>NOTICE>>>Constructed New usfLog (Logger).
+1497194109>>>94433600>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497194109>>>94433600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194109>>>94727600>>>SYSTEM>>>2017-06-11 03:15:09 Log File (initLog) Started
+1497194109>>>94727600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194115>>>79687500>>>SYSTEM>>>2017-06-11 03:15:15 Log File (initLog) Started
+1497194115>>>79687500>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194115>>>79687500>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497194115>>>79687500>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194115>>>80634900>>>SYSTEM>>>2017-06-11 03:15:15 Log File (initLog) Started
+1497194115>>>80634900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194439>>>59373600>>>SYSTEM>>>2017-06-11 03:20:39 Log File () Started
+1497194439>>>59373600>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194439>>>59373600>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497194439>>>59373600>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194439>>>59714200>>>SYSTEM>>>2017-06-11 03:20:39 Log File () Started
+1497194439>>>59714200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194482>>>25722400>>>SYSTEM>>>2017-06-11 03:21:22 Log File (initLog) Started
+1497194482>>>25722400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194482>>>25722400>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497194482>>>25722400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194482>>>26232300>>>SYSTEM>>>2017-06-11 03:21:22 Log File (initLog) Started
+1497194482>>>26232300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194496>>>67786700>>>SYSTEM>>>2017-06-11 03:21:36 Log File (initLog) Started
+1497194496>>>67786700>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194496>>>67786700>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497194496>>>67786700>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194496>>>67908300>>>SYSTEM>>>2017-06-11 03:21:36 Log File (initLog) Started
+1497194496>>>67908300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: crg3653jdjmpqgc390oj8hod72
+1497194535>>>78148200>>>SYSTEM>>>2017-06-11 03:22:15 Log File (initLog) Started
+1497194535>>>78148200>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194535>>>78148200>>>NOTICE>>>Constructed New usfLog (Logger).
+1497194535>>>78148200>>>SYSTEM>>>Retrieving Logger Object
+		code: 2
+		message: Object [Logger]::usfLog Not Stored.
+		location: 213
+		action: Retrieving Logger Object
+		method: RetrieveObject
+		severity: system
+
+1497194535>>>78148200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5
+1497194535>>>ohnqulpodqmbg51hknh4eenvh5>>>INFO>>>Constructing Available Web Apps
+1497194535>>>78344200>>>SYSTEM>>>2017-06-11 03:22:15 Log File (initLog) Started
+1497194535>>>78344200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5
+1497194535>>>ohnqulpodqmbg51hknh4eenvh5>>>WARNING>>>JsonData
+		code: 1
+		message: JSON Data File (C:\Users\Peter\Documents\www\USF\resource\site-init\xss-exception-list.json) Not Found
+		location: 186
+		action: JsonData
+		method: JsonData::ReadJsonFile
+		severity: warning
+
+1497194535>>>ohnqulpodqmbg51hknh4eenvh5>>>NOTICE>>>No Web App XSS Exception Data
+1497194535>>>ohnqulpodqmbg51hknh4eenvh5>>>SYSTEM>>>New Session: ohnqulpodqmbg51hknh4eenvh5
+1497194590>>>77479400>>>SYSTEM>>>2017-06-11 03:23:10 Log File (initLog) Started
+1497194590>>>77479400>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497194590>>>77479400>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497194590>>>77479400>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5
+1497194590>>>77614900>>>SYSTEM>>>2017-06-11 03:23:10 Log File (initLog) Started
+1497194590>>>77614900>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5
+1497198019>>>84131300>>>SYSTEM>>>2017-06-11 04:20:19 Log File (initLog) Started
+1497198019>>>84131300>>>CAUTION>>>No PHP Session to Associated with Log File (initLog).
+1497198019>>>84131300>>>NOTICE>>>Retrieved usfLog (Logger) from PHP Session.
+1497198019>>>84131300>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5
+1497198019>>>85027200>>>SYSTEM>>>2017-06-11 04:20:19 Log File (initLog) Started
+1497198019>>>85027200>>>SYSTEM>>>Log File (initLog) Associated with PHP Session: ohnqulpodqmbg51hknh4eenvh5

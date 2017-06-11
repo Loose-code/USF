@@ -48,13 +48,40 @@ class Logger {
         if (!is_dir($this->logFilePath)) {
             mkdir($this->logFilePath, 0666, true);
         }
+        $this->OpenLogFile();
+        return $this;
+    }
+
+    /**
+     * Magic Method: Makes a conscious attempt to remove any File Locks
+     */
+    public function __destruct() {
+        flock($this->logFilePointer, LOCK_UN);
+    }
+
+    /** 
+     * Magic Method: Opens Log File and ensures we have a File Pointer.
+     */
+    public function __wakeup() {
+        $this->OpenLogFile();
+    }
+
+    /**
+     * Private Method: Opens Log File
+     * 
+     * It is anticipated that various instance of this Class could be stored in
+     * the PHP Session and, as File Pointers are not preserved, we need to
+     * ensure that <b>property</b> <i>$logFilePointer</i> is a file pointer. So
+     * this needs to be accessible to the <i>wakeup</i> magic method.
+     */
+    private function OpenLogFile() {
         $fileOpen = @(fopen($this->logFilePath . $this->logFileName, 'cb'));
         if ($fileOpen) {
             $this->logFilePointer = $fileOpen;
             $microTime = explode(' ', microtime());
             $logId = substr($microTime[0], 2);
             $this->logId = $logId;
-            $this->LogInternalEvent('Log File (' . $logFileName . ') Started', 'SYSTEM');
+            $this->LogInternalEvent(date('Y-m-d h:i:s', $microTime[1]) . ' Log File (' . $this->logFileName . ') Started', 'SYSTEM');
             $logId = $this->AssociateSession();
             $this->SetLogging('on');
             return $this;
@@ -63,13 +90,6 @@ class Logger {
             $lastError = error_get_last();
             throw new Exception('Unable to Open Log File (' . $this->logFileName . '). System returns: ' . $lastError['message']);
         }
-    }
-
-    /**
-     * Magic Method: Makes a conscious attempt to remove any File Locks
-     */
-    public function __destruct() {
-        flock($this->logFilePointer, LOCK_UN);
     }
 
     /**

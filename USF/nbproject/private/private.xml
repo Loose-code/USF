@@ -4,17 +4,23 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/XssFilter.class</file>
-            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/xss-exception-list.json.json</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/RecordServerAccess.class</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/UsfMethod.class</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/Logger.class</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/initLog</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/usf-append.inc</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/usf-constants.inc</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/server-prepend.inc</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/fileLog</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/xss-exception-list.json</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/usfLog</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/server-append.inc</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/JsonData.class</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/classes/FileAccess.class</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/www/index.html</file>
             <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/usf-prepend.inc</file>
-            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/initLog</file>
-            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/usf-constants.inc</file>
-            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/fileLog</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/PHP/init/known-schemes.json</file>
+            <file>file:/C:/Users/Peter/Documents/www/USF/resource/logs/20170608purge.log</file>
         </group>
     </open-files>
 </project-private>

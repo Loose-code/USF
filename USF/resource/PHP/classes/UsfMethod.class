@@ -63,8 +63,11 @@ class UsfMethod {
     /**
      * Public Static Method: Will ensure that an array contains unique values.
      * 
-     * Will accept indexed or associated, simple or multidimenstional arrays.
+     * Will accept indexed or associated, simple or multidimensional arrays.
      * Kudos to PHP User Contributions.
+     * 
+     * @note It appears that if different keys have the same value, they will be
+     * treated as having the "same" value.
      * 
      * $array = UsfMethod::UniqueArray(<i>array</i> $array);
      * 
@@ -76,7 +79,7 @@ class UsfMethod {
         $result = array_map("unserialize", array_unique(array_map("serialize", $array)));
         foreach ($result as $key => $value) {
             if (is_array($value) ) {
-              $result[$key] = self::UniqueArray($value);
+                $result[$key] = self::UniqueArray($value);
                 $result[$key] = array_merge($result[$key]);
             }
         }
@@ -202,14 +205,16 @@ class UsfMethod {
     public static function RetrieveObject($className, $objectName, $objectArguments=null, $clearSession=false) {
         $returnedObject = false;
         $errorData = null;
-
         if ($clearSession !== true) {
-            if (!session_id()) {
-                $errorData = [1, 'No active PHP Session when attempting to retrieve ' . $objectName, __LINE__ -1];
+            if (empty(session_id())) {
+                $errorData = [1, 'No active PHP Session when attempting to retrieve ' . $objectName, __LINE__ -1, 'system'];
             }
-            if ((array_key_exists('usf_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['usf_objects']))) {
+            elseif ((array_key_exists('usf_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['usf_objects']))) {
                 $statusMessage = 'Retrieved ' . $objectName . ' (' . $className . ') from PHP Session.';
                 $returnedObject = unserialize($_SESSION['usf_objects'][$objectName]);
+            }
+            else {
+                $errorData = [2, 'Object [' . $className . ']::' . $objectName . ' Not Stored.', __LINE__ -5, 'system'];
             }
         }
         if ($returnedObject === false) {
@@ -230,14 +235,14 @@ class UsfMethod {
                 $statusMessage = 'Constructed New ' . $objectName . ' (' . $className . ').';
             }
             catch (Exception $ex) {
-                $errorData = [2, 'Unable to Construct ' . $objectName . ' (' . $className . ').' . $ex->getMessage(), __LINE -1];
+                $errorData = [3, 'Unable to Construct ' . $objectName . ' (' . $className . ').' . $ex->getMessage(), __LINE__ -1, 'fatal'];
             }
         }
         if (is_a($returnedObject, $className)) {
             $GLOBALS['initLog']->WriteLine($statusMessage, 'NOTICE');
         }
         else {
-            $errorData = [3, 'Object' . $objectName . ' (' . $className . ') is not Sane.', __LINE -1];
+            $errorData = [4, 'Object' . $objectName . ' (' . $className . ') is not Sane.', __LINE__ -4, 'fatal'];
         }
         if (isset($errorData)) {
             $errorPacket = array(
@@ -246,11 +251,10 @@ class UsfMethod {
                 'location' => $errorData[2],
                 'action' => 'Retrieving ' . $className . ' Object',
                 'method' => __FUNCTION__,
-                'severity' => 'fatal',
+                'severity' => $errorData[3],
             );
 
             ProcessErrorEvent($errorPacket);
-            die('Fatal Error Encountered: ' . $errorPacket['message']);
         }
         return $returnedObject;
     }
@@ -580,7 +584,7 @@ class UsfMethod {
                 $returnValue[] = $includeFile;
             }
             else {
-                $GLOBALS['initLog']->WriteLine('Site Include File ' . $includeFile . ' not found.', 'STATUS');
+                $GLOBALS['usfLog']->WriteLine('Site Include File ' . $includeFile . ' not found.', 'STATUS');
             }
         }
         return $returnValue;

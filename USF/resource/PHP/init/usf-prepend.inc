@@ -27,7 +27,10 @@
     /* @note Sessions run as "expected" but NARS requires "session sharing"
      * @TODO Needs more work for NARS i.e. Code for Sharing session */
     list($thisSessionId, $thisSessionStatus) = UsfMethod::GetSessionId();
-    $sessionStarted = UsfMethod::StartThisSession($thisSessionId, $thisSessionStatus);
+    $USF_sessionStarted = UsfMethod::StartThisSession($thisSessionId, $thisSessionStatus);
+    if ($thisSessionStatus == 'none') {
+        $accessComment = 'New Session: ' . session_id();
+    }
     $usfLog = UsfMethod::RetrieveObject('Logger', 'usfLog', 'usfLog');
     $initLog->AssociateSession();
 
@@ -50,10 +53,18 @@
         $destroySession = true;
         $accessComment = 'Destroy Session [' . session_id() . '] requested by direct access.';
     }
+    /* Disables the forced redirect to existing Web App */
     $bypassCrossSite = false;
     if ((array_key_exists('cross', $_REQUEST)) && ($_REQUEST['cross'] == 'true')) {
         $bypassCrossSite = true;
     }
+    /* Forces various methods to recalculate data rather than retrive from PHP Session */
+    $refreshSessionLookup = false;
+    if ((array_key_exists('refresh', $_REQUEST)) && ($_REQUEST['refresh'] == 'true')) {
+        $refreshSessionLookup = true;
+    }
+    define('USF_REFRESH_SESSION_LOOKUP', $refreshSessionLookup);
+
 
 //  Determine the Web App and set up for redirect if required
     $requestedUsfWebApp = UsfMethod::WebAppFromUrl($fullRequest);
@@ -74,20 +85,14 @@
     }
 
 //  Check for XSS and similar
-    $filterXss = new XssFilter($serializedData, true);
-    list($validAccess, $xssCheck, $accessComment) = $filterXss->ValidRequestMethod($_SERVER['REQUEST_METHOD']);
-    if ($validAccess) {
-        list($validAccess, $xssCheck, $accessComment) = $filterXss->ProcessXss();
+    $filterXss = new XssFilter($serializedData, USF_REFRESH_SESSION_LOOKUP);
+    $validMethod = $filterXss->ValidRequestMethod($_SERVER['REQUEST_METHOD']);
+    if ($validMethod['status'] === true) {
+        list($validAccess, $xssCheck, $xssComment) = $filterXss->ProcessXss();
     }
-    if (!$validAccess) {
-        $errorPacket = $filterXss->GetLastError();
-        if ($errorPacket !== false) {
-            $errorPacket['action'] = 'XSS Filter';
-            $errorPacket['method'] = $xssCheck;
-            FatalErrorEvent($errorPacket);
-        }
+    if (!empty($validMethod['result'])) {
+        $accessComment = $validMethod['result'];
     }
-    unset($filterXss, $validAccess, $xssCheck, $xssMethod);
 
 //  Log Server Activity
     if (!isset($accessComment)) {
@@ -106,8 +111,17 @@
         $errorPacket = $accessLog->GetErrorPacket();
         FatalErrorEvent($errorPacket);
     }
-    unset($accessComment, $accessLog);
-    
+
+// Do we need to Kill XSS?
+    if (!$validAccess) {
+        $errorPacket = $filterXss->GetLastError();
+        if ($errorPacket !== false) {
+            $errorPacket['action'] = 'XSS Filter';
+            $errorPacket['method'] = $xssCheck;
+            FatalErrorEvent($errorPacket);
+            die('XSS Violation: ' . $xssCheck);
+        }
+    }
 
 // Do we have to destroy the Session?
     if ($destroySession) {
@@ -133,7 +147,26 @@
 // Bootstrap the Web App 
     $desiredIncludes = array('site-constants', 'site-methods', 'site-init');
     $availableIncludes = PreloadIncludeCheck($desiredIncludes);
-    unset($initLog, $requestedUsfWebApp, $desiredIncludes);
+    unset(
+        $accessComment,
+        $accessLog,
+        $accessTime,
+        $bypassCrossSite,
+        $desiredIncludes,
+        $destroySession,
+        $errorPacket,
+        $filterXss,
+        $initLog,
+        $oldWebApp,
+        $redirectRequired,
+        $requestedWebApp,
+        $serializedData,
+        $thisSessionStatus,
+        $validAccess,
+        $validMethod,
+        $xssCheck,
+        $xssComment
+    );
     ob_end_clean();
     foreach ($availableIncludes as $includeFile) {
         include_once($includeFile);

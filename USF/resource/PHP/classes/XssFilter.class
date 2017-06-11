@@ -37,66 +37,54 @@ class XssFilter {
      */
     public function __construct($xssData, $clearSession=false) {
         $this->logger = new Logger('initLog', false);
-            if((isset($_SESSION) && $clearSession === false)) {
-                $this->phpSession = true;
-            }
-            else {
-                $statusMessage = 'No active PHP Session.';
-                if ($clearSession === true) {
-                    $statusMessage = 'PHP Session Data Reset.';
-                }
-                $GLOBALS['initLog']->WriteLine($statusMessage, 'NOTICE');
-            }
-            if(!is_array($xssData)) {
-                $xssData = array($xssData);
-            }
-            foreach ($xssData as $key => $value) {
-                $xssData[$key] = rawurlencode(rawurldecode($value));
-            }
-            $this->dataToProcess = implode('|', $xssData);
-            $this->xssExceptionList = $this->GetXssExceptionList();
-            if ($clearSession === true) {
-                $this->phpSession = true;
-            }
+        if (isset($_SESSION)) {
+            $this->phpSession = true;
+        }
+        else {
+            $this->logger->WriteLine('No active PHP Session.', 'notice');
+        }
+        if ($clearSession === true) {
+            $this->phpSession = false;
+            $this->logger->WriteLine('PHP Session Data Reset.', 'notice');
+        }
+        if(!is_array($xssData)) {
+            $xssData = array($xssData);
+        }
+        foreach ($xssData as $key => $value) {
+            $xssData[$key] = rawurlencode(rawurldecode($value));
+        }
+        $this->dataToProcess = implode('|', $xssData);
+        $this->xssExceptionList = $this->GetXssExceptionList();
         return $this;
     }
 
     /**
      * Public Method: Will only allow "approved" Client Request Methods.
      * 
-     * $boolean = $this->ValidRequestMethod( <i>string</i> $_SERVER['REQUEST_METHOD']);
+     * $array = $this->ValidRequestMethod( <i>string</i> $_SERVER['REQUEST_METHOD']);
      * 
      * The "approved" Request Methods are "hard coded".
      * 
      * @TODO Consider if there are ANY valid reasons to allow HEAD.
      * 
      * @param string The Client Request Method i.e. GET, HEAD or PUSH etc.
-     *      Typically the $_SERVER['REQUEST_METHOD'] Global.
+     *   Typically the $_SERVER['REQUEST_METHOD'] Global.
      * 
-     * @return boolean TRUE if approved FALSE otherwise.
+     * @return array A two element associated array where:
+     *   'result' => A <b>string</b> message appropriate for a given <i>status</i>.
+     *   'status' => Boolean TRUE if approved FALSE otherwise.
      */
     public function ValidRequestMethod($requestedMethod) {
-        $this->lastError = false;
-        $xssCheck = 'Access Method';
-        $accessComment = '';
-        $lastError = array(
-            'severity'  => 'fatal',
-        );
+        $returnData = '';
+        $returnStatus = false;
         switch (strtolower($requestedMethod)) {
             case 'get':
             case 'post':
-                $returnValue = true;
+                $returnStatus = true;
                 break;
             case 'head':
-                $validRequest = $this->VerifyRequestMethod($requestedMethod);
-                if ($validRequest) {
-                    $returnValue = true;
-                }
-                else {
-                    $returnValue = false;
-                    $lastError['message'] = 'Requested Method (' . $requestedMethod . ') not available.';
-                    $lastError['code'] = 1;
-                }
+                $errorData = [1, 'Requested Method (' . $requestedMethod . ') not available.', __LINE__ + 1, 'fatal'];
+                $returnStatus = $this->VerifyRequestMethod($requestedMethod);
                 break;
             case 'options':
             case 'put':
@@ -104,15 +92,12 @@ class XssFilter {
             case 'delete':
             case 'connect':
             default:
-                $returnValue = false;
-                $lastError['message'] = 'Requested Method (' . $requestedMethod . ') is inappropriate.';
-                $lastError['code'] = 2;
+                $errorData = [2, 'Requested Method (' . $requestedMethod . ') is inappropriate.', __LINE__, 'fatal'];
         }
-        if (!$returnValue) {
-            $this->lastError = $lastError;
-            $accessComment = $lastError['message'];
+        if (!$returnStatus) {
+            $returnData = $this->ProcessLocalError($errorData, 'Access Method');
         }
-        return array($returnValue, $xssCheck, $accessComment);
+        return ['result' => $returnData, 'status' => $returnStatus];
     }
 
     /**
@@ -137,7 +122,6 @@ class XssFilter {
     public function ProcessXss() {
         $signatureMap = array(
             'user' => '@',
-            'self' => '://',
             'scheme' => '://',
             'script' => '<',
         );
@@ -225,30 +209,46 @@ class XssFilter {
      * @return array The converted JSON Data as an array og PHP variables.
      */
     private function GetXssExceptionData() {
-        $logEvent = null;
         $thisWebApp = WebAppFromSession('app');
         $usfXssData = $this->GetJsonData($this->xssDataFile, USF_PHP_INIT_DIRECTORY);
         if ($usfXssData['status'] === false) {
-            $logEvent = ['No USF XSS Exception Data', 'notice'];
+            $usfXssData['result'] = unserialize(USF_XSS_DATA_FILE_STRUCTURE);
+            $this->logger->WriteLine('No USF XSS Exception Data', 'notice');
         }
         $webAppInitLocation = UsfMethod::CleanPath(USF_SITE_CONFIG_DIRECTORY_PHP . $thisWebApp);
         $webAppXssData = $this->GetJsonData($this->xssDataFile, $webAppInitLocation);
         if ($webAppXssData['status'] === false) {
-            $logEvent = ['No Web App XSS Exception Data', 'notice'];
+            $webAppXssData['result'] = unserialize(USF_XSS_DATA_FILE_STRUCTURE);
+            $this->logger->WriteLine('No Web App XSS Exception Data', 'notice');
         }
         $exceptionListData = array_merge_recursive($usfXssData['result']['exceptions'], $webAppXssData['result']['exceptions']);
-        $exceptionListData = UsfMethod::UniqueArray($exceptionListData);
         $this->AddServerAlias($exceptionListData);
-        if (!empty($logEvent)) {
-            $this->logger->WriteLine($logEvent[0], $logEvent[1]);
-        }
+        $exceptionListData = UsfMethod::UniqueArray($exceptionListData);
         return $exceptionListData;
     }
 
-    private function GetJsonData($xssDataFilename, $xsfDataPath) {
+    /**
+     * Private Method: Dedicated Method to retrieve and convert XSS JSON Data.
+     * 
+     * Called by <b>private method</b> <i>GetXssExceptionData()</i> to retrieve
+     * and convert the XSS Exception Data JSON File.
+     * 
+     * $array = $this->GetJsonData(<i>string</i>$xssDataFilename, <i>string</i>xssDataPath);
+     * 
+     * @param string $xssDataFilename The name of the XSS Exception Data File.
+     * 
+     * @param string $xssDataPath The absolute OS path to the XSS Exception Data File.
+     * 
+     * @return array A two element associated array where:
+     *   'result' => A <b>string</b> message appropriate for a given <i>status</i>.
+     *   'status' => Boolean TRUE if approved FALSE otherwise.
+     * 
+     * @uses JsonData
+     */
+    private function GetJsonData($xssDataFilename, $xssDataPath) {
         $returnData = null;
         $returnStatus = null;
-        $readJson = JsonData::ReadJsonFile($xssDataFilename, $xsfDataPath);
+        $readJson = JsonData::ReadJsonFile($xssDataFilename, $xssDataPath);
         if ($readJson['status'] === true) {
             $convertJson = JsonData::ConvertJson($readJson['result']);
             if ($convertJson['status'] === true) {
@@ -257,8 +257,8 @@ class XssFilter {
             }
         }
         if (empty($returnData)) {
-            $returnData = array('exceptions' => array(),);
-            $returnStatus = true;
+            $returnData = array();
+            $returnStatus = false;
         }
         return ['result' => $returnData, 'status' => $returnStatus];
     }
@@ -268,28 +268,22 @@ class XssFilter {
      * 
      * $array = $this->AddServerAlias(<i>array</i>&$exceptionListData);
      * 
-     * Normally the XSS Signature Exception list would be managed (statcally)
-     * through configuration files. However, some of them (typicall the "self"
-     * Category) can only determined whilst the Server is active. This method
+     * Normally the XSS Signature Exception list would be managed statically
+     * through configuration files. However, some exceptions i.e. the Server
+     * Alias, can only be determined whilst the Server is active. This method
      * will merge those "dynamic" signautes with the static ones.
      * 
      * @param array [reference] $exceptionListData XSS Signatures that are part
-     *      of the Configuration.
+     * of the Configuration.
      */
     private function AddServerAlias(&$exceptionListData) {
-        $array = array(
-            'principal' => 'uri',
-            'content' =>array(),
-        );
         $lookFor = '://';
         foreach(SERVER_SELF_URI_ALIAS as $serverAlias) {
             if (strpos($serverAlias, $lookFor) === false) {
                 $serverAlias = $lookFor . $serverAlias;
             }
-            $array['content'][] = array('uri' => $serverAlias);
+            array_push($exceptionListData['scheme']['content'], array('uri' => $serverAlias));
         }
-        $array = UsfMethod::UniqueArray($array);
-        $exceptionListData['self'] = $array;
     }
 
     private function CheckXssException($thisSignature, $thisList, $signatureCount) {
@@ -329,7 +323,7 @@ class XssFilter {
     }
 
     /**
-     * Public Method: Return the current value of <b>property</b> <i>lastError</i>.
+     * Public Method: Returns the current value of <b>property</b> <i>lastError</i>.
      * 
      * $array = $this->GetLastError();
      * 
@@ -337,5 +331,39 @@ class XssFilter {
      */
     public function GetLastError() {
         return $this->lastError;
+    }
+
+    /**
+     * Private Method: Will format information about an error.
+     * 
+     * Given customised indexed array of error information, it will format it
+     * into a standardised associated array for use with a Client interface. In
+     * this case via the <b>property</b> <i>lastError</i>.
+     * 
+     * $errorData = [<i>integer</i>$errorCode, <i>string</i>$errorMessage, __LINE__ +/-n, <i>string</i>$severity];
+     * $string = $this->ProcessLocalError(<i>array</i>$errorData, __METHOD__);
+     * 
+     * @param array $errorData An indexed array of error information, where element:
+     *   0 => Error Code.
+     *   1 => Error Message.
+     *   2 => The (approximate) Line Number that the error occurred.
+     *   3 => Error Severity.
+     * 
+     * @param string $callingMethod Typically the result of the <b>magic constant</b>
+     * <i>__METHOD__</i> but it can be any "uniquely identifying" text such as
+     * <i>Access Method</i>.
+     * 
+     * @return string Curtsey return of the Error Message.
+     */
+    private function ProcessLocalError($errorData, $callingMethod) {
+        $this->lastError = array(
+            'code' => $errorData[0],
+            'message' => $errorData[1],
+            'location' => $errorData[2],
+            'action' => __CLASS__,
+            'method' => $callingMethod,
+            'severity' => $errorData[3],
+        );
+        return $errorData[1];
     }
 }

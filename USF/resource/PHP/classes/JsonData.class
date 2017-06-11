@@ -180,17 +180,20 @@ class JsonData {
 
     public static function ReadJsonFile($fileName=null, $filePath=null){
         $returnData = null;
-        $returnStatus = null;
+        $returnStatus = false;
         $jsonDataFile = self::JsonDataFile($fileName, $filePath);
         $errorData = [1, 'JSON Data File (' . $jsonDataFile. ') Not Found', __LINE__ + 1, 'warning'];
         if (file_exists($jsonDataFile)) {
             $jsonFileObject = new FileAccess($jsonDataFile, 'read');
             $returnData = $jsonFileObject->ReadFullFile();
-            $returnStatus = true;
+            $errorData = [2, 'Error Reading JSON Data File (' . $jsonDataFile. ')', __LINE__ + 1, 'error'];
+            if ($returnData !== false) {
+                $returnStatus = true;
+            }
         }
-        else {
+        if ($returnStatus === false) {
             static::ProcessLocalError($errorData, __METHOD__);
-            $returnStatus = false;
+            $returnData = $errorData[1];
         }
         return ['result' => $returnData, 'status' => $returnStatus];
     }

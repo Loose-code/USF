@@ -43,6 +43,7 @@
          'USF_FILELOCK_SLEEP_PERIOD'     => 3,  //Number of seconds to "sleep" before attempting to accquire a file lock.
          'USF_FILELOCK_RETRY_COUNT'      => 2,  //Number of times to attempt to accquire a file lock.
          'USF_XSS_DATA_FILE'             => 'xss-exception-list',
+         'USF_XSS_DATA_FILE_STRUCTURE'   => serialize(array('exceptions' => array('scheme' => array('principal' => 'uri','content' => array(),),'coding' => array('principal' => 'page','content' => array(),),'contact' => array('principal' => 'user','content' => array(),),),)),
      );
      foreach ($serverWideConstants as $key => $value) {
          $thisDefinitionString = 'define($key, "$value");';

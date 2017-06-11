@@ -7,6 +7,7 @@
 <?php
     echo "<p>Web App: " . WebAppFromSession('display') . "</p>";
     echo "<p>Session: " . session_id() . "<p>";
+    print_r($_SESSION);
     phpinfo();
 ?>
     </body>
