@@ -1,0 +1,192 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of ErrorProcessor
+ *
+ * @author Peter
+ */
+class ErrorProcessor {
+    private $errorLog = null;
+    private $errorStack = array();
+    private $errorCount = 0;
+    private $recentError = '';
+
+    public function __construct() {
+        $this->errorLog = new Logger('usflog');
+    }
+    /**
+     * 
+     * @param type $errorInfo
+     * @param type $caller
+     * @return type
+     */
+    public function FormatErrorPacket($errorInfo, $caller) {
+        $errorPacket = array(
+            'code' => $errorInfo[0],
+            'message' => $errorInfo[1],
+            'location' => $errorInfo[2],
+            'severity' => $errorInfo[3],
+            'action' => $caller,
+        );
+        return $errorPacket;
+    }
+
+    /**
+     * Will Log and report an error.
+     * 
+     * $array = ProcessErrorEvent( ARRAY $errorPacket);
+     * 
+     * If there is an active Logger Instance then the error will be logged
+     * according to the current reporting level. An attempt will be made to
+     * "push" a notice about the error through to the Client (filtered by the
+     * Client's preferences). Errors with a FATAL severity will cause an
+     * appropriate Error Display in the Client's Browser and USF Web App to be
+     * be halted. A simplifed "backtrack" dump will be added to the log data.
+     * 
+     * @see Logger Class for more information about reporting levels etc.
+     * 
+     * @param array $errorPacket An associated array containing information
+     * about the error with (at least) the following elements:
+     *  'code'     => A number uniquiely identifying the error within a
+     *                "logical" block of code.
+     *  'message'  => A textual (hopefully unique) description of the error.
+     *  'location' => Expected to be the __LINE__ Magic Constant.,
+     *  'action'   => Anticipated to be either __CLASS__ or __FILE__ Magic
+     *                Constants. However, it could be a unique description of
+     *                the "logic" being proccessed i.e. "XSS Filtering".
+     *  'method'   => Anticipated to be either __METHOD__ or __FUNCTION__ Magic
+     *                Constants. However, it could be a unique description of
+     *                the "logic" being proccessed i.e. "Access Method".
+     *  'severity' => The Logger Reporting Level as decribed for the Logger
+     *                Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.,
+     * 
+     * @return array An associated array containing information about the error.
+     * Essentially <i>$errorPack</i> modified or otherwise.
+     */
+    public function ProcessErrorEvent($errorPacket) {
+        $scheduledToDie = false;
+        $errorReference = $this->LogError($errorPacket);
+        if (strtolower($errorPacket['severity']) == 'fatal') {
+            $scheduledToDie = true;
+        }
+        $this->PushUsfNotice($errorPacket, $errorReference);
+        if ($scheduledToDie) {
+            $this->FatalErrorEvent($errorPacket, $errorReference);
+            die('Fatal Error Encountered: ' . $errorPacket['action']);
+        }
+        return array($errorPacke, $errorReference);
+    }
+
+    /**
+     * Will generate and output a HTML page for the Client's Browser.
+     * 
+     * The page will provide useful information about the "fatal" error.
+     * Normally it is expected that this function would be called by
+     * ProcessError().
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error @see <i>ProcessErrorEvent()</i>
+     * 
+     * @return void.
+     */
+    public function FatalErrorEvent($errorPacket, $errorReference) {
+        /**
+         * @TODO Add Retry / Reset (new session) / Refresh (Session back up?)
+         */
+        $errorPacket['dump'] = PHP_EOL . UsfMethod::CaptureOutput();
+        $templateFile = USF_HTML_TEMPLATE_DIRECTORY . DIRECTORY_SEPARATOR . 'fatal-process-error.html';
+        $htmlOut = file_get_contents($templateFile);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_REFERENCE### -->', $errorReference, $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_ACTION### -->', $errorPacket['action'], $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_LOCATION### -->', $errorPacket['location'], $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_MESSAGE### -->', $errorPacket['message'], $htmlOut);
+        while (ob_get_level() != 0) {
+            ob_end_clean();
+        }
+        die($htmlOut);
+    }
+
+    /**
+     * Will attempt to log and error to the active System Log.
+     * 
+     * If the Initialisation Log is still Active, errors will be logged there in
+     * order to "caputure" any initialisation errors. Otherwise, the USF Log
+     * will be used. Even if there is no active Log, or the Log Event is not 
+     * written, a Reference Id will be returned.
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error with the following elements:
+     *  'action'   => The Script, Class or "logic block" within which the error
+     *                occurred.
+        'method'   => The "location" of the error - Method or Function and Line.
+        'message'  => A textual (hopefully unique) description of the error.
+     *  'severity' => The Logger Reporting Level as decribed for the
+     *                Logger Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.
+     * 
+     * @note This will (eventually) be a Private Method for an Error Logging
+     * Class.
+     * 
+     * @return string A reference number associated with the Log Entry.
+     */
+    private function LogError($errorPacket) {
+        if (isset($GLOBALS['initLog'])) {
+            $GLOBALS['initLog']->WriteBlock($errorPacket, $errorPacket['action'], $errorPacket['severity']);
+            $errorReference = 'I:' . implode(':', $GLOBALS['initLog']->GetLogReference());
+        }
+        elseif (isset($GLOBALS['usfLog'])) {
+            $GLOBALS['usfLog']->WriteBlock($errorPacket, $errorPacket['action'], $errorPacket['severity']);
+            $errorReference = 'S:'. implode(':', $GLOBALS['usfLog']->GetLogReference());
+        }
+        else {
+            $errorSource = preg_replace ('/[^A-Z0-9]/', '', strtoupper(pathinfo($errorPacket['action'], PATHINFO_FILENAME)));
+            $errorReference = $errorSource . ':' . time();
+        }
+        return $errorReference;
+    }
+
+    /**
+     * Future Feature: Will push a notice to the Client's Browser.
+     * 
+     * Simialar in concept to the function ProcessFatalError() in that the
+     * intention is to issue notices of non-fatal USF Events.
+     * 
+     * @param array $errorPacket An associated array containg information about
+     * the error with the following elements:
+     *  'action'   => The Script, Class or "logic block" within which the error
+     *                occurred.
+        'method'   => The "location" of the error - Method or Function and Line.
+        'message'  => A textual (hopefully unique) description of the error.
+     *  'severity' => The Logger Reporting Level as decribed for the
+     *                Logger Class i.e. 'WARNING', 'FATAL', 'CAUTION' etc.
+     * 
+     * @param string [optional] $errorReference A Log Reference as provided,
+     *      typically, by function LogError() that will help to locate an entry
+     *      in a Log File. If ommitted, as in some instances where this function
+     *      may be called directly the case where no Log File is running, this
+     *      function will generate a Reference Id.
+     * 
+     * @return void.
+     */
+    private function PushUsfNotice($errorPacket, $errorReference) {
+        /** @TODO Do This */
+    }
+
+    public function CurrentError($errorData=null) {
+        if (!is_null($errorData)) {
+            $this->$recentError = $errorData;
+            $this->errorCount++;
+            array_push($this->errorStack, $errorData);
+        }
+        return $this->errorStack[$this->errorCount];
+    }
+
+    public function GetErrors() {
+        return $this->errorStack;
+    }
+}

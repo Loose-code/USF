@@ -1,0 +1,35 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of DbAccess
+ *
+ * @author Peter
+ */
+class DbAccess {
+    private $dbConnection = null;
+    private $errorProcessor = null;
+    
+    
+    public function __construct($host, $schema, $user, $password, $options=null) {
+        $this->errorProcessor = new ErrorProcessor();
+        try {
+            $dbConnection = new PDO("mysql:host=$host;dbname=$schema", $user, $password);
+        } catch (PDOException $conversion) {
+            $errorInfo = [1, 'Connection failed: ' . $conversion->getMessage(), __LINE__ - 2, 'fatal'];
+            $this->LocalErrorProcess($errorInfo, __METHOD__);
+}
+
+    }
+    
+    private function LocalErrorProcess($errorInfo, $callingMethod) {
+        $errorPacket = $this->errorProcessor->FormatErrorPacket($errorInfo, $callingMethod);
+        $errorAction = $this->errorProcessor->ProcessErrorEvent($errorPacket);
+        return $errorAction;
+    }
+}

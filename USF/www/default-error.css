@@ -43,7 +43,7 @@ body {
 }
 .error-prompt {
     float: left;
-    width: 30%;
+    width: 25%;
     text-align: right;
     padding-right: 3px;
     font-weight: bold;
@@ -51,7 +51,7 @@ body {
 }
 .error-text {
     float: left;
-    width: 65%;
+    width: 70%;
     padding-right: 3px;
     line-height: 21px;
 }

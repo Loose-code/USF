@@ -36,7 +36,7 @@ class XssFilter {
      * @return object Returns a single Instance of this Class.
      */
     public function __construct($xssData, $clearSession=false) {
-        $this->logger = new Logger('initLog', false);
+        $this->logger = new Logger('initLog');
         if (isset($_SESSION)) {
             $this->phpSession = true;
         }

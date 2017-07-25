@@ -51,7 +51,7 @@ class UsfMethod {
         }
         // OS Flavour of the day  - for consistency.
         $realSlash = rawurlencode(DIRECTORY_SEPARATOR);
-        if ($webEnviroment === true) {
+        if ($webEnviroment == true) {
             // Because the double slash for scheme:// will be a single slash.
             $string = str_replace('%3A[SLASH]', '%3A[SLASH][SLASH]', $string); 
             $realSlash = rawurlencode('/');     // Web version
@@ -203,15 +203,18 @@ class UsfMethod {
      * @see UsfMethod::StoreObject()
      */
     public static function RetrieveObject($className, $objectName, $objectArguments=null, $clearSession=false) {
+if ($className == 'DbAccess') {
+    //die(var_dump(func_get_args()));
+}
         $returnedObject = false;
         $errorData = null;
         if ($clearSession !== true) {
             if (empty(session_id())) {
                 $errorData = [1, 'No active PHP Session when attempting to retrieve ' . $objectName, __LINE__ -1, 'system'];
             }
-            elseif ((array_key_exists('usf_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['usf_objects']))) {
-                $statusMessage = 'Retrieved ' . $objectName . ' (' . $className . ') from PHP Session.';
-                $returnedObject = unserialize($_SESSION['usf_objects'][$objectName]);
+            elseif ((array_key_exists('stored_objects', $_SESSION)) && (array_key_exists($objectName, $_SESSION['stored_objects']))) {
+                $statusMessage = 'Retrieved USF Object: ' . $objectName . ' (' . $className . ') from PHP Session.';
+                $returnedObject = unserialize($_SESSION['stored_objects'][$objectName]);
             }
             else {
                 $errorData = [2, 'Object [' . $className . ']::' . $objectName . ' Not Stored.', __LINE__ -5, 'system'];
@@ -239,6 +242,7 @@ class UsfMethod {
             }
         }
         if (is_a($returnedObject, $className)) {
+            $_SESSION['stored_objects'][$objectName] = $objectName;
             $GLOBALS['initLog']->WriteLine($statusMessage, 'NOTICE');
         }
         else {
@@ -342,8 +346,24 @@ class UsfMethod {
             $usfWebApp['phpRoot'] = USF_WEB_ROOT_DIRECTORY_PHP;
             $usfWebApp['webRoot'] = USF_ROOT_DIRECTORY_WEB;
         }
-//die(var_dump($usfWebApp));
         return $usfWebApp;
+    }
+
+    /**
+     * Hack to return the name of a variable
+     * 
+     * $string = UsfMethod::GetVariableName(<i>mixed</i> $variable);
+     * @param mixed $variable The PHP variable for which you require the name.
+     * 
+     * @return string The name of the variable.
+     */
+    public static function GetVariableName($variable) {
+        $returnValue = key($variable);
+        if (is_object($variable)) {
+            $nameArray = explode('%00', rawurlencode($returnValue));
+            $returnValue = array_pop($nameArray);
+        }
+        return $returnValue;
     }
 
 }
@@ -536,7 +556,7 @@ class UsfMethod {
         $htmlOut = file_get_contents($templateFile);
         $htmlOut = str_replace('<!-- ####USCREF_ERROR_REFERENCE### -->', $errorReference, $htmlOut);
         $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_ACTION -->', $errorPacket['action'], $htmlOut);
-        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_METHOD -->', $errorPacket['method'] . '->' . $errorPacket['location'], $htmlOut);
+        $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_LOCATION -->', $errorPacket['method'] . '->' . $errorPacket['location'], $htmlOut);
         $htmlOut = str_replace('<!-- ####USCREF_ERROR_PACKET_MESSAGE -->', $errorPacket['message'], $htmlOut);
         while (ob_get_level() != 0) {
             ob_end_clean();
@@ -579,7 +599,7 @@ class UsfMethod {
         $returnValue = array();
         clearstatcache();
         foreach ($includeArray as $fileName) {
-            $includeFile = UsfMethod::CleanPath(WEB_APP_CONFIG_DIRECTORY_PHP . $fileName . '.inc', true);
+            $includeFile = WEB_APP_CONFIG_DIRECTORY_PHP . $fileName . '.inc';
             if (is_readable($includeFile)) {
                 $returnValue[] = $includeFile;
             }

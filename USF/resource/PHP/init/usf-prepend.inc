@@ -3,16 +3,19 @@
         ob_end_clean();
     }
     $bufferStarted = ob_start();
+    $storedClasses = array();
     require_once('usf-constants.inc');
     require_once(USF_PHP_CLASS_DIRECTORY . 'UsfMethod.class');
     require_once(USF_PHP_CLASS_DIRECTORY . 'JsonData.class');
     require_once(USF_PHP_CLASS_DIRECTORY . 'FileAccess.class');
     require_once(USF_PHP_CLASS_DIRECTORY . 'Logger.class');
+    require_once(USF_PHP_CLASS_DIRECTORY . 'ErrorProcessor.class');
     require_once(USF_PHP_CLASS_DIRECTORY . 'XssFilter.class');
     require_once(USF_PHP_CLASS_DIRECTORY . 'RecordServerAccess.class');
+    require_once(USF_PHP_CLASS_DIRECTORY . 'DbAccess.class');
 
 // Start the Initialisation Log and other initial values
-    $initLog = new Logger('initLog');
+    $initLog = new Logger('initLog', true);
     $initLog->SetLogging('debug');
     $accessTime     = $_SERVER['REQUEST_TIME'];
     $fullRequest    = $_SERVER['REQUEST_URI'];
@@ -31,7 +34,8 @@
     if ($thisSessionStatus == 'none') {
         $accessComment = 'New Session: ' . session_id();
     }
-    $usfLog = UsfMethod::RetrieveObject('Logger', 'usfLog', 'usfLog');
+    $usfLog = UsfMethod::RetrieveObject('Logger', 'usfLog', array('usfLog', true));
+    array_push($storedClasses, 'usfLog');
     $initLog->AssociateSession();
 
 // Get any REQUEST instuctions - Do we want to Kill the Session? */
@@ -146,6 +150,7 @@
 
 // Bootstrap the Web App 
     $desiredIncludes = array('site-constants', 'site-methods', 'site-init');
+//die(var_dump($desiredIncludes));
     $availableIncludes = PreloadIncludeCheck($desiredIncludes);
     unset(
         $accessComment,
@@ -156,7 +161,6 @@
         $destroySession,
         $errorPacket,
         $filterXss,
-        $initLog,
         $oldWebApp,
         $redirectRequired,
         $requestedWebApp,

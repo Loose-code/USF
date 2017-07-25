@@ -23,7 +23,7 @@ class FileAccess {
     private $messages = array();
 
     public function __construct($fullFileName, $crud) {
-        $this->logger = new Logger('fileLog', false);
+        $this->logger = new Logger('fileLog');
         $fileLock = LOCK_EX;
         switch ($crud) {
             case 'create':

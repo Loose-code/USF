@@ -5,7 +5,7 @@
  * @author Peter
  */
 class Logger {
-    private $verbose = true;
+    private $verbose = false;
     protected $logId = null;
     protected $logFilePath = USF_LOG_DIRECTORY_PHP;
     private $logFilePointer = null;
@@ -39,7 +39,7 @@ class Logger {
      * @param boolean $verbose [optional]
      * @throws Exception
      */
-    public function __construct($logFileName=null, $verbose=true) {
+    public function __construct($logFileName=null, $verbose=false) {
         $this->verbose = $verbose;
         if (empty($logFileName)) {
             $logFileName = USF_RL_DEFAULT_LOGFILE;
@@ -81,7 +81,9 @@ class Logger {
             $microTime = explode(' ', microtime());
             $logId = substr($microTime[0], 2);
             $this->logId = $logId;
-            $this->LogInternalEvent(date('Y-m-d h:i:s', $microTime[1]) . ' Log File (' . $this->logFileName . ') Started', 'SYSTEM');
+            if ($this->verbose) {
+                $this->LogInternalEvent(date('Y-m-d h:i:s', $microTime[1]) . ' Log File (' . $this->logFileName . ') Started', 'SYSTEM');
+            }
             $logId = $this->AssociateSession();
             $this->SetLogging('on');
             return $this;
